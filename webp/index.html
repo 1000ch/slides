@@ -4,15 +4,93 @@
     <meta charset="utf-8">
     <title>WebP</title>
     <link rel="stylesheet" href="../bower_components/reveal.js/css/reveal.min.css">
+    <link rel="stylesheet" href="../bower_components/reveal.js/css/theme/simple.css">
     <script src="../bower_components/reveal.js/js/reveal.min.js"></script>
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
-        <section>Single Horizontal Slide</section>
         <section>
-          <section>Vertical Slide 1</section>
-          <section>Vertical Slide 2</section>
+          <h1>WebP is future</h1>
+          <h3>Shogo Sensui</h3>
+        </section>
+        <section>
+          <section>
+            <h1>WebP使おうぜ！の話</h1>
+          </section>
+          <section>
+            <h2>WebPって何？</h2>
+            <ul>
+              <li>「ウェッピー」と読む</li>
+              <li>Googleが開発した新しい画像フォーマット</li>
+              <li>圧縮効率がよく、ファイルサイズがとても小さい</li>
+            </ul>
+          </section>
+          <section>
+            <h2>どのくらい小さいの？</h2>
+          </section>
+          <section>
+            <h2>各種フォーマット比</h2>
+            <ul>
+              <li>PNG8と同じくらい</li>
+              <li>同程度の画像品質でJPGの平均30%オフ</li>
+            </ul>
+          </section>
+          <section>
+            <h2>画像の占める割合ってどんなもんよ</h2>
+          </section>
+          <section>
+            <img src="capture.png">
+          </section>
+          <section>
+            <h2>ダウンロードさせるリソースの大半を画像が占めている</h2>
+            <p>弊社ゲームサービスにおいては、特に顕著。</p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>手段と実現可能性</h1>
+          </section>
+          <section>
+            <h2>デバイスのWebP対応状況</h2>
+            <ul>
+              <li>✘ iPhone Safari</li>
+              <li>✔ iPhone Chrome</li>
+              <li>✘ Android ベンダーブラウザ</li>
+              <li>✔ Android Chrome</li>
+            </ul>
+          </section>
+          <section>
+            <h2>iPhoneのChromeでOKということは…</h2>
+          </section>
+          <section>
+            <h2>デコーダがあればiPhoneアプリでも表示可能</h2>
+          </section>
+          <section>
+            <h2>ガワアプリならWebPで軽量化された画像リソースを使える</h2>
+            <p>ガワネイティブが高速に動作すれば良い副作用が連鎖的にありそう</p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>作ったツール（おまけ）<h1>
+          </section>
+          <section>
+            <h2>エンコーダ系</h2>
+            <ul>
+              <li><a href='http://github.com/1000ch/node-cwebp-bin'>node-cwebp-bin</a></li>
+              <li><a href='http://github.com/1000ch/grunt-cwebp'>grunt-cwebp</a></li>
+              <li><a href='http://github.com/1000ch/gulp-cwebp'>gulp-cwebp</a></li>
+            </ul>
+          </section>
+          <section>
+            <h2>デコーダ系</h2>
+            <ul>
+              <li><a href='http://github.com/1000ch/node-dwebp-bin'>node-dwebp-bin</a></li>
+              <li><a href='http://github.com/1000ch/grunt-dwebp'>grunt-dwebp</a></li>
+              <li><a href='http://github.com/1000ch/gulp-dwebp'>gulp-dwebp</a></li>
+            </ul>
+          </section>
         </section>
       </div>
     </div>
@@ -20,12 +98,11 @@
       Reveal.initialize({
         // Display controls in the bottom right corner
         controls: true,
- 
         // Display a presentation progress bar
         progress: true,
- 
         // Display the page number of the current slide
-        slideNumber: false
+        slideNumber: false,
+        width: 1280
       });
     </script>
   </body>
