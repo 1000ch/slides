@@ -11,7 +11,7 @@
     <div class="reveal">
       <div class="slides">
         <section>
-          <h1>WebP is future</h1>
+          <h1>WebP is Future</h1>
           <h3>Shogo Sensui</h3>
         </section>
         <section>
@@ -46,10 +46,18 @@
             <h2>ダウンロードさせるリソースの大半を画像が占めている</h2>
             <p>弊社ゲームサービスにおいては、特に顕著。</p>
           </section>
+          <section>
+            <h2>YouTube等では既に使われてる</h2>
+            <p><a href='https://www.youtube.com/watch?v=8vJSCmIMIjI'>ビデオサムネイルのサイズを20%削減し、ページロードを10%高速化した。</a></p>
+          </section>
+          <section>
+            <h1>Performance is Feature</h1>
+            <h3>スピードに勝るユーザー体験は無い。</h3>
+          </section>
         </section>
         <section>
           <section>
-            <h1>手段と実現可能性</h1>
+            <h1>実現可能性</h1>
           </section>
           <section>
             <h2>デバイスのWebP対応状況</h2>
@@ -61,6 +69,10 @@
             </ul>
           </section>
           <section>
+            <h2>対応状況あまり良くない</h2>
+            <p>けど今回は、あまり重要じゃない</p>
+          </section>
+          <section>
             <h2>iPhoneのChromeでOKということは…</h2>
           </section>
           <section>
@@ -69,6 +81,36 @@
           <section>
             <h2>ガワアプリならWebPで軽量化された画像リソースを使える</h2>
             <p>ガワネイティブが高速に動作すれば良い副作用が連鎖的にありそう</p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>これからやらなきゃいけないこと</h1>
+          </section>
+          <section>
+            <h2>WebP画像の用意</h2>
+            <p>今までのPNG・JPGの画像で、WebPにコンバートしたものも用意する。</p>
+            <p>これについてはツールで自動化する（デザイナーが意識しないように）。</p>
+          </section>
+          <section>
+            <h2>配信サーバーの設定</h2>
+            <pre><code>location = /hoge {
+    if ($http_accept ~* "webp") {
+        add_header Vary Accept;
+        rewrite (.*) $1.webp last;
+    }
+    if ($http_user_agent ~* "(Chrome|Opera|Android|Android.*Chrome)") {
+        add_header Vary User-Agent;
+        rewrite (.*) $1.webp last;
+    }
+    rewrite (.*) $1.png last;
+}</code></pre>
+            <p>これはNginxの例</p>
+          </section>
+          <section>
+            <h2>リクエストヘッダのacceptにimage/webpを含める</h2>
+            <p>WebPに対応しているブラウザであれば勝手に投げる。</p>
+            <p>ガワアプリのWebViewの仕組みは要調査。</p>
           </section>
         </section>
         <section>
