@@ -16,7 +16,7 @@
         </section>
         <section>
           <section>
-            <h1>WebP使おうぜ！の話</h1>
+            <h1>WebP使おうぜ！</h1>
           </section>
           <section>
             <h2>WebPって何？</h2>
@@ -37,14 +37,15 @@
             </ul>
           </section>
           <section>
-            <h2>画像の占める割合ってどんなもんよ</h2>
+            <h2>サービスが提供するリソースのうち画像の占める割合</h2>
           </section>
           <section>
+            <h2>ガールフレンド（仮）の場合</h2>
             <img src="capture.png">
           </section>
           <section>
             <h2>ダウンロードさせるリソースの大半を画像が占めている</h2>
-            <p>弊社ゲームサービスにおいては、特に顕著。</p>
+            <p>弊社ゲームサービスにおいては、特に顕著（平均70%~80%）</p>
           </section>
           <section>
             <h2>YouTube等では既に使われてる</h2>
@@ -52,7 +53,7 @@
           </section>
           <section>
             <h1>Performance is Feature</h1>
-            <h3>スピードに勝るユーザー体験は無い。</h3>
+            <h3>スピードに勝るユーザー体験は無い</h3>
           </section>
         </section>
         <section>
@@ -76,16 +77,20 @@
             <h2>iPhoneのChromeでOKということは…</h2>
           </section>
           <section>
-            <h2>デコーダがあればiPhoneアプリでも表示可能</h2>
+            <h2>iPhoneでもWebP表示可能</h2>
+            <p>iOS SDKのWebViewにもWebPデコーダを組み込める</p>
           </section>
           <section>
-            <h2>ガワアプリならWebPで軽量化された画像リソースを使える</h2>
-            <p>ガワネイティブが高速に動作すれば良い副作用が連鎖的にありそう</p>
+            <h1>つまり…</h1>
+          </section>
+          <section>
+            <h2>ガワアプリでWebPで軽量化された画像リソースを使える</h2>
+            <p>ストアのアプリが高速に動作すれば良い副作用が連鎖的にありそう</p>
           </section>
         </section>
         <section>
           <section>
-            <h1>これからやらなきゃいけないこと</h1>
+            <h1>開発側でやること</h1>
           </section>
           <section>
             <h2>WebP画像の用意</h2>
@@ -109,30 +114,40 @@
           </section>
           <section>
             <h2>リクエストヘッダのacceptにimage/webpを含める</h2>
-            <p>WebPに対応しているブラウザであれば勝手に投げる。</p>
-            <p>ガワアプリのWebViewの仕組みは要調査。</p>
+            <p>WebPに対応しているブラウザであれば勝手に投げる</p>
+            <p>ガワアプリのWebViewの仕組みは要調査</p>
+          </section>
+          <section>
+            <h1>たったこれだけ</h1>
           </section>
         </section>
         <section>
           <section>
-            <h1>作ったツール（おまけ）<h1>
+            <h1>作ったツール<h1>
+          </section>
+          <section>
+            <h2>あまりツール化されていない</h2>
+            <p>ビルドとかいちいち面倒だし、自動化できないと現実解にならない</p>
           </section>
           <section>
             <h2>エンコーダ系</h2>
             <ul>
-              <li><a href='http://github.com/1000ch/node-cwebp-bin'>node-cwebp-bin</a></li>
-              <li><a href='http://github.com/1000ch/grunt-cwebp'>grunt-cwebp</a></li>
-              <li><a href='http://github.com/1000ch/gulp-cwebp'>gulp-cwebp</a></li>
+              <li><a href='http://github.com/1000ch/node-cwebp-bin'>node-cwebp-bin</a> - エンコーダ（cwebp）のnodeラッパー</li>
+              <li><a href='http://github.com/1000ch/grunt-cwebp'>grunt-cwebp</a> - gruntモジュール</li>
+              <li><a href='http://github.com/1000ch/gulp-cwebp'>gulp-cwebp</a> - gulpモジュール</li>
             </ul>
           </section>
           <section>
             <h2>デコーダ系</h2>
             <ul>
-              <li><a href='http://github.com/1000ch/node-dwebp-bin'>node-dwebp-bin</a></li>
-              <li><a href='http://github.com/1000ch/grunt-dwebp'>grunt-dwebp</a></li>
-              <li><a href='http://github.com/1000ch/gulp-dwebp'>gulp-dwebp</a></li>
+              <li><a href='http://github.com/1000ch/node-dwebp-bin'>node-dwebp-bin</a> - デコーダ（dwebp）のnodeラッパー</li>
+              <li><a href='http://github.com/1000ch/grunt-dwebp'>grunt-dwebp</a> - gruntモジュール</li>
+              <li><a href='http://github.com/1000ch/gulp-dwebp'>gulp-dwebp</a> - gulpモジュール</li>
             </ul>
           </section>
+        </section>
+        <section>
+          <h1>おしまい</h1>
         </section>
       </div>
     </div>
