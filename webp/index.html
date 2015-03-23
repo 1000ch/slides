@@ -1,0 +1,182 @@
+<html>
+<head>
+  <title>WebP - A new image format for the Web</title>
+  <link rel="stylesheet" href="../bower_components/Talkie/dist/talkie.min.css">
+  <link rel="stylesheet" href="../bower_components/Talkie/dist/talkie-default.min.css">
+  <link rel="stylesheet" href="../bower_components/highlightjs/styles/monokai_sublime.css">
+</head>
+<body>
+
+<script layout="cover"
+        invert
+        type="text/x-markdown"
+        backface="./img/inokashira.jpg"
+        backface-filter="blur(1px) brightness(.8)">
+# Introduction to **WebP**
+
+A new image format for the Web
+
+by [@1000ch](http://twitter.com/1000ch)
+
+</script>
+<script layout="bullets"
+        type="text/x-markdown">
+
+## WebPとは？
+
+- Googleが開発する新しい画像フォーマット
+- 可逆/非可逆圧縮・アルファチャネル・アニメーション
+- とにかく軽い
+
+</script>
+<script layout="bullets"
+        type="text/x-markdown">
+
+## どのくらい軽いの？
+
+- 可逆圧縮 → PNG比で約26%小さい
+- 非可逆圧縮 → JPEG比で約25%~34%小さい
+- アルファチャネル付きの非可逆圧縮 → 3倍以上もサイズが異なる
+
+</script>
+<script layout="title"
+        type="text/x-markdown">
+
+# 利用に向けて
+
+</script>
+<script layout="bullets"
+        type="text/x-markdown">
+
+## ブラウザサポート
+
+- Chrome + Opera
+- Android Chrome
+- iOS Chrome
+- Windows Codecがあればエクスプローラ
+
+</script>
+<script layout="title"
+        type="text/x-markdown">
+
+### iOS Safariだと…
+
+![](./img/webp-safari.jpg)
+
+</script>
+<script layout="title"
+        type="text/x-markdown">
+
+### iOS Chromeだと…
+
+![](./img/webp-chrome.jpg)
+
+</script>
+<script layout="bullets"
+        type="text/x-markdown">
+
+## iOS WebViewもOK
+
+- dwebpなのかChrome Frameなのかわからんけど
+- ネットワークコストの軽減
+- アプリサイズのダイエット
+
+</script>
+<script layout="bullets"
+        type="text/x-markdown">
+
+## 非対応ブラウザのために
+
+- WebPJSで`.webp`をdataURIにしたり・・・
+- `image/webp`がない場合はpngを返したり・・・
+- やりようはいくらでもある
+
+</script>
+<script layout="title"
+        type="text/x-markdown">
+
+# ツール
+
+</script>
+<script layout="title"
+        type="text/x-markdown">
+
+## cwebpでWebPにコンバート
+
+Homebrewで…
+
+```
+$ brew install cwebp
+```
+
+[Nodeのラッパー作った](https://github.com/imagemin/cwebp-bin)
+
+```
+$ npm install [-g] cwebp-bin
+```
+
+</script>
+<script layout="title"
+        type="text/x-markdown">
+
+## GUIでやりたい？
+
+ブラウザで試せるツール作った
+
+- http://webp.herokuapp.com
+
+Macのアプリケーション作った（ストア申請中）
+
+</script>
+<script layout="title"
+        type="text/x-markdown">
+
+### WebPonize
+
+![](./img/webponize.jpg)
+
+Coming Soon!
+
+</script>
+<script layout="cover"
+        type="text/x-markdown"
+        backface-filter="blur(1px) brightness(.8)">
+## Thank you!
+
+[@1000ch](http://twitter.com/1000ch)
+
+</script>
+
+<script src="../bower_components/highlightjs/highlight.pack.js"></script>
+<script src="../bower_components/Talkie/dist/talkie.min.js"></script>
+<script>
+  var talkie  = Talkie({
+    wide: false,
+    control: true,
+    progress: true
+  });
+
+  talkie.next.plug(talkie.control.keydown('s'));
+  talkie.next.plug(talkie.control.keydown('n'));
+  talkie.prev.plug(talkie.control.keydown('a'));
+  talkie.prev.plug(talkie.control.keydown('p'));
+
+  window.Bacon = talkie.Bacon;
+
+  talkie.next.plug(Bacon.fromEventTarget(document.getElementById('next'), 'touchend'));
+  talkie.prev.plug(Bacon.fromEventTarget(document.getElementById('prev'), 'touchend'));
+
+  window.next  = function() {
+    talkie.next.push();
+  };
+
+  window.prev  = function() {
+    talkie.prev.push();
+  };
+
+  window.jump  = function(num) {
+    talkie.jump.push(num);
+  };
+</script>
+</body>
+</html>
