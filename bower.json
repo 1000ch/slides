@@ -1,6 +1,21 @@
 {
+  "name": "slide",
+  "version": "0.0.0",
+  "homepage": "https://github.com/1000ch/slide",
+  "authors": [
+    "1000ch <shogo.sensui@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
   "dependencies": {
     "Talkie": "ahomu/Talkie#~0.7.1",
-    "highlightjs": "~8.4.0"
+    "highlightjs": "~8.4.0",
+    "fontawesome": "~4.3.0"
   }
 }
