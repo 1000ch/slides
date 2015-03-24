@@ -4,6 +4,7 @@
   <link rel="stylesheet" href="../bower_components/Talkie/dist/talkie.min.css">
   <link rel="stylesheet" href="../bower_components/Talkie/dist/talkie-default.min.css">
   <link rel="stylesheet" href="../bower_components/highlightjs/styles/monokai_sublime.css">
+  <link rel="stylesheet" href="../bower_components/fontawesome/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -16,7 +17,17 @@
 
 A new image format for the Web
 
-by [@1000ch](http://twitter.com/1000ch)
+by [1000ch](http://twitter.com/1000ch)
+
+</script>
+<script layout="bullets"
+        type="text/x-markdown">
+
+## I am 1000ch
+
+- Engineer at CyberAgent
+- [1000ch.net](http://1000ch.net)
+- [HTML5Experts.jp エキスパート](http://html5experts.jp/1000ch)
 
 </script>
 <script layout="bullets"
@@ -36,7 +47,7 @@ by [@1000ch](http://twitter.com/1000ch)
 
 - 可逆圧縮 → PNG比で約26%小さい
 - 非可逆圧縮 → JPEG比で約25%~34%小さい
-- アルファチャネル付きの非可逆圧縮 → 3倍以上もサイズが異なる
+- アルファチャネル付きの非可逆圧縮 → PNG比で3倍以上も小さい
 
 </script>
 <script layout="title"
@@ -64,12 +75,12 @@ by [@1000ch](http://twitter.com/1000ch)
 <script layout="bullets"
         type="text/x-markdown">
 
-## ブラウザサポート
+## サポート環境
 
 - Chrome + Opera
-- Android Chrome
+- Android Chrome <i class="fa fa-android"></i>
 - iOS Chrome
-- Windows Codecがあればエクスプローラ
+- CodecがあればWindowsのエクスプローラ <i class="fa fa-windows"></i>
 
 </script>
 <script layout="title"
@@ -93,12 +104,11 @@ by [@1000ch](http://twitter.com/1000ch)
 
 ## iOS WebViewもOK
 
-- いずれかの方法でできる（気がする）
-  - vwebpで表示する
-  - dwebpでデコードする
-  - Chrome Frameを使う（サポートおわた）
-- ネットワークコストの軽減
-- アプリサイズのダイエット
+- vwebpで表示する
+- dwebpでデコードする
+- Chrome Frameを使う（サポート終了）
+
+ネットワークコストの軽減＋アプリサイズのダイエット
 
 </script>
 <script layout="bullets"
@@ -106,9 +116,10 @@ by [@1000ch](http://twitter.com/1000ch)
 
 ## 非対応ブラウザのために
 
-- WebPJSで`.webp`をdataURIにしたり・・・
-- `image/webp`がない場合はpngを返したり・・・
-- やりようはいくらでもある
+- WebPJSで`.webp`をdataURIに変換
+- リクエストヘッダに`image/webp`がない場合はpngを返却
+
+やりようはいくらでもある
 
 </script>
 <script layout="title"
@@ -120,18 +131,22 @@ by [@1000ch](http://twitter.com/1000ch)
 <script layout="bullets"
         type="text/x-markdown">
 
-## cwebpでWebPにコンバート
+## コマンドラインツール
 
-Homebrewで…
+- Homebrewでcwebpのインストール
+- [Nodeのラッパー](https://github.com/imagemin/cwebp-bin)
+- [grunt-cwebp](https://github.com/1000ch/grunt-cwebp)
+- [gulp-cwebp](https://github.com/1000ch/gulp-cwebp)
 
-```
+</script>
+<script layout="code"
+        type="text/x-markdown">
+
+```bash
 $ brew install cwebp
-```
-
-[Nodeのラッパー作った](https://github.com/imagemin/cwebp-bin)
-
-```
 $ npm install [-g] cwebp-bin
+$ npm install grunt-cwebp
+$ npm install gulp-cwebp
 ```
 
 </script>
@@ -140,11 +155,8 @@ $ npm install [-g] cwebp-bin
 
 ## GUIでやりたい？
 
-ブラウザで試せるツール作った
-
-- http://webp.herokuapp.com
-
-Macのアプリケーション作った（ストア申請中）
+- [webp.herokuapp.com](http://webp.herokuapp.com) - Webツール
+- WebPonize - Macのアプリ（ストア申請中）
 
 </script>
 <script layout="title"
@@ -162,7 +174,9 @@ Coming Soon!
         backface-filter="blur(1px) brightness(.8)">
 ## Thank you!
 
-[@1000ch](http://twitter.com/1000ch)
+- [<i class="fa fa-twitter"></i> 1000ch](http://twitter.com/1000ch)
+- [<i class="fa fa-github"></i> 1000ch](http://github.com/1000ch)
+- [<i class="fa fa-home"></i> 1000ch.net](http://1000ch.net)
 
 </script>
 
