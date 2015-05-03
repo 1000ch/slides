@@ -23,10 +23,10 @@ by [1000ch](http://twitter.com/1000ch)
 <script layout="bullets"
         type="text/x-markdown">
 
-## I am 1000ch
+## Who is 1000ch
 
 - Engineer at CyberAgent
-- [1000ch.net](http://1000ch.net)
+- ブログが[1000ch.net](http://1000ch.net)の人
 - [HTML5Experts.jp エキスパート](http://html5experts.jp/1000ch)
 
 </script>
@@ -37,7 +37,7 @@ by [1000ch](http://twitter.com/1000ch)
 
 - Googleが開発する新しい画像フォーマット
 - 可逆/非可逆圧縮・アルファチャネル・アニメーション
-- とにかく軽い
+- 高圧縮率でファイルサイズがとても軽い
 
 </script>
 <script layout="bullets"
@@ -47,7 +47,7 @@ by [1000ch](http://twitter.com/1000ch)
 
 - 可逆圧縮 → PNG比で約26%小さい
 - 非可逆圧縮 → JPEG比で約25%~34%小さい
-- アルファチャネル付きの非可逆圧縮 → PNG比で3倍以上も小さい
+- アルファチャネル付きの非可逆圧縮 → PNG比で3倍以上小さい
 
 </script>
 <script layout="title"
@@ -77,9 +77,9 @@ by [1000ch](http://twitter.com/1000ch)
 
 ## サポート環境
 
-- Chrome + Opera
-- Android Chrome <i class="fa fa-android"></i>
-- iOS Chrome
+- Google Chrome (+ Opera)
+- Chrome for Android <i class="fa fa-android"></i>
+- Chrome for iOS
 - CodecがあればWindowsのエクスプローラ <i class="fa fa-windows"></i>
 
 </script>
@@ -118,6 +118,7 @@ by [1000ch](http://twitter.com/1000ch)
 
 - WebPJSで`.webp`をdataURIに変換
 - リクエストヘッダに`image/webp`がない場合はpngを返却
+- `<picture>`と`<source type="image/webp">`で条件分岐
 
 やりようはいくらでもある
 
@@ -133,10 +134,10 @@ by [1000ch](http://twitter.com/1000ch)
 
 ## コマンドラインツール
 
-- Homebrewでcwebpのインストール
-- [Nodeのラッパー](https://github.com/imagemin/cwebp-bin)
-- [grunt-cwebp](https://github.com/1000ch/grunt-cwebp)
-- [gulp-cwebp](https://github.com/1000ch/gulp-cwebp)
+- [cwebp](https://developers.google.com/speed/webp/docs/precompiled) Homebrewからもインストール可
+- [cwebp-bin](https://github.com/imagemin/cwebp-bin) cwebpのNode.jsラッパー
+- [grunt-cwebp](https://github.com/1000ch/grunt-cwebp) Gruntプラグイン
+- [gulp-cwebp](https://github.com/1000ch/gulp-cwebp) Gulpプラグイン
 
 </script>
 <script layout="code"
@@ -156,7 +157,7 @@ $ npm install gulp-cwebp
 ## GUIでやりたい？
 
 - [webp.herokuapp.com](http://webp.herokuapp.com) - Webツール
-- WebPonize - Macのアプリ（ストア申請中）
+- [WebPonize](http://github.com/1000ch/webponize) - Macのアプリ
 
 </script>
 <script layout="title"
@@ -166,7 +167,7 @@ $ npm install gulp-cwebp
 
 ![](./img/webponize.jpg)
 
-Coming Soon!
+Drag & Drop!
 
 </script>
 <script layout="cover"
