@@ -14,8 +14,8 @@
     "tests"
   ],
   "dependencies": {
-    "Talkie": "ahomu/Talkie#~0.7.1",
-    "highlightjs": "~8.4.0",
+    "Talkie": "ahomu/Talkie#~0.7.3",
+    "highlightjs": "~8.5.0",
     "fontawesome": "~4.3.0"
   }
 }
