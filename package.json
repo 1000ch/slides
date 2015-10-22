@@ -1,0 +1,16 @@
+{
+  "name": "slide",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1000ch/slide.git"
+  },
+  "author": "1000ch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/1000ch/slide/issues"
+  },
+  "homepage": "https://github.com/1000ch/slide#readme",
+  "dependencies": {
+    "talkiejs": "^0.8.3"
+  }
+}
