@@ -1,10 +1,10 @@
 <html>
 <head>
   <title>WebPonize - A Mac OS App for converting PNG, JPEG, animated (or not) GIF images into WebP.</title>
-  <link rel="stylesheet" href="../bower_components/Talkie/dist/talkie.min.css">
-  <link rel="stylesheet" href="../bower_components/Talkie/dist/talkie-default.min.css">
-  <link rel="stylesheet" href="../bower_components/highlightjs/styles/monokai_sublime.css">
-  <link rel="stylesheet" href="../bower_components/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../node_modules/talkiejs/dist/talkie.min.css">
+  <link rel="stylesheet" href="../node_modules/talkiejs/dist/talkie-default.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/monokai.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -204,8 +204,9 @@ Just drag & drop!
 
 </script>
 
-<script src="../bower_components/highlightjs/highlight.pack.js"></script>
-<script src="../bower_components/Talkie/dist/talkie.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="../node_modules/talkiejs/dist/talkie.min.js"></script>
 <script>
   var talkie  = Talkie({
     wide: false,
