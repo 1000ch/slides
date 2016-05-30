@@ -1,38 +1,36 @@
 <!doctype html>
 <html>
-<head>
-  <title>WebP - A new image format for the Web</title>
-  <link rel="stylesheet" href="../node_modules/talkiejs/dist/talkie.min.css">
-  <link rel="stylesheet" href="../node_modules/talkiejs/dist/talkie-default.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/monokai.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-</head>
-<body>
+  <head>
+    <title>WebP - A new image format for the Web</title>
+    <link rel="stylesheet" href="../node_modules/talkiejs/dist/talkie.min.css">
+    <link rel="stylesheet" href="../node_modules/talkiejs/dist/talkie-default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/tomorrow.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  </head>
+  <body>
+<template layout
+          invert
+          type="text/x-markdown"
+          backface="./img/inokashira.jpg"
+          backface-filter="blur(1px) brightness(.8)">
 
-<script layout="cover"
-        invert
-        type="text/x-markdown"
-        backface="./img/inokashira.jpg"
-        backface-filter="blur(1px) brightness(.8)">
 # Introduction to **WebP**
 
 A new image format for the Web
 
-by [1000ch](http://twitter.com/1000ch)
+by [@1000ch](http://twitter.com/1000ch)
 
-</script>
-<script layout="bullets"
-        type="text/x-markdown">
+</template>
+<template layout type="text/x-markdown">
 
 ## Who is 1000ch
 
-- Engineer at CyberAgent
-- ブログが[1000ch.net](http://1000ch.net)の人
+- Software Engineer at CyberAgent
+- [1000ch.net](http://1000ch.net)の人
 - [HTML5Experts.jp エキスパート](http://html5experts.jp/1000ch)
 
-</script>
-<script layout="bullets"
-        type="text/x-markdown">
+</template>
+<template layout type="text/x-markdown">
 
 ## WebPとは？
 
@@ -40,9 +38,8 @@ by [1000ch](http://twitter.com/1000ch)
 - 可逆/非可逆圧縮・アルファチャネル・アニメーション
 - 高圧縮率でファイルサイズがとても軽い
 
-</script>
-<script layout="bullets"
-        type="text/x-markdown">
+</template>
+<template layout type="text/x-markdown">
 
 ## どのくらい軽いの？
 
@@ -50,31 +47,27 @@ by [1000ch](http://twitter.com/1000ch)
 - 非可逆圧縮 → JPEG比で約25%~34%小さい
 - アルファチャネル付きの非可逆圧縮 → PNG比で3倍以上小さい
 
-</script>
-<script layout="title"
-        type="text/x-markdown">
+</template>
+<template layout type="text/x-markdown">
 
 ### 1000ch.jpg (圧縮レベル80で33KB)
 
 ![](./img/1000ch.jpg)
 
-</script>
-<script layout="title"
-        type="text/x-markdown">
+</template>
+<template layout type="text/x-markdown">
 
 ### 1000ch.webp (圧縮レベル80で15KB)
 
 ![](./img/1000ch.jpg)
 
-</script>
-<script layout="title"
-        type="text/x-markdown">
+</template>
+<template layout type="text/x-markdown">
 
 # 利用に向けて
 
-</script>
-<script layout="bullets"
-        type="text/x-markdown">
+</template>
+<template layout type="text/x-markdown">
 
 ## サポート環境
 
@@ -83,25 +76,22 @@ by [1000ch](http://twitter.com/1000ch)
 - Chrome for iOS
 - CodecがあればWindowsのエクスプローラ <i class="fa fa-windows"></i>
 
-</script>
-<script layout="title"
-        type="text/x-markdown">
+</template>
+<template layout type="text/x-markdown">
 
 ### iOS Safariだと…
 
 ![](./img/webp-safari.jpg)
 
-</script>
-<script layout="title"
-        type="text/x-markdown">
+</template>
+<template layout type="text/x-markdown">
 
 ### iOS Chromeだと…
 
 ![](./img/webp-chrome.jpg)
 
-</script>
-<script layout="bullets"
-        type="text/x-markdown">
+</template>
+<template layout type="text/x-markdown">
 
 ## iOS WebViewもOK
 
@@ -111,9 +101,8 @@ by [1000ch](http://twitter.com/1000ch)
 
 ネットワークコストの軽減＋アプリサイズのダイエット
 
-</script>
-<script layout="bullets"
-        type="text/x-markdown">
+</template>
+<template layout type="text/x-markdown">
 
 ## 非対応ブラウザのために
 
@@ -123,15 +112,13 @@ by [1000ch](http://twitter.com/1000ch)
 
 やりようはいくらでもある
 
-</script>
-<script layout="title"
-        type="text/x-markdown">
+</template>
+<template layout type="text/x-markdown">
 
 # ツール
 
-</script>
-<script layout="bullets"
-        type="text/x-markdown">
+</template>
+<template layout type="text/x-markdown">
 
 ## コマンドラインツール
 
@@ -140,9 +127,8 @@ by [1000ch](http://twitter.com/1000ch)
 - [grunt-cwebp](https://github.com/1000ch/grunt-cwebp) Gruntプラグイン
 - [gulp-cwebp](https://github.com/1000ch/gulp-cwebp) Gulpプラグイン
 
-</script>
-<script layout="code"
-        type="text/x-markdown">
+</template>
+<template layout type="text/x-markdown">
 
 ```bash
 $ brew install cwebp
@@ -151,18 +137,16 @@ $ npm install grunt-cwebp
 $ npm install gulp-cwebp
 ```
 
-</script>
-<script layout="bullets"
-        type="text/x-markdown">
+</template>
+<template layout type="text/x-markdown">
 
 ## GUIでやりたい？
 
 - [webp.herokuapp.com](http://webp.herokuapp.com) - Webツール
 - [WebPonize](http://github.com/1000ch/webponize) - Macのアプリ
 
-</script>
-<script layout="title"
-        type="text/x-markdown">
+</template>
+<template layout type="text/x-markdown">
 
 ### WebPonize
 
@@ -170,27 +154,28 @@ $ npm install gulp-cwebp
 
 Drag & Drop!
 
-</script>
-<script layout="cover"
-        type="text/x-markdown"
-        backface-filter="blur(1px) brightness(.8)">
+</template>
+<template layout type="text/x-markdown" backface-filter="blur(1px) brightness(.8)">
+
 ## Thank you!
 
 - [<i class="fa fa-twitter"></i> 1000ch](http://twitter.com/1000ch)
 - [<i class="fa fa-github"></i> 1000ch](http://github.com/1000ch)
 - [<i class="fa fa-home"></i> 1000ch.net](http://1000ch.net)
 
-</script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-<script src="../node_modules/talkiejs/dist/talkie.min.js"></script>
-<script>
-  Talkie({
-    wide: false,
-    control: true,
-    progress: true
-  });
-</script>
-</body>
+</template>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../node_modules/talkiejs/dist/talkie.min.js"></script>
+    <script>
+      Talkie({
+        wide         : false,
+        control      : true,
+        pointer      : true,
+        progress     : true,
+        backface     : true,
+        notransition : true
+      });
+    </script>
+  </body>
 </html>
