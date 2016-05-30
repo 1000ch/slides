@@ -1,3 +1,4 @@
+<!doctype html>
 <html>
 <head>
   <title>麻雀はじめの一歩</title>
@@ -303,37 +304,15 @@ by [@1000ch](http://twitter.com/1000ch)
 
 </script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 <script src="../node_modules/talkiejs/dist/talkie.min.js"></script>
 <script>
-  var talkie  = Talkie({
+  Talkie({
     wide: false,
     control: true,
     progress: true
   });
-
-  talkie.next.plug(talkie.control.keydown('s'));
-  talkie.next.plug(talkie.control.keydown('n'));
-  talkie.prev.plug(talkie.control.keydown('a'));
-  talkie.prev.plug(talkie.control.keydown('p'));
-
-  window.Bacon = talkie.Bacon;
-
-  talkie.next.plug(Bacon.fromEventTarget(document.getElementById('next'), 'touchend'));
-  talkie.prev.plug(Bacon.fromEventTarget(document.getElementById('prev'), 'touchend'));
-
-  window.next  = function() {
-    talkie.next.push();
-  };
-
-  window.prev  = function() {
-    talkie.prev.push();
-  };
-
-  window.jump  = function(num) {
-    talkie.jump.push(num);
-  };
 </script>
 </body>
 </html>
