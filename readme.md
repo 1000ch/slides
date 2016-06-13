@@ -1,3 +1,2 @@
 - [Introduction to WebP](http://1000ch.github.io/slide/webp)
 - [麻雀はじめの一歩](http://1000ch.github.io/slide/mahjong)
-- [WebPonize](http://1000ch.github.io/slide/webponize)
