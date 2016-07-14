@@ -10,9 +10,7 @@
   <body>
 <template layout
           invert
-          type="text/x-markdown"
-          backface="./img/cover.jpg"
-          backface-filter="blur(1px) brightness(.8)">
+          type="text/x-markdown">
 
 # よくわかる画像の話
 
@@ -46,9 +44,11 @@ by [@1000ch](http://twitter.com/1000ch)
 
 ## PNG
 
-- フルカラー（約1677万色）＋アルファチャネル
+- フルカラー＋アルファチャネル
+- 8bitモード（インデックスカラー）
 - 可逆圧縮
-- 8bitモード有
+
+※フルカラーは約1677万色（赤256×緑256×青256）
 
 <img mahjong src="./img/lossless.png">
 
@@ -57,9 +57,9 @@ by [@1000ch](http://twitter.com/1000ch)
 
 ## JPEG
 
-- フルカラー（約1677万色）
-- 非可逆圧縮
+- フルカラー
 - プログレッシブ or ベースライン
+- 非可逆圧縮
 
 <img mahjong src="./img/lossy.png">
 
@@ -76,7 +76,7 @@ by [@1000ch](http://twitter.com/1000ch)
 
 ## WebP
 
-- 24bitフルカラー（約1677万色）＋アルファチャネル
+- フルカラー＋アルファチャネル
 - 可逆圧縮・非可逆圧縮
 - アニメーション
 
@@ -97,6 +97,7 @@ by [@1000ch](http://twitter.com/1000ch)
 ## 画像ファイルのサイズ
 
 - 通信コスト、ストレージやメモリ消費に影響する
+- ことWebに関しては、帯域の80%を画像データが占めている
 - 同等の表現ができれば、軽いほど良い
 
 </template>
@@ -175,6 +176,15 @@ PNG（18.8MB）
 - [ImageAlpha](https://pngmini.com/): PNGの8bitにダウンコンバートする
 - [JPEGmini](http://www.jpegmini.com/): JPEGを圧縮する
 - [WebPonize](https://webponize.github.io): JPEG・PNGをWebPに変換する
+
+</template>
+<template layout type="text/x-markdown">
+
+## 参考資料
+
+- [Give PNG a chance](http://article.enja.io/articles/give-png-a-chance.html)
+- [We should optimize images](https://medium.com/@1000ch/we-should-optimize-images-8435760e0ec9)
+- [Introduction to WebP](https://medium.com/@1000ch/introduction-to-webp-b593dfe1d1d1)
 
 </template>
 <template layout
