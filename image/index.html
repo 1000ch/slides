@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+  <head>
+    <title>よくわかる画像の話</title>
+    <link rel="stylesheet" href="../node_modules/talkiejs/dist/talkie.min.css">
+    <link rel="stylesheet" href="../node_modules/talkiejs/dist/talkie-default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/tomorrow.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  </head>
+  <body>
+<template layout
+          invert
+          type="text/x-markdown"
+          backface="./img/cover.jpg"
+          backface-filter="blur(1px) brightness(.8)">
+
+# よくわかる画像の話
+
+by [@1000ch](http://twitter.com/1000ch)
+
+</template>
+<template layout type="text/x-markdown">
+
+## 画像の存在
+
+- 写真・ロゴ・アイコンなど、プラットフォームを問わず至る所で使われている
+- 印象的な画像はユーザーの目を引き、時に重要な情報を伝える
+- **画像はサービスにとって重要な存在**
+
+</template>
+<template layout type="text/x-markdown">
+
+## そもそも画像ってなんだろう？
+
+</template>
+<template layout type="text/x-markdown">
+
+## 少し噛み砕いてみる
+
+- RGBの表現系からなる画素の集合（＝ビットマップ）
+- よく使われる画像フォーマットは、PNG・JPEG・GIF・WebP
+- それぞれ特徴があるが、基本的には画素の集合を圧縮したもの
+
+</template>
+<template layout type="text/x-markdown">
+
+## PNG
+
+- フルカラー（約1677万色）＋アルファチャネル
+- 可逆圧縮
+- 8bitモード有
+
+<img mahjong src="./img/lossless.png">
+
+</template>
+<template layout type="text/x-markdown">
+
+## JPEG
+
+- フルカラー（約1677万色）
+- 非可逆圧縮
+- プログレッシブ or ベースライン
+
+<img mahjong src="./img/lossy.png">
+
+</template>
+<template layout type="text/x-markdown">
+
+## GIF
+
+- 256色＋特定色の透過
+- アニメーション
+
+</template>
+<template layout type="text/x-markdown">
+
+## WebP
+
+- 24bitフルカラー（約1677万色）＋アルファチャネル
+- 可逆圧縮・非可逆圧縮
+- アニメーション
+
+</template>
+<template layout
+          invert type="text/x-markdown">
+
+## 特徴を踏まえた画像フォーマットの選択
+
+- **PNG**: UIパーツをアイコンのように色数が少なく透過がある
+- **JPEG**: 写真やグラデーションを含むような複雑で非透過な画像
+- **GIF**: アニメーションをさせたい場合
+- **WebP**: WebPをサポートしている環境の場合
+
+</template>
+<template layout type="text/x-markdown">
+
+## 画像ファイルのサイズ
+
+- 通信コスト、ストレージやメモリ消費に影響する
+- 同等の表現ができれば、軽いほど良い
+
+</template>
+<template layout type="text/x-markdown">
+
+# 今から4枚のJPEGと1枚のPNGをお見せします
+
+</template>
+<template layout
+          invert
+          type="text/x-markdown"
+          backface="./img/original.jpg">
+
+JPEG（4.7MB）
+
+</template>
+<template layout
+          invert
+          type="text/x-markdown"
+          backface="./img/compress-80.jpg">
+
+JPEG（1.8MB）
+
+</template>
+<template layout
+          invert
+          type="text/x-markdown"
+          backface="./img/compress-60.jpg">
+
+JPEG（1.1MB）
+
+</template>
+<template layout
+          invert
+          type="text/x-markdown"
+          backface="./img/compress-40.jpg">
+
+JPEG（0.8MB）
+
+</template>
+<template layout
+          invert
+          type="text/x-markdown"
+          backface="./img/original.png">
+
+PNG（18.8MB）
+
+</template>
+<template layout type="text/x-markdown">
+
+## 圧縮率とファイルサイズの関係
+
+- オリジナル: **4.7MB**（100%）
+- 圧縮率80: **1.8MB**（38%）
+- 圧縮率60: **1.1MB**（23.6%）
+- 圧縮率40: **0.8MB**（16.9%）
+- PNGに変換したもの: **18.8MB**（400%）
+
+ファイルサイズは **縦横が小さいかより圧縮がされているか** に左右される（もちろん最適化された上であれば、縦横サイズが小さい＝ピクセル数が少ないほうがファイルサイズは小さくなる）
+
+</template>
+<template layout type="text/x-markdown">
+
+## 画像を適切に扱うためにサービス提供側ができる努力
+
+- 開発側が適切な画像フォーマットを選択し圧縮・最適化するのは、前提であり最低条件
+- ユーザーに強いるのは非現実的（**PNGの写真を送信されても文句言えない**）
+- **アプリケーション側で吸収する必要がある**（アップロード時・配信時など）
+
+</template>
+<template layout type="text/x-markdown">
+
+## 画像最適化ツール
+
+- [ImageOptim](https://imageoptim.com/mac): JPEG・PNG・GIFを最適化する
+- [ImageAlpha](https://pngmini.com/): PNGの8bitにダウンコンバートする
+- [JPEGmini](http://www.jpegmini.com/): JPEGを圧縮する
+- [WebPonize](https://webponize.github.io): JPEG・PNGをWebPに変換する
+
+</template>
+<template layout
+          invert
+          type="text/x-markdown">
+
+## おしまい
+
+</template>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../node_modules/talkiejs/dist/talkie.min.js"></script>
+    <script>
+      Talkie({
+        wide         : false,
+        control      : true,
+        pointer      : true,
+        progress     : true,
+        backface     : true,
+        notransition : true
+      });
+    </script>
+  </body>
+</html>
