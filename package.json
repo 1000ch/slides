@@ -4,6 +4,6 @@
   "repository": "1000ch/slide",
   "author": "1000ch",
   "dependencies": {
-    "talkiejs": "^0.9.1"
+    "talkiejs": "^0.10.0"
   }
 }
