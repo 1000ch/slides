@@ -86,7 +86,7 @@ by [@1000ch](http://twitter.com/1000ch)
 
 ## 特徴を踏まえた画像フォーマットの選択
 
-- **PNG**: UIパーツをアイコンのように色数が少なく透過がある
+- **PNG**: UIパーツ・アイコンのように色数が少なく透過がある
 - **JPEG**: 写真やグラデーションを含むような複雑で非透過な画像
 - **GIF**: アニメーションをさせたい場合
 - **WebP**: WebPをサポートしている環境の場合
@@ -164,8 +164,8 @@ PNG（18.8MB）
 ## 画像を適切に扱うためにサービス提供側ができる努力
 
 - 開発側が適切な画像フォーマットを選択し圧縮・最適化するのは、前提であり最低条件
-- ユーザーに強いるのは非現実的（**PNGの写真を送信されても文句言えない**）
-- **アプリケーション側で吸収する必要がある**（アップロード時・配信時など）
+- ユーザーに強いるのは非現実的（**PNGの写真をサーバーに送信されても文句は言えない**）
+- **アプリケーション側で吸収する必要がある**（アップロード時・配信時などにPNGをJPEGに変換する等）
 
 </template>
 <template layout type="text/x-markdown">
@@ -174,7 +174,7 @@ PNG（18.8MB）
 
 - [ImageOptim](https://imageoptim.com/mac): JPEG・PNG・GIFを最適化する
 - [ImageAlpha](https://pngmini.com/): PNGの8bitにダウンコンバートする
-- [JPEGmini](http://www.jpegmini.com/): JPEGを圧縮する
+- [JPEGmini](http://www.jpegmini.com/): JPEGを圧縮・最適化する
 - [WebPonize](https://webponize.github.io): JPEG・PNGをWebPに変換する
 
 </template>
