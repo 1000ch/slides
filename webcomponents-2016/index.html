@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Web Components 2016 & Polymer v2</title>
+    <link rel="stylesheet" href="../node_modules/talkiejs/dist/talkie.min.css">
+    <link rel="stylesheet" href="../node_modules/talkiejs/dist/talkie-default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/monokai.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  </head>
+  <body>
+<template layout="title" type="text/x-markdown">
+
+# Web Components 2016 & Polymer v2
+
+2016.10.09 [DevFest Tokyo 2016](http://gdg-tokyo.connpass.com/event/38927/) [@1000ch](http://twitter.com/1000ch)
+
+</template>
+
+<template layout="bullets" type="text/x-markdown">
+
+## @1000ch
+
+- 株式会社サイバーエージェント
+- Web 技術とか iOS とかいろいろ
+- [https://1000ch.net](https://1000ch.net) の人
+
+</template>
+
+<template layout="bullets" type="text/x-markdown">
+
+## アジェンダ
+
+- Web Components おさらい
+- 最近の Web Components 事情
+- Polymer v2 リリース
+
+</template>
+
+<template layout="title" invert type="text/x-markdown">
+
+# Web Components<br>おさらい
+
+</template>
+
+<template layout="bullets" type="text/x-markdown">
+
+## 「再利用可能な Web モジュール」の難しさ
+
+- それを **作る** コストと **使う** コスト
+- 特定のライブラリへの依存問題
+- エコシステムが醸成されない問題
+- CSS は容赦なくグローバルを汚染する問題
+
+</template>
+
+<template layout="bullets" type="text/x-markdown">
+
+## Extensible Web の体現
+
+- Web 標準技術を組み合わせて構成する（重要）
+- 低レベル API は高レベル API を兼ねる
+- **「Web モジュール」を作る手法が一般化** される
+
+</template>
+
+<template layout="bullets" type="text/x-markdown">
+
+## Web Components を支える技術
+
+- **Custom Elements**: 新たな要素の定義
+- **Shadow DOM**: 隔離された DOM スコープ
+- **HTML Imports**: 断片化した HTML のロード
+- **Templates**: 不活性な HTML 要素
+
+</template>
+
+<template layout="title" invert type="text/x-markdown">
+
+# 最近の Web Components 事情
+
+</template>
+
+<template layout="bullets" type="text/x-markdown">
+
+## Shadow DOM v1
+
+- `createShadowRoot()` から `attachShadow()` へ
+- readonly な `shadowRoot` プロパティ
+- 複数 `Shadow Root` の廃止
+- Opened な Shadow DOM と Closed な Shadow DOM
+    - `/deep/` と `::shadow` の廃止
+- [Shadow Root をホストできる要素が限定的に](https://dom.spec.whatwg.org/#dom-element-attachshadow)
+- `<content>` から `<slot>` へ
+    - `::content .foo` から `::slotted(.foo)` へ
+
+</template>
+
+<template layout="bullets" type="text/x-markdown">
+
+## Custom Elements v1
+
+- ES2015 class ベースの要素定義
+- ライフサイクルコールバックの見直し
+    - `constructor` (former: `createdCallback`)
+    - `connectedCallback` (former: `attachedCallback`)
+    - `disconnectedCallback` (former: `detachedCallback`)
+    - `attributeChangedCallback`　(+ `observedAttributes`)
+    - `adoptedCallback`: 要素が新たなドキュメントに移動した時
+- `document.registerElement` から `window.customElements` へ
+    - `customElements.get('foo-element')`
+    - `customElements.whenDefined('foo-element').then(...)`
+
+</template>
+
+<template layout="code" type="text/x-markdown">
+
+## Custom Elements v0
+
+```html
+<script>
+  const FooElement = Object.create(HTMLElement.prototype);
+
+  FooElement.createdCallback = () => { ... };
+  FooElement.attachedCallback = () => { ... };
+  FooElement.detachedCallback = () => { ... };
+  FooElement.attributeChangedCallback = () => { ... };
+
+  document.registerElement('foo-element', {
+    prototype: FooElement
+  });
+</script>
+```
+
+</template>
+
+<template layout="code" type="text/x-markdown">
+
+## Custom Elements v1
+
+```html
+<script>
+  class FooElement extends HTMLElement {
+    constructor() { ... }
+    connectedCallback() { ... }
+    disconnectedCallback() { ... }
+    attributeChangedCallback() { ... }
+    adoptedCallback() { ... }
+  }
+
+  window.customElements.define('foo-element', FooElement);
+</script>
+```
+
+</template>
+
+<template layout="bullets" type="text/x-markdown">
+
+## HTML Imports どうなった
+
+- [Mozilla は ES6 Modules を意識して見送っている](https://hacks.mozilla.org/2014/12/mozilla-and-web-components/)
+    - [JavaScript Loader](https://github.com/whatwg/loader)
+    - `<script type="module"></script>` のアセット解決方法
+- [The state of Web Components](https://hacks.mozilla.org/2015/06/the-state-of-web-components/)
+
+</template>
+
+<template layout="bullets" type="text/x-markdown">
+
+## ブラウザサポート状況
+
+- **Shadow DOM v0**: Chrome, Firefox (w/flag), Safari 10, Opera
+- **Shadow DOM v1**: Chrome 53~, Opera 40~, Safari 10~ (+iOS)
+- **Custom Elements v0**: Chrome, Firefox (w/flag), Opera
+- **Custom Elements v1**: Chrome 54~, Opera 41~
+- **Templates**: Chrome, Firefox, Safari, Opera, Edge
+
+</template>
+
+<template layout="title" invert type="text/x-markdown">
+
+# Polymer v2 🎉
+
+</template>
+
+<template layout="bullets" type="text/x-markdown">
+
+## Polymer v2 のロードマップ
+
+- Web Components "v1" の機能のフルサポート
+    - ネイティブと同様 ES2015 class ベースのカスタム要素の定義
+- Polymer v1 からのスムースなマイグレーション
+    - Polymer v1 で提供されていた `polymer.html` が引き続き提供される
+    - `Polymer.CompatElement` など
+- 標準にそぐわない "leaky" な抽象化を排除
+    - `Polymer.dom()` や `notifyPath` など
+- Polymer 内部のデータシステムやポリフィルの改善
+    - Shady DOM は `webcomponentsjs` へ
+    - `Polymer.Element` でカスタム要素を定義
+
+</template>
+
+<template layout="code" type="text/x-markdown">
+
+## Polymer v2
+
+```javascript
+class MyElement extends Polymer.Element {
+  static get is() { return 'my-element'; }
+  static get config() {
+    return {
+      /* properties, observers meta data */
+    };
+  }
+  constructor() { super(); }
+  connectedCallback() { super.connectedCallback(); }
+  ...
+}
+
+customElements.define(MyElement.is, MyElement);
+```
+
+</template>
+
+<template layout="title" type="text/x-markdown"></template>
+<template layout="bullets" type="text/x-markdown"></template>
+<template layout="code" type="text/x-markdown"></template>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../node_modules/talkiejs/dist/talkie.min.js"></script>
+    <script>
+      Talkie({
+        wide         : false,
+        control      : true,
+        pointer      : true,
+        progress     : true,
+        backface     : true,
+        notransition : true
+      });
+    </script>
+  </body>
+</html>
