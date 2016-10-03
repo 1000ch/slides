@@ -42,14 +42,32 @@
 
 </template>
 
+<template layout="cover" invert type="text/x-markdown" backface="./img/battle.jpg" backface-filter="brightness(.75)">
+
+## 「Web モジュール」の難しさ
+
+〜 Web 開発者が戦ってきたもの 〜
+
+</template>
+
 <template layout="bullets" type="text/x-markdown">
 
-## 「再利用可能な Web モジュール」の難しさ
+## 再利用可能な Web モジュール
 
-- それを **作る** コストと **使う** コスト
+- それを **作る難しさ** と **使うコスト**
 - 特定のライブラリへの依存問題
 - エコシステムが醸成されない問題
-- CSS は容赦なくグローバルを汚染する問題
+- 容赦なくグローバルを汚染する問題
+
+</template>
+
+<template layout="title" type="text/x-markdown">
+
+## CSS だけはどうにもならない
+
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="und" dir="ltr">(╯°□°）╯︵ SSƆ</p>&mdash; 1000ch (@1000ch) <a href="https://twitter.com/1000ch/status/752394739438137344">2016年7月11日</a></blockquote>
+
+CSS はつらい。本当につらい。
 
 </template>
 
@@ -57,15 +75,15 @@
 
 ## Extensible Web の体現
 
-- Web 標準技術を組み合わせて構成する（重要）
+- **Web 標準を組み合わせて実現する（重要）**
 - 低レベル API は高レベル API を兼ねる
-- **「Web モジュール」を作る手法が一般化** される
+- 「Web モジュール」を作る手法が一般化される
 
 </template>
 
 <template layout="bullets" type="text/x-markdown">
 
-## Web Components を支える技術
+## Web Components<br>を支える技術
 
 - **Custom Elements**: 新たな要素の定義
 - **Shadow DOM**: 隔離された DOM スコープ
@@ -77,6 +95,14 @@
 <template layout="title" invert type="text/x-markdown">
 
 # 最近の Web Components 事情
+
+</template>
+
+<template layout="title" type="text/x-markdown">
+
+## Shadow DOM v1<br>と<br>Custom Elements v1
+
+これまでの仕様を v0 、新たなものを v1 として再策定が進んでいる
 
 </template>
 
@@ -158,21 +184,50 @@
 ## HTML Imports どうなった
 
 - [Mozilla は ES6 Modules を意識して見送っている](https://hacks.mozilla.org/2014/12/mozilla-and-web-components/)
-    - [JavaScript Loader](https://github.com/whatwg/loader)
+    - [JavaScript Loader](https://github.com/whatwg/loader) あたりの話
     - `<script type="module"></script>` のアセット解決方法
 - [The state of Web Components](https://hacks.mozilla.org/2015/06/the-state-of-web-components/)
 
 </template>
 
-<template layout="bullets" type="text/x-markdown">
+<template layout="bullets" invert backface="./img/webplatform.jpg" backface-filter="brightness(.25)" type="text/x-markdown">
 
 ## ブラウザサポート状況
 
-- **Shadow DOM v0**: Chrome, Firefox (w/flag), Safari 10, Opera
-- **Shadow DOM v1**: Chrome 53~, Opera 40~, Safari 10~ (+iOS)
-- **Custom Elements v0**: Chrome, Firefox (w/flag), Opera
+- **Shadow DOM v0**: Chrome, Firefox w/flag, Safari 10, Opera
+- **Shadow DOM v1**: Chrome 53~, Opera 40~, Safari 10
+- **Custom Elements v0**: Chrome, Firefox w/flag, Opera
 - **Custom Elements v1**: Chrome 54~, Opera 41~
+- **HTML Imports**: Chrome, Firefox w/flag, Opera
 - **Templates**: Chrome, Firefox, Safari, Opera, Edge
+
+</template>
+
+<template layout="title" type="text/x-markdown">
+
+## Safari 10 に Shadow DOM v1 が実装された (❗)
+
+</template>
+
+<template layout="title" backface="./img/before.jpg" backface-filter="blur(1px) brightness(.8)"></template>
+
+<template layout="title" type="text/x-markdown">
+
+## Safari TP 14 に Shadow DOM v1 が実装された (❗❗)
+
+_メニューの Develop → Experimental Features → Custom Elements_
+
+</template>
+
+<template layout="title" backface="./img/after.jpg" backface-filter="blur(1px) brightness(.8)"></template>
+
+<template layout="bullets" type="text/x-markdown">
+
+## Safari の実装が進むのは、開発者にとってかなり大きい
+
+- モバイルでの利用がかなり現実的になってきた😍
+- あとは Firefox と Edge を応援するだけ👆
+- IE... (´・ω・`).;:...(´・ω...:.;::..(´・;::: .:.;: ...
 
 </template>
 
@@ -238,5 +293,6 @@ customElements.define(MyElement.is, MyElement);
         notransition : true
       });
     </script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </body>
 </html>
