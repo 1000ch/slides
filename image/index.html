@@ -4,11 +4,11 @@
     <title>よくわかる画像の話</title>
     <link rel="stylesheet" href="../node_modules/talkiejs/dist/talkie.min.css">
     <link rel="stylesheet" href="../node_modules/talkiejs/dist/talkie-default.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/tomorrow.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/monokai.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   </head>
   <body>
-<template layout
+<template layout="title"
           invert
           type="text/x-markdown">
 
@@ -17,7 +17,7 @@
 by [@1000ch](http://twitter.com/1000ch)
 
 </template>
-<template layout type="text/x-markdown">
+<template layout="bullets" type="text/x-markdown">
 
 ## 画像の存在
 
@@ -26,12 +26,12 @@ by [@1000ch](http://twitter.com/1000ch)
 - **画像はサービスにとって重要な存在**
 
 </template>
-<template layout type="text/x-markdown">
+<template layout="title" invert type="text/x-markdown">
 
-## そもそも画像ってなんだろう？
+# そもそも画像ってなんだろう？
 
 </template>
-<template layout type="text/x-markdown">
+<template layout="bullets" type="text/x-markdown">
 
 ## 少し噛み砕いてみる
 
@@ -40,7 +40,7 @@ by [@1000ch](http://twitter.com/1000ch)
 - それぞれ特徴があるが、基本的には画素の集合を圧縮したもの
 
 </template>
-<template layout type="text/x-markdown">
+<template layout="bullets" type="text/x-markdown">
 
 ## PNG
 
@@ -53,7 +53,7 @@ by [@1000ch](http://twitter.com/1000ch)
 <img mahjong src="./img/lossless.png">
 
 </template>
-<template layout type="text/x-markdown">
+<template layout="bullets" type="text/x-markdown">
 
 ## JPEG
 
@@ -64,7 +64,7 @@ by [@1000ch](http://twitter.com/1000ch)
 <img mahjong src="./img/lossy.png">
 
 </template>
-<template layout type="text/x-markdown">
+<template layout="bullets" type="text/x-markdown">
 
 ## GIF
 
@@ -72,7 +72,7 @@ by [@1000ch](http://twitter.com/1000ch)
 - アニメーション
 
 </template>
-<template layout type="text/x-markdown">
+<template layout="bullets" type="text/x-markdown">
 
 ## WebP
 
@@ -81,8 +81,7 @@ by [@1000ch](http://twitter.com/1000ch)
 - アニメーション
 
 </template>
-<template layout
-          invert type="text/x-markdown">
+<template layout="bullets" invert type="text/x-markdown">
 
 ## 特徴を踏まえた画像フォーマットの選択
 
@@ -92,7 +91,7 @@ by [@1000ch](http://twitter.com/1000ch)
 - **WebP**: WebPをサポートしている環境の場合
 
 </template>
-<template layout type="text/x-markdown">
+<template layout="bullets" type="text/x-markdown">
 
 ## 画像ファイルのサイズ
 
@@ -101,12 +100,12 @@ by [@1000ch](http://twitter.com/1000ch)
 - 同等の表現ができれば、軽いほど良い
 
 </template>
-<template layout type="text/x-markdown">
+<template layout="title" invert type="text/x-markdown">
 
 # 今から4枚のJPEGと1枚のPNGをお見せします
 
 </template>
-<template layout
+<template layout="title"
           invert
           type="text/x-markdown"
           backface="./img/original.jpg">
@@ -114,7 +113,7 @@ by [@1000ch](http://twitter.com/1000ch)
 JPEG（4.7MB）
 
 </template>
-<template layout
+<template layout="title"
           invert
           type="text/x-markdown"
           backface="./img/compress-80.jpg">
@@ -122,7 +121,7 @@ JPEG（4.7MB）
 JPEG（1.8MB）
 
 </template>
-<template layout
+<template layout="title"
           invert
           type="text/x-markdown"
           backface="./img/compress-60.jpg">
@@ -130,7 +129,7 @@ JPEG（1.8MB）
 JPEG（1.1MB）
 
 </template>
-<template layout
+<template layout="title"
           invert
           type="text/x-markdown"
           backface="./img/compress-40.jpg">
@@ -138,7 +137,7 @@ JPEG（1.1MB）
 JPEG（0.8MB）
 
 </template>
-<template layout
+<template layout="title"
           invert
           type="text/x-markdown"
           backface="./img/original.png">
@@ -146,7 +145,7 @@ JPEG（0.8MB）
 PNG（18.8MB）
 
 </template>
-<template layout type="text/x-markdown">
+<template layout="bullets" type="text/x-markdown">
 
 ## 圧縮率とファイルサイズの関係
 
@@ -159,7 +158,7 @@ PNG（18.8MB）
 ファイルサイズは **縦横が小さいかより圧縮がされているか** に左右される（もちろん最適化された上であれば、縦横サイズが小さい＝ピクセル数が少ないほうがファイルサイズは小さくなる）
 
 </template>
-<template layout type="text/x-markdown">
+<template layout="bullets" type="text/x-markdown">
 
 ## 画像を適切に扱うためにサービス提供側ができる努力
 
@@ -168,7 +167,7 @@ PNG（18.8MB）
 - **アプリケーション側で吸収する必要がある**（アップロード時・配信時などにPNGをJPEGに変換する等）
 
 </template>
-<template layout type="text/x-markdown">
+<template layout="bullets" type="text/x-markdown">
 
 ## 画像最適化ツール
 
@@ -178,7 +177,7 @@ PNG（18.8MB）
 - [WebPonize](https://webponize.github.io): JPEG・PNGをWebPに変換する
 
 </template>
-<template layout type="text/x-markdown">
+<template layout="bullets" type="text/x-markdown">
 
 ## 参考資料
 
@@ -187,14 +186,12 @@ PNG（18.8MB）
 - [Introduction to WebP](https://medium.com/@1000ch/introduction-to-webp-b593dfe1d1d1)
 
 </template>
-<template layout
-          invert
-          type="text/x-markdown">
+<template layout="title" invert type="text/x-markdown">
 
 ## おしまい
 
 </template>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/monokai.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script src="../node_modules/talkiejs/dist/talkie.min.js"></script>
     <script>

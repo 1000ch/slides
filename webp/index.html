@@ -4,11 +4,11 @@
     <title>WebP - A new image format for the Web</title>
     <link rel="stylesheet" href="../node_modules/talkiejs/dist/talkie.min.css">
     <link rel="stylesheet" href="../node_modules/talkiejs/dist/talkie-default.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/tomorrow.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/monokai.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   </head>
   <body>
-<template layout
+<template layout="title"
           invert
           type="text/x-markdown"
           backface="./img/inokashira.jpg"
@@ -21,7 +21,7 @@ A new image format for the Web
 by [@1000ch](http://twitter.com/1000ch)
 
 </template>
-<template layout type="text/x-markdown">
+<template layout="bullets" type="text/x-markdown">
 
 ## Who is 1000ch
 
@@ -30,7 +30,7 @@ by [@1000ch](http://twitter.com/1000ch)
 - [HTML5Experts.jp エキスパート](http://html5experts.jp/1000ch)
 
 </template>
-<template layout type="text/x-markdown">
+<template layout="bullets" type="text/x-markdown">
 
 ## WebPとは？
 
@@ -39,7 +39,7 @@ by [@1000ch](http://twitter.com/1000ch)
 - 高圧縮率でファイルサイズがとても軽い
 
 </template>
-<template layout type="text/x-markdown">
+<template layout="bullets" type="text/x-markdown">
 
 ## どのくらい軽いの？
 
@@ -48,26 +48,26 @@ by [@1000ch](http://twitter.com/1000ch)
 - アルファチャネル付きの非可逆圧縮 → PNG比で3倍以上小さい
 
 </template>
-<template layout type="text/x-markdown">
+<template layout="cover" type="text/x-markdown">
 
 ### 1000ch.jpg (圧縮レベル80で33KB)
 
 ![](./img/1000ch.jpg)
 
 </template>
-<template layout type="text/x-markdown">
+<template layout="cover" type="text/x-markdown">
 
 ### 1000ch.webp (圧縮レベル80で15KB)
 
 ![](./img/1000ch.jpg)
 
 </template>
-<template layout type="text/x-markdown">
+<template layout="title" invert type="text/x-markdown">
 
 # 利用に向けて
 
 </template>
-<template layout type="text/x-markdown">
+<template layout="bullets" type="text/x-markdown">
 
 ## サポート環境
 
@@ -77,21 +77,21 @@ by [@1000ch](http://twitter.com/1000ch)
 - CodecがあればWindowsのエクスプローラ <i class="fa fa-windows"></i>
 
 </template>
-<template layout type="text/x-markdown">
+<template layout="cover" type="text/x-markdown">
 
 ### iOS Safariだと…
 
 ![](./img/webp-safari.jpg)
 
 </template>
-<template layout type="text/x-markdown">
+<template layout="cover" type="text/x-markdown">
 
 ### iOS Chromeだと…
 
 ![](./img/webp-chrome.jpg)
 
 </template>
-<template layout type="text/x-markdown">
+<template layout="bullets" type="text/x-markdown">
 
 ## iOS WebViewもOK
 
@@ -102,7 +102,7 @@ by [@1000ch](http://twitter.com/1000ch)
 ネットワークコストの軽減＋アプリサイズのダイエット
 
 </template>
-<template layout type="text/x-markdown">
+<template layout="bullets" type="text/x-markdown">
 
 ## 非対応ブラウザのために
 
@@ -113,12 +113,12 @@ by [@1000ch](http://twitter.com/1000ch)
 やりようはいくらでもある
 
 </template>
-<template layout type="text/x-markdown">
+<template layout="title" invert type="text/x-markdown">
 
 # ツール
 
 </template>
-<template layout type="text/x-markdown">
+<template layout="bullets" type="text/x-markdown">
 
 ## コマンドラインツール
 
@@ -128,7 +128,7 @@ by [@1000ch](http://twitter.com/1000ch)
 - [gulp-cwebp](https://github.com/1000ch/gulp-cwebp) Gulpプラグイン
 
 </template>
-<template layout type="text/x-markdown">
+<template layout="code" type="text/x-markdown">
 
 ```bash
 $ brew install cwebp
@@ -138,7 +138,7 @@ $ npm install gulp-cwebp
 ```
 
 </template>
-<template layout type="text/x-markdown">
+<template layout="bullets" type="text/x-markdown">
 
 ## GUIでやりたい？
 
@@ -146,7 +146,7 @@ $ npm install gulp-cwebp
 - [WebPonize](http://github.com/1000ch/webponize) - Macのアプリ
 
 </template>
-<template layout type="text/x-markdown">
+<template layout="cover" type="text/x-markdown">
 
 ### WebPonize
 
@@ -155,7 +155,7 @@ $ npm install gulp-cwebp
 Drag & Drop!
 
 </template>
-<template layout type="text/x-markdown">
+<template layout="bullets" type="text/x-markdown">
 
 ## WebPonizeの機能
 
@@ -166,7 +166,7 @@ Drag & Drop!
 - 圧縮率やアルファチャネルのオプション設定できる
 
 </template>
-<template layout type="text/x-markdown" backface-filter="blur(1px) brightness(.8)">
+<template layout="bullets" type="text/x-markdown" backface-filter="blur(1px) brightness(.8)">
 
 ## Thank you!
 
@@ -175,7 +175,7 @@ Drag & Drop!
 - [<i class="fa fa-home"></i> 1000ch.net](http://1000ch.net)
 
 </template>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script src="../node_modules/talkiejs/dist/talkie.min.js"></script>
     <script>
