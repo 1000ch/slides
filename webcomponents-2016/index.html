@@ -179,6 +179,14 @@ CSS はつらい。本当につらい。
 
 </template>
 
+<template layout="title" type="text/x-markdown">
+
+## `is` 属性の行方…
+
+WebKit は `<button is="foo-button" />` のような [Custom Elements によるネイティブ要素の拡張をしない方針](https://github.com/w3c/webcomponents/issues/509#issuecomment-233419167)を今のところ示している
+
+</template>
+
 <template layout="bullets" type="text/x-markdown">
 
 ## HTML Imports どうなった
@@ -242,15 +250,9 @@ _メニューの Develop → Experimental Features → Custom Elements_
 ## Polymer v2 のロードマップ
 
 - Web Components "v1" の機能のフルサポート
-    - ネイティブと同様 ES2015 class ベースのカスタム要素の定義
-- Polymer v1 からのスムースなマイグレーション
-    - Polymer v1 で提供されていた `polymer.html` が引き続き提供される
-    - `Polymer.CompatElement` など
+- Polymer v1.x からのスムースなマイグレーション
 - 標準にそぐわない "leaky" な抽象化を排除
-    - `Polymer.dom()` や `notifyPath` など
-- Polymer 内部のデータシステムやポリフィルの改善
-    - Shady DOM は `webcomponentsjs` へ
-    - `Polymer.Element` でカスタム要素を定義
+- Polymer 内部のデータシステムの改善
 
 </template>
 
@@ -270,12 +272,66 @@ class MyElement extends Polymer.Element {
   connectedCallback() { super.connectedCallback(); }
   ...
 }
-
 customElements.define(MyElement.is, MyElement);
 ```
 
 </template>
 
+<template layout="title" type="text/x-markdown">
+
+## Polymer v1.x の<br>API も一応使える
+
+`polymer.html` が引き続き提供され、`Polymer.dom()` や `Polymer.CompatElement` といった Polymer v1.x で提供されてきた API も含まれる。
+
+</template>
+
+<template layout="title" type="text/x-markdown">
+
+## ネイティブ API への移行を強く推奨
+
+Polymer で抽象化してきた API が排除されネイティブの API を使うように。例えば、[Shady DOM v1](https://github.com/webcomponents/shadydom)が提供されることで DOM 操作に関しても `Polymer.dom()` が不要になる。
+
+</template>
+
+<template layout="bullets" type="text/x-markdown">
+
+## Polymer v1.x の機能は引き続き提供される
+
+</template>
+
+<template layout="code" type="text/x-markdown">
+
+## Type Extension の雲行きが怪しいので…
+
+```html
+<template is="dom-repeat" items="{{items}}">
+  ...
+</template>
+
+<style is="custom-style">
+  ...
+</style>
+```
+
+</template>
+
+<template layout="code" type="text/x-markdown">
+
+## Polymer でも非サポート `is="dom-repeat"` などは要修正
+
+```html
+<dom-repeat items="{{items}}">
+  <template>...</template>
+</dom-repeat>
+
+<custom-style>
+  <style>...</style>
+</custom-style>
+```
+
+</template>
+
+<template layout="cover" type="text/x-markdown"></template>
 <template layout="title" type="text/x-markdown"></template>
 <template layout="bullets" type="text/x-markdown"></template>
 <template layout="code" type="text/x-markdown"></template>
