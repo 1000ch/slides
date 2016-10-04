@@ -1,3 +1,4 @@
-- [Introduction to WebP](http://1000ch.github.io/slide/webp)
-- [麻雀はじめの一歩](http://1000ch.github.io/slide/mahjong)
-- [よくわかる画像の話](http://1000ch.github.io/slide/image)
+- [Introduction to WebP](https://1000ch.github.io/slide/webp)
+- [麻雀はじめの一歩](https://1000ch.github.io/slide/mahjong)
+- [よくわかる画像の話](https://1000ch.github.io/slide/image)
+- [The Silver Searcherのススメ](https://1000ch.github.io/slide/ag)
