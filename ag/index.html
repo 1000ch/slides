@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+  <head>
+    <title>The Silver Searcher のススメ</title>
+    <link rel="stylesheet" href="../node_modules/talkiejs/dist/talkie.min.css">
+    <link rel="stylesheet" href="../node_modules/talkiejs/dist/talkie-default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/monokai.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  </head>
+  <body>
+<template layout="title" type="text/x-markdown">
+
+# The Silver Searcher のススメ
+
+</template>
+<template layout="bullets" type="text/x-markdown">
+
+## ファイルの中身を検索するときに何を使っている？
+
+- `grep`: Linux に標準搭載されている
+- `ack`: `grep` より高速に動作する
+
+</template>
+<template layout="title" type="text/x-markdown">
+
+## The Silver Searcher<br>というものがあります
+
+</template>
+<template layout="bullets" type="text/x-markdown">
+
+## The Silver Searcher?
+
+- `ack` よりも速い
+- `ack` よりもコマンドが短い
+- `.gitignore` の内容を検索対象から除外
+- オプションが直感的で便利
+
+</template>
+<template layout="code" type="text/x-markdown">
+
+## ベンチマーク vs ack
+
+```bash
+$ ack test_blah ~/code/  104.66s user 4.82s system 99% cpu 1:50.03 total
+$ ag test_blah ~/code/  4.67s user 4.58s system 286% cpu 3.227 total
+```
+
+</template>
+<template layout="code" type="text/x-markdown">
+
+## インストール via Homebrew
+
+```bash
+$ brew install the_silver_searcher
+```
+
+</template>
+<template layout="code" type="text/x-markdown">
+
+## keyword で検索
+
+```bash
+# keyword で検索
+$ ag keyword
+
+# keyword で folder 配下を検索
+$ ag keyword folder
+```
+
+</template>
+<template layout="code" type="text/x-markdown">
+
+## 検索オプションはいろいろ
+
+```bash
+# 圧縮されたファイルも検索
+$ ag -z/--search-zip keyword
+
+# パターンにマッチするファイル・フォルダを検索
+$ ag -G/--file-search-regex '\.(js|json)' keyword
+
+# 隠しファイルも検索
+$ ag --hidden keyword
+
+# 全ファイルを検索
+$ ag -u/--unrestricted keyword
+
+# JS ファイルを検索
+$ ag --js keyword
+```
+
+</template>
+
+<template layout="code" type="text/x-markdown">
+
+## 出力のオプションもいろいろ
+
+```bash
+# マッチしたファイル名だけ表示
+$ ag -l/--files-with-matches keyword
+
+# マッチしなかったファイル名だけ表示
+$ ag -L/--files-without-matches keyword
+
+# マッチした回数を表示
+$ ag -c/--count keyword
+
+# マッチした行のみ表示
+$ ag -o/--only-matching keyword
+```
+
+</template>
+
+<template layout="bullets" type="text/x-markdown">
+
+## 所感
+
+- タイプ数が少ないのは結構大きい
+- プロジェクトが大きくてもログが膨大でも大丈夫
+- `yum` でも `apt-get` でも使えるのでサーバーに入れる価値ある
+
+</template>
+
+<template layout="title" type="text/x-markdown">
+
+# おしまい
+
+</template>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../node_modules/talkiejs/dist/talkie.min.js"></script>
+    <script>
+      Talkie({
+        wide         : false,
+        control      : true,
+        pointer      : true,
+        progress     : true,
+        backface     : true,
+        notransition : true
+      });
+    </script>
+  </body>
+</html>
