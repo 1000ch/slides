@@ -42,7 +42,7 @@
 
 </template>
 
-<template layout="cover" invert type="text/x-markdown" backface="./img/battle.jpg" backface-filter="brightness(.75)">
+<template layout="title" invert type="text/x-markdown" backface="./img/battle.jpg" backface-filter="brightness(.75)">
 
 ## 「Web モジュール」の難しさ
 
@@ -114,10 +114,16 @@ CSS はつらい。本当につらい。
 - readonly な `shadowRoot` プロパティ
 - 複数 `Shadow Root` の廃止
 - Opened な Shadow DOM と Closed な Shadow DOM
-    - `/deep/` と `::shadow` の廃止
 - [Shadow Root をホストできる要素が限定的に](https://dom.spec.whatwg.org/#dom-element-attachshadow)
 - `<content>` から `<slot>` へ
-    - `::content .foo` から `::slotted(.foo)` へ
+
+</template>
+
+<template layout="title" type="text/x-markdown">
+
+## [What's New in Shadow DOM v1 (by examples)](http://hayato.io/2016/shadowdomv1/)
+
+更なる詳細はこちらの神資料を参照ください
 
 </template>
 
@@ -127,14 +133,7 @@ CSS はつらい。本当につらい。
 
 - ES2015 class ベースの要素定義
 - ライフサイクルコールバックの見直し
-    - `constructor` (former: `createdCallback`)
-    - `connectedCallback` (former: `attachedCallback`)
-    - `disconnectedCallback` (former: `detachedCallback`)
-    - `attributeChangedCallback`　(+ `observedAttributes`)
-    - `adoptedCallback`: 要素が新たなドキュメントに移動した時
 - `document.registerElement` から `window.customElements` へ
-    - `customElements.get('foo-element')`
-    - `customElements.whenDefined('foo-element').then(...)`
 
 </template>
 
@@ -145,7 +144,6 @@ CSS はつらい。本当につらい。
 ```html
 <script>
   const FooElement = Object.create(HTMLElement.prototype);
-
   FooElement.createdCallback = () => { ... };
   FooElement.attachedCallback = () => { ... };
   FooElement.detachedCallback = () => { ... };
@@ -175,6 +173,22 @@ CSS はつらい。本当につらい。
 
   window.customElements.define('foo-element', FooElement);
 </script>
+```
+
+</template>
+
+<template layout="code" type="text/x-markdown">
+
+## `window.customElements`
+
+```javascript
+// <foo-element> コンストラクタの参照
+const FooElement = customElements.get('foo-element');
+
+// <foo-element> が定義されたタイミング
+customElements.whenDefined('foo-element').then(() => {
+  console.log('foo-element is defined');
+});
 ```
 
 </template>
@@ -243,6 +257,8 @@ _メニューの Develop → Experimental Features → Custom Elements_
 
 # Polymer v2 🎉
 
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="en" dir="ltr">Polymer 2.0 is just starting to come together. For a very early look at what&#39;s coming, check out: <a href="https://t.co/w6U7L4I0OZ">https://t.co/w6U7L4I0OZ</a></p>&mdash; Polymer (@polymer) <a href="https://twitter.com/polymer/status/774379113666654208">2016年9月9日</a></blockquote>
+
 </template>
 
 <template layout="bullets" type="text/x-markdown">
@@ -264,14 +280,12 @@ _メニューの Develop → Experimental Features → Custom Elements_
 class MyElement extends Polymer.Element {
   static get is() { return 'my-element'; }
   static get config() {
-    return {
-      /* properties, observers meta data */
-    };
+    return { /* properties, observers meta data */ };
   }
   constructor() { super(); }
   connectedCallback() { super.connectedCallback(); }
-  ...
 }
+
 customElements.define(MyElement.is, MyElement);
 ```
 
@@ -287,7 +301,7 @@ customElements.define(MyElement.is, MyElement);
 
 <template layout="title" type="text/x-markdown">
 
-## ネイティブ API への移行を強く推奨
+## ネイティブ API へ<br>移行を強く推奨
 
 Polymer で抽象化してきた API が排除されネイティブの API を使うように。例えば、[Shady DOM v1](https://github.com/webcomponents/shadydom)が提供されることで DOM 操作に関しても `Polymer.dom()` が不要になる。
 
@@ -295,13 +309,13 @@ Polymer で抽象化してきた API が排除されネイティブの API を�
 
 <template layout="bullets" type="text/x-markdown">
 
-## Polymer v1.x の機能は引き続き提供される
+## Polymer v1.x の機能は引き続き提供されるが…
 
 </template>
 
 <template layout="code" type="text/x-markdown">
 
-## Type Extension の雲行きが怪しいので…
+## Type Extension の<br>雲行きが怪しいので…
 
 ```html
 <template is="dom-repeat" items="{{items}}">
@@ -328,6 +342,14 @@ Polymer で抽象化してきた API が排除されネイティブの API を�
   <style>...</style>
 </custom-style>
 ```
+
+</template>
+
+<template layout="title" invert type="text/x-markdown">
+
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="en" dir="ltr">Polymer Summit 2016 registration is now open! Join us in London on October 17-18. <a href="https://t.co/gWSEOpy3Sb">https://t.co/gWSEOpy3Sb</a> <a href="https://t.co/Noj4kAsdqd">pic.twitter.com/Noj4kAsdqd</a></p>&mdash; Polymer (@polymer) <a href="https://twitter.com/polymer/status/765254100300603393">2016年8月15日</a></blockquote>
+
+[Polymer Summit 2016](https://www.polymer-project.org/summit/) in London on October 17-18
 
 </template>
 
