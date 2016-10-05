@@ -85,10 +85,10 @@ CSS はつらい。本当につらい。
 
 ## Web Components<br>を支える技術
 
-- **Custom Elements**: 新たな要素の定義
-- **Shadow DOM**: 隔離された DOM スコープ
-- **HTML Imports**: 断片化した HTML のロード
-- **Templates**: 不活性な HTML 要素
+- [Custom Elements](https://www.w3.org/TR/custom-elements/): 新たな要素の定義
+- [Shadow DOM](https://www.w3.org/TR/shadow-dom/): 隔離された DOM スコープ
+- [HTML Imports](https://www.w3.org/TR/html-imports/): 断片化した HTML のロード
+- [Templates](https://www.w3.org/TR/html5/scripting-1.html#the-template-element): 不活性な HTML 要素
 
 </template>
 
@@ -102,7 +102,7 @@ CSS はつらい。本当につらい。
 
 ## Shadow DOM v1<br>と<br>Custom Elements v1
 
-これまでの仕様を v0 、新たなものを v1 として再策定が進んでいる
+これまでのものを v0 、新たなものを v1<br>として改めて仕様の策定が進んでいる
 
 </template>
 
@@ -111,11 +111,44 @@ CSS はつらい。本当につらい。
 ## Shadow DOM v1
 
 - `createShadowRoot()` から `attachShadow()` へ
-- readonly な `shadowRoot` プロパティ
-- 複数 `Shadow Root` の廃止
 - Opened な Shadow DOM と Closed な Shadow DOM
+- 複数 `Shadow Root` の廃止
 - [Shadow Root をホストできる要素が限定的に](https://dom.spec.whatwg.org/#dom-element-attachshadow)
 - `<content>` から `<slot>` へ
+
+</template>
+
+<template layout="code" type="text/x-markdown">
+
+### `createShadowRoot()` から `attachShadow()` へ
+
+```javascript
+const div = document.querySelector('div');
+const shadowRoot = div.attachShadow({
+  mode: 'open' // or 'close'
+});
+
+// readonly な shadowRoot プロパティの追加
+console.log(div.shadowRoot);
+```
+
+引数に open か close かどうかを指定する（必須）
+
+</template>
+
+<template layout="title" type="text/x-markdown">
+
+### Opened な Shadow DOM<br>と<br>Closed な Shadow DOM
+
+外部からアクセスできる Shadow DOM と、アクセスできない Shadow DOM。
+
+</template>
+
+<template layout="title" type="text/x-markdown">
+
+### 複数 `Shadow Root` の廃止
+
+<blockquote>Though multiple shadow roots were originally introduced to support an Inheritance Model for components, Blink has already deprecated this feature even in v0. Do not use multiple shadow roots.</blockquote>
 
 </template>
 
@@ -123,7 +156,7 @@ CSS はつらい。本当につらい。
 
 ## [What's New in Shadow DOM v1 (by examples)](http://hayato.io/2016/shadowdomv1/)
 
-更なる詳細はこちらの神資料を参照ください
+更なる詳細はこちらの神資料を参照のこと
 
 </template>
 
