@@ -100,7 +100,7 @@ CSS はつらい。本当につらい。
 
 <template layout="title" type="text/x-markdown">
 
-## Shadow DOM v1<br>と<br>Custom Elements v1
+## Shadow DOM v1 と<br>Custom Elements v1
 
 これまでのものを v0 、新たなものを v1<br>として改めて仕様の策定が進んでいる
 
@@ -120,7 +120,7 @@ CSS はつらい。本当につらい。
 
 <template layout="code" type="text/x-markdown">
 
-### `createShadowRoot()` から `attachShadow()` へ
+### `createShadowRoot()` から<br>`attachShadow()` へ
 
 ```javascript
 const div = document.querySelector('div');
@@ -149,6 +149,8 @@ console.log(div.shadowRoot);
 ### 複数 `Shadow Root` の廃止
 
 <blockquote>Though multiple shadow roots were originally introduced to support an Inheritance Model for components, Blink has already deprecated this feature even in v0. Do not use multiple shadow roots.</blockquote>
+
+元々
 
 </template>
 
@@ -226,6 +228,16 @@ customElements.whenDefined('foo-element').then(() => {
 
 </template>
 
+<template layout="title" invert backface="./img/defined-promise.png" backface-filter="blur(1px) brightness(.5)" type="text/x-markdown">
+
+## カスタム要素が定義されるタイミングを待ちたい？
+
+不完全な状態でページが表示されるのを避けるには、 `:defined` だけでは難しいため
+
+[Issue #427 · w3c/webcomponents](https://github.com/w3c/webcomponents/issues/427)
+
+</template>
+
 <template layout="title" type="text/x-markdown">
 
 ## `is` 属性の行方…
@@ -264,7 +276,7 @@ WebKit は `<button is="foo-button" />` のような [Custom Elements による�
 
 </template>
 
-<template layout="title" backface="./img/before.jpg" backface-filter="blur(1px) brightness(.8)"></template>
+<template layout="title" type="text/x-markdown" backface="./img/before.jpg" backface-filter="blur(1px) brightness(.75)"></template>
 
 <template layout="title" type="text/x-markdown">
 
@@ -274,7 +286,7 @@ _メニューの Develop → Experimental Features → Custom Elements_
 
 </template>
 
-<template layout="title" backface="./img/after.jpg" backface-filter="blur(1px) brightness(.8)"></template>
+<template layout="title" type="text/x-markdown" backface="./img/after.jpg" backface-filter="blur(1px) brightness(.75)"></template>
 
 <template layout="bullets" type="text/x-markdown">
 
@@ -340,7 +352,7 @@ Polymer で抽象化してきた API が排除されネイティブの API を�
 
 </template>
 
-<template layout="bullets" type="text/x-markdown">
+<template layout="title" type="text/x-markdown">
 
 ## Polymer v1.x の機能は引き続き提供されるが…
 
@@ -364,7 +376,7 @@ Polymer で抽象化してきた API が排除されネイティブの API を�
 
 <template layout="code" type="text/x-markdown">
 
-## Polymer でも非サポート `is="dom-repeat"` などは要修正
+## Polymer v2 でも<br>`is=""` はサポートしない
 
 ```html
 <dom-repeat items="{{items}}">
@@ -378,6 +390,16 @@ Polymer で抽象化してきた API が排除されネイティブの API を�
 
 </template>
 
+<template layout="title" invert backface="./img/Polymer-Catalog.png" backface-filter="blur(1px) brightness(.5)" type="text/x-markdown">
+
+[https://elements.polymer-project.org/](https://elements.polymer-project.org/)
+
+## Polymer Elements
+
+v2 のリリースに伴いアップデートされるが、<br>使う側に影響はない。はず
+
+</template>
+
 <template layout="title" invert type="text/x-markdown">
 
 <blockquote class="twitter-tweet" data-lang="ja"><p lang="en" dir="ltr">Polymer Summit 2016 registration is now open! Join us in London on October 17-18. <a href="https://t.co/gWSEOpy3Sb">https://t.co/gWSEOpy3Sb</a> <a href="https://t.co/Noj4kAsdqd">pic.twitter.com/Noj4kAsdqd</a></p>&mdash; Polymer (@polymer) <a href="https://twitter.com/polymer/status/765254100300603393">2016年8月15日</a></blockquote>
@@ -386,10 +408,48 @@ Polymer で抽象化してきた API が排除されネイティブの API を�
 
 </template>
 
-<template layout="cover" type="text/x-markdown"></template>
-<template layout="title" type="text/x-markdown"></template>
-<template layout="bullets" type="text/x-markdown"></template>
-<template layout="code" type="text/x-markdown"></template>
+<template layout="code" type="text/x-markdown">
+
+## Polymer v2-preview<br>を今すぐ試したい？
+
+```html
+$ bower install --save Polymer/polymer#2.0-preview
+```
+
+<del>おそらく Polymer Summit に合わせてリリースされる</del>
+
+</template>
+
+<template layout="title" invert type="text/x-markdown">
+
+# まとめ
+
+</template>
+
+<template layout="bullets" type="text/x-markdown">
+
+## スペックに関して
+
+- Shadow DOM v1 も Custom Elements v1 も順当にリデザインされてる
+- Shadow DOM は既に v2 に関する議論がはじまっている
+- HTML Imports だけは若干先行きが不安だが、ひとまず `webcomponents.js` のポリフィルに頼る
+- WebKit の進捗によって **モバイル利用が現実的になりつつある**
+
+</template>
+
+<template layout="bullets" type="text/x-markdown">
+
+## 使い方に関して
+
+</template>
+
+<template layout="title" invert type="text/x-markdown" backface="./img/end.jpg" backface-filter="blur(1px) brightness(.5)">
+
+# おわり
+
+[@1000ch](http://twitter.com/1000ch)
+
+</template>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
