@@ -44,7 +44,7 @@
 
 <template layout="title" invert type="text/x-markdown" backface="./img/battle.jpg" backface-filter="brightness(.75)">
 
-## 「Web モジュール」の難しさ
+## 「Web のコンポーネント」の難しさ
 
 〜 Web 開発者が戦ってきたもの 〜
 
@@ -52,7 +52,7 @@
 
 <template layout="bullets" type="text/x-markdown">
 
-## 再利用可能な Web モジュール
+## 再利用可能な Web のコンポーネント
 
 - それを **作る難しさ** と **使うコスト**
 - 特定のライブラリへの依存問題
@@ -76,7 +76,7 @@ CSS はつらい。 本当につらい。
 ## Web 標準技術を組み合わせて実現する（重要）
 
 - アプローチはどれも特定のツールや手法に依存してきた
-- **Web モジュール** を作る手法が一般化される
+- **Web のコンポーネント** を作る手法が一般化される
 - 「そうだ、 [Extensible Web](http://jxck.hatenablog.com/entry/extendthewebforward) だ」
 
 </template>
@@ -322,9 +322,9 @@ WebKit は `<button is="foo-button" />` のような [Custom Elements による�
 ## ブラウザサポート状況
 
 - **Shadow DOM v0**: Chrome, Firefox w/flag, Safari 10, Opera
-- **Shadow DOM v1**: Chrome 53~, Opera 40~, Safari 10
+- **Shadow DOM v1**: Chrome 53, Opera 40, Safari 10
 - **Custom Elements v0**: Chrome, Firefox w/flag, Opera
-- **Custom Elements v1**: Chrome 54~, Opera 41~
+- **Custom Elements v1**: Chrome 54, Opera 41, Safari TP 14
 - **HTML Imports**: Chrome, Firefox w/flag, Opera
 - **Templates**: Chrome, Firefox, Safari, Opera, Edge
 
@@ -334,13 +334,15 @@ WebKit は `<button is="foo-button" />` のような [Custom Elements による�
 
 ## Safari 10 に Shadow DOM v1 が実装された (❗)
 
+[iOS 10のシェア](https://mixpanel.com/trends/#report/ios_10/from_date:-3,report_unit:hour,to_date:0)次第だが、時間の問題
+
 </template>
 
 <template layout="title" type="text/x-markdown" backface="./img/before.jpg" backface-filter="blur(1px) brightness(.75)"></template>
 
 <template layout="title" type="text/x-markdown">
 
-## Safari TP 14 に Shadow DOM v1 が実装された (❗❗)
+## Safari TP 14 に Custom Elements v1 が実装された (❗❗)
 
 _メニューの Develop → Experimental Features → Custom Elements_
 
