@@ -32,7 +32,7 @@
 
 - Web Components おさらい
 - 最近の Web Components 事情
-- Polymer v2 リリース
+- Polymer v2 is coming !!
 
 </template>
 
@@ -67,17 +67,17 @@
 
 <blockquote class="twitter-tweet" data-lang="ja"><p lang="und" dir="ltr">(╯°□°）╯︵ SSƆ</p>&mdash; 1000ch (@1000ch) <a href="https://twitter.com/1000ch/status/752394739438137344">2016年7月11日</a></blockquote>
 
-CSS はつらい。本当につらい。
+CSS はつらい。 本当につらい。
 
 </template>
 
 <template layout="bullets" type="text/x-markdown">
 
-## Extensible Web の体現
+## Web 標準技術を組み合わせて実現する（重要）
 
-- **Web 標準を組み合わせて実現する（重要）**
-- 低レベル API は高レベル API を兼ねる
-- 「Web モジュール」を作る手法が一般化される
+- アプローチはどれも特定のツールや手法に依存してきた
+- **Web モジュール** を作る手法が一般化される
+- 「そうだ、 [Extensible Web](http://jxck.hatenablog.com/entry/extendthewebforward) だ」
 
 </template>
 
@@ -120,7 +120,7 @@ CSS はつらい。本当につらい。
 
 <template layout="code" type="text/x-markdown">
 
-### `createShadowRoot()` から<br>`attachShadow()` へ
+## `createShadowRoot()` から<br>`attachShadow()` へ
 
 ```javascript
 const div = document.querySelector('div');
@@ -138,25 +138,25 @@ console.log(div.shadowRoot);
 
 <template layout="title" type="text/x-markdown">
 
-### Opened な Shadow DOM<br>と<br>Closed な Shadow DOM
+## Opened な Shadow DOM<br>と<br>Closed な Shadow DOM
 
-外部からアクセスできる Shadow DOM と、アクセスできない Shadow DOM。
+外部からアクセスできる Shadow DOM と、アクセスできない Shadow DOM。 Closed な Shadow DOM であれば `shadowRoot` プロパティは `null` を返す
 
 </template>
 
 <template layout="title" type="text/x-markdown">
 
-### 複数 `Shadow Root` の廃止
+## 複数 `Shadow Root` の廃止
 
 <blockquote>Though multiple shadow roots were originally introduced to support an Inheritance Model for components, Blink has already deprecated this feature even in v0. Do not use multiple shadow roots.</blockquote>
 
-元々
+ある要素の `attachShadow()` を2回以上実行すると例外が発生する
 
 </template>
 
 <template layout="title" type="text/x-markdown">
 
-### Shadow Host になれる要素が制限された
+## 制限された<br>Shadow Host になれる要素
 
 `article`, `aside`, `blockquote`, `body`, `div`, `footer`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `header`, `nav`, `p`, `section`, `span`
 
@@ -164,7 +164,59 @@ console.log(div.shadowRoot);
 
 <template layout="title" type="text/x-markdown">
 
+## `<content>` から `<slot>` へ
+
+`<content>` で指定していた Insertion Points は、 `<slot>` に代わり Slots と表現されるようになる。セレクタで指定していたのが、 `<slot name=slot-name>` のような[スロット名の完全一致で挿入される](http://codepen.io/1000ch/pen/ALVkYX)。
+
+</template>
+
+<template layout="code" type="text/x-markdown">
+
+```html
+<template>
+  <style>
+    ::content input { background: skyblue; }
+  </style>
+  <div>
+    <content select=".class-name"></content>
+    <content></content>
+  </div>
+</template>
+
+<form-container>
+  <input class="class-name" type="text">
+  <button>Button</button>
+</form-container>
+```
+
+</template>
+
+<template layout="code" type="text/x-markdown">
+
+```html
+<template>
+  <style>
+    ::slotted(input) { background: skyblue; }
+  </style>
+  <div>
+    <slot name="slot-name"></slot>
+    <slot></slot>
+  </div>
+</template>
+
+<form-container>
+  <input slot="slot-name" type="text">
+  <button>Button</button>
+</form-container>
+```
+
+</template>
+
+<template layout="title" type="text/x-markdown">
+
 ## [What's New in Shadow DOM v1 (by examples)](http://hayato.io/2016/shadowdomv1/)
+
+http://hayato.io/2016/shadowdomv1/
 
 更なる詳細はこちらの神資料を参照のこと
 
@@ -300,17 +352,33 @@ _メニューの Develop → Experimental Features → Custom Elements_
 
 ## Safari の実装が進むのは、開発者にとってかなり大きい
 
-- モバイルでの利用がかなり現実的になってきた😍
+- モバイルでの利用は現実的になってきた😍
 - あとは Firefox と Edge を応援するだけ👆
 - IE... (´・ω・`).;:...(´・ω...:.;::..(´・;::: .:.;: ...
 
 </template>
 
-<template layout="title" invert type="text/x-markdown">
+<template layout="title" invert type="text/x-markdown" backface="./img/backface.jpg" backface-filter="blur(1px) brightness(.75)">
 
-# Polymer v2 🎉
+# Polymer v2<br>is coming !!
+
+</template>
+
+<template layout="title" invert type="text/x-markdown" backface="./img/backface.jpg" backface-filter="blur(1px) brightness(.75)">
+
+## Polymer 2.0 Preview
 
 <blockquote class="twitter-tweet" data-lang="ja"><p lang="en" dir="ltr">Polymer 2.0 is just starting to come together. For a very early look at what&#39;s coming, check out: <a href="https://t.co/w6U7L4I0OZ">https://t.co/w6U7L4I0OZ</a></p>&mdash; Polymer (@polymer) <a href="https://twitter.com/polymer/status/774379113666654208">2016年9月9日</a></blockquote>
+
+[Polymer/polymer](https://github.com/Polymer/polymer) リポジトリの `2.0-preview` ブランチ
+
+</template>
+
+<template layout="title" invert type="text/x-markdown" backface="./img/backface.jpg" backface-filter="blur(1px) brightness(.75)">
+
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="en" dir="ltr">Polymer Summit 2016 registration is now open! Join us in London on October 17-18. <a href="https://t.co/gWSEOpy3Sb">https://t.co/gWSEOpy3Sb</a> <a href="https://t.co/Noj4kAsdqd">pic.twitter.com/Noj4kAsdqd</a></p>&mdash; Polymer (@polymer) <a href="https://twitter.com/polymer/status/765254100300603393">2016年8月15日</a></blockquote>
+
+[Polymer Summit 2016](https://www.polymer-project.org/summit/) in London on October 17-18
 
 </template>
 
@@ -318,8 +386,8 @@ _メニューの Develop → Experimental Features → Custom Elements_
 
 ## Polymer v2 のロードマップ
 
-- Web Components "v1" の機能のフルサポート
-- Polymer v1.x からのスムースなマイグレーション
+- Web Components **"v1"** の機能のフルサポート
+- Polymer `v1.x` からのスムースなマイグレーション
 - 標準にそぐわない "leaky" な抽象化を排除
 - Polymer 内部のデータシステムの改善
 
@@ -398,6 +466,14 @@ Polymer で抽象化してきた API が排除されネイティブの API を�
 
 </template>
 
+<template layout="title" invert type="text/x-markdown">
+
+## Web Components "v1"<br>の API に依存する
+
+故に、サポートされていない環境でも使うには webcomponentsjs によるポリフィルが必要。そして新たなスペックに対応するポリフィルを提供する [v1](https://github.com/webcomponents/webcomponentsjs/tree/v1) ブランチの開発が進められている
+
+</template>
+
 <template layout="title" invert backface="./img/Polymer-Catalog.png" backface-filter="blur(1px) brightness(.5)" type="text/x-markdown">
 
 [https://elements.polymer-project.org/](https://elements.polymer-project.org/)
@@ -408,14 +484,6 @@ v2 のリリースに伴いアップデートされるが、<br>使う側に影�
 
 </template>
 
-<template layout="title" invert type="text/x-markdown">
-
-<blockquote class="twitter-tweet" data-lang="ja"><p lang="en" dir="ltr">Polymer Summit 2016 registration is now open! Join us in London on October 17-18. <a href="https://t.co/gWSEOpy3Sb">https://t.co/gWSEOpy3Sb</a> <a href="https://t.co/Noj4kAsdqd">pic.twitter.com/Noj4kAsdqd</a></p>&mdash; Polymer (@polymer) <a href="https://twitter.com/polymer/status/765254100300603393">2016年8月15日</a></blockquote>
-
-[Polymer Summit 2016](https://www.polymer-project.org/summit/) in London on October 17-18
-
-</template>
-
 <template layout="code" type="text/x-markdown">
 
 ## Polymer v2-preview<br>を今すぐ試したい？
@@ -423,8 +491,6 @@ v2 のリリースに伴いアップデートされるが、<br>使う側に影�
 ```html
 $ bower install --save Polymer/polymer#2.0-preview
 ```
-
-<del>おそらく Polymer Summit に合わせてリリースされる</del>
 
 </template>
 
@@ -439,15 +505,19 @@ $ bower install --save Polymer/polymer#2.0-preview
 ## スペックに関して
 
 - Shadow DOM v1 も Custom Elements v1 も順当にリデザインされてる
-- Shadow DOM は既に v2 に関する議論がはじまっている
-- HTML Imports だけは若干先行きが不安だが、ひとまず `webcomponents.js` のポリフィルに頼る
-- WebKit の進捗によって **モバイル利用が現実的になりつつある**
+- Shadow DOM は既に [v2](https://github.com/w3c/webcomponents/labels/v2) に関する議論がはじまっている
+- HTML Imports だけは先行きが若干不安だが、ひとまず `webcomponents.js` のポリフィルに頼る
+- WebKit の実装進捗によって **モバイル利用が現実的になりつつある**
 
 </template>
 
 <template layout="bullets" type="text/x-markdown">
 
 ## 使い方に関して
+
+- スコープを解決するためのツールは沢山でてきたが、ツールありきのアプローチでは可搬性が担保されない
+- 今こそみんなで使っていこう（<del>流行らなければ過去の遺物になってしまう</del>）
+- 開発の未来は <u>**C** omponent **D** riven **D** evelopment</u>
 
 </template>
 
