@@ -360,6 +360,14 @@ _メニューの Develop → Experimental Features → Custom Elements_
 
 </template>
 
+<template layout="title" type="text/x-markdown">
+
+## Edgeに実装を進めてもらおう
+
+みんなで [Shadow DOM (unprefixed)](https://wpdev.uservoice.com/forums/257854-microsoft-edge-developer/suggestions/6263785-shadow-dom-unprefixed) と [Custom Elements](https://wpdev.uservoice.com/forums/257854-microsoft-edge-developer/suggestions/6261298-custom-elements) に投票しよう！
+
+</template>
+
 <template layout="title" invert type="text/x-markdown" backface="./img/backface.jpg" backface-filter="blur(1px) brightness(.75)">
 
 # Polymer v2<br>is coming !!
@@ -373,6 +381,14 @@ _メニューの Develop → Experimental Features → Custom Elements_
 <blockquote class="twitter-tweet" data-lang="ja"><p lang="en" dir="ltr">Polymer 2.0 is just starting to come together. For a very early look at what&#39;s coming, check out: <a href="https://t.co/w6U7L4I0OZ">https://t.co/w6U7L4I0OZ</a></p>&mdash; Polymer (@polymer) <a href="https://twitter.com/polymer/status/774379113666654208">2016年9月9日</a></blockquote>
 
 [Polymer/polymer](https://github.com/Polymer/polymer) リポジトリの `2.0-preview` ブランチ
+
+</template>
+
+<template layout="title" invert type="text/x-markdown" backface="./img/backface.jpg" backface-filter="blur(1px) brightness(.75)">
+
+## 日本語訳
+
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Polymer 2.0 Preview が公開されていますが、その時のアナウンス内容を日本語訳してみました。興味のある方はぜひお読みください。 <a href="https://t.co/Y9EEERPKCR">https://t.co/Y9EEERPKCR</a> <a href="https://twitter.com/hashtag/polymer?src=hash">#polymer</a> <a href="https://twitter.com/hashtag/html5j?src=hash">#html5j</a></p>&mdash; Yoichiro Tanaka (@yoichiro) <a href="https://twitter.com/yoichiro/status/779830672693207041">2016年9月24日</a></blockquote>
 
 </template>
 
@@ -392,6 +408,23 @@ _メニューの Develop → Experimental Features → Custom Elements_
 - Polymer `v1.x` からのスムースなマイグレーション
 - 標準にそぐわない "leaky" な抽象化を排除
 - Polymer 内部のデータシステムの改善
+
+</template>
+
+<template layout="code" type="text/x-markdown">
+
+## Polymer v1.x
+
+```javascript
+const MyElement = Polymer({
+  is: 'my-element',
+  created: function () {},
+  attached: function() {},
+  detached: function() {},
+  attributeChanged: function() {},
+  ready: function() {}
+});
+```
 
 </template>
 
