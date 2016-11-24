@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Introduction to Resource Hints</title>
+    <link rel="stylesheet" href="../node_modules/talkiejs/dist/talkie.min.css">
+    <link rel="stylesheet" href="../node_modules/talkiejs/dist/talkie-default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/monokai.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  </head>
+  <body>
+<template layout="title" invert type="text/x-markdown" backface="./img/cover.jpg" backface-filter="brightness(.5)">
+
+# Introduction to Resource Hints
+
+2016.12.05 [Frontrend Vol.8](https://frontrend.connpass.com/event/45238/) [@1000ch](http://twitter.com/1000ch)
+
+</template>
+
+<template layout="bullets" type="text/x-markdown">
+
+## @1000ch
+
+- 株式会社サイバーエージェント
+- Web 技術とか iOS とかいろいろ
+- [https://1000ch.net](https://1000ch.net) の人
+
+</template>
+
+<template layout="title" type="text/x-markdown">
+
+## Resouce Hints とは
+
+これから必要になるリソースを `<link>` 要素でブラウザに事前に伝えて **投機的に** 取得してもらう機能
+
+</template>
+
+<template layout="title" type="text/x-markdown">
+
+## 「投機的に」
+
+> 利ざやを得ようとする様子。成否は確実でないが、機会を上手く利用して利益を得ようとする行為を形容する。
+
+つまり、現在のページロードを邪魔しないように、ブラウザがアイドルの時に必要になるリソースをロードしてもらう
+
+</template>
+
+<template layout="title" type="text/x-markdown">
+
+## [Resouce Hints](https://w3c.github.io/resource-hints/)
+
+- [DNS Prefetch](https://w3c.github.io/resource-hints/#dns-prefetch): 投機的な DNS 解決
+- [Preconnect](https://w3c.github.io/resource-hints/#preconnect): 投機的な TCP 接続
+- [Prefetch](https://w3c.github.io/resource-hints/#prefetch): 投機的なリソース取得
+- [Prerender](https://w3c.github.io/resource-hints/#prerender): 投機的なページ描画
+
+</template>
+
+<template layout="code" invert type="text/x-markdown">
+
+## DNS Prefetch
+
+```html
+<link rel="dns-prefetch" href="//example.com">
+```
+
+指定したオリジンへの DNS 解決を行う。接続するドメインがわかるが、スキーマが定まらない場合に
+
+</template>
+
+<template layout="code" invert type="text/x-markdown">
+
+## Preconnect
+
+```html
+<link rel="preconnect" href="//example.com">
+<link rel="preconnect" href="//cdn.example.com" crossorigin>
+```
+
+指定したオリジンへの DNS 解決を含む TCP 接続を行う。接続するドメイン及びスキーマがわかっている場合に
+
+</template>
+
+<template layout="code" invert type="text/x-markdown">
+
+## Prefetch
+
+```html
+<link rel="prefetch" href="//example.com/next-page.html" as="html" crossorigin="use-credentials">
+<link rel="prefetch" href="/library.js" as="script">
+```
+
+指定した URL のリソースを取得する。`as` はオプショナルだが、付けておくと良い
+
+</template>
+
+<template layout="bullets" type="text/x-markdown">
+
+## Preload directive
+
+- **(none)**: XHR, fetch	`link rel=preload href=...`
+- **media**: `audio`, `video`
+- **script**: `script`, importScripts の script
+- **style**: `link rel="stylesheet"`, CSS の `@import`
+- **font**: CSS の `@font-face`
+- **image**: `img`, `picture`, `srcset`, CSS の `-image`
+
+他には `worker`, `embed`, `object`, `documenet` など
+
+</template>
+
+<template layout="code" invert type="text/x-markdown">
+
+## Prerender
+
+```html
+<link rel="prerender" href="//example.com/next-page.html">
+```
+
+指定した URL のリソース取得及び評価を行う。描画まで実行するので、高速にナビゲーションされる。ブラウザのコストも大きいので、次に発生する可能性の高いナビゲーションに対して実施すると良い
+
+</template>
+
+<template layout="title" type="text/x-markdown">
+
+## Chrome の Prerender History
+
+[`chrome://net-internals/#prerender`](chrome://net-internals/#prerender)
+
+</template>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../node_modules/talkiejs/dist/talkie.min.js"></script>
+    <script>
+      Talkie({
+        wide         : false,
+        control      : true,
+        pointer      : true,
+        progress     : true,
+        backface     : true,
+        notransition : true
+      });
+    </script>
+  </body>
+</html>

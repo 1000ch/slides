@@ -3,3 +3,4 @@
 - [よくわかる画像の話](https://1000ch.github.io/slide/image)
 - [The Silver Searcherのススメ](https://1000ch.github.io/slide/ag)
 - [Web Components 2016 & Polymer v2](https://1000ch.github.io/slide/webcomponents-2016)
+- [Introduction to Resource Hints](https://1000ch.github.io/slide/resource-hints)
