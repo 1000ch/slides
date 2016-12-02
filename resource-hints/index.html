@@ -63,7 +63,8 @@
 <link rel="dns-prefetch" href="//example.com">
 ```
 
-指定したオリジンへの DNS 解決を行う。接続するドメインがわかるが、スキーマが定まらない場合に
+- 指定したオリジンへの DNS 解決を行う
+- ドメインがわかるが、スキーマが定まらない場合に使う
 
 </template>
 
@@ -76,7 +77,8 @@
 <link rel="preconnect" href="//cdn.example.com" crossorigin>
 ```
 
-指定したオリジンへの DNS 解決を含む TCP 接続を行う。接続するドメイン及びスキーマがわかっている場合に
+- 指定したオリジンへの DNS 解決を含む TCP 接続を行う
+- ドメイン及びスキーマがわかっている場合に使う
 
 </template>
 
@@ -89,7 +91,8 @@
 <link rel="prefetch" href="/library.js" as="script">
 ```
 
-指定した URL のリソースを取得する。`as` はオプショナルだが、付けておくと良い
+- 指定した URL のリソースを取得する
+- `as` はオプショナルだが、付けておくと良い
 
 </template>
 
@@ -116,7 +119,9 @@
 <link rel="prerender" href="//example.com/next-page.html">
 ```
 
-指定した URL のリソース取得及び評価を行う。描画まで実行するので、高速にナビゲーションされる。ブラウザのコストも大きいので、次に発生する可能性の高いナビゲーションに対して実施すると良い
+- 指定した URL のリソース取得及び評価を行う
+- 描画まで実行するので、高速にナビゲーションされる
+- コストも大きいので、次に発生する可能性の高いナビゲーションに対して実施すると良い
 
 </template>
 
@@ -125,6 +130,34 @@
 ## Chrome の Prerender History
 
 [`chrome://net-internals/#prerender`](chrome://net-internals/#prerender)
+
+</template>
+
+<template layout="code" invert type="text/x-markdown">
+
+## Hint probability
+
+```html
+<link rel="dns-prefetch" href="//widget.com" pr="0.75">
+<link rel="preconnect" href="//cdn.example.com" pr="0.42">
+<link rel="prefetch" href="//example.com/next-page.html" pr="0.75">
+<link rel="prerender" href="//example.com/thankyou.html" pr="0.25">
+```
+
+- リソースの優先度を `pr` 属性に `0.0~1.0` で指定する
+
+</template>
+
+<template>
+
+```javascript
+for (const a of document.getElementsByTagName('a')) {
+  const link = document.createElement('link');
+  link.rel = 'prerender';
+  link.href = a.href;
+  document.head.appendChild(link);
+}
+```
 
 </template>
 
