@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-<template layout="title" invert type="text/x-markdown" backface="./img/cover.jpg" backface-filter="brightness(.5)">
+<template layout="title" invert type="text/x-markdown" backface="img/cover.jpg" backface-filter="brightness(.5)">
 
 # Introduction to Resource Hints
 
@@ -26,21 +26,25 @@
 
 </template>
 
-<template layout="title" type="text/x-markdown">
+<template layout="title" invert type="text/x-markdown" backface="img/cat-reading.gif" backface-filter="brightness(.5)">
 
 ## Resouce Hints とは
 
-これから必要になるリソースを `<link>` 要素でブラウザに事前に伝えて **投機的に** 取得してもらう機能
+これから必要になるリソースを `<link>` 要素で定義し、それをブラウザが **投機的に** 取得する機能
 
 </template>
 
 <template layout="title" type="text/x-markdown">
 
-## 「投機的に」
+# 投機的に？
 
-> 利ざやを得ようとする様子。成否は確実でないが、機会を上手く利用して利益を得ようとする行為を形容する。
+</template>
 
-つまり、現在のページロードを邪魔しないように、ブラウザがアイドルの時に必要になるリソースをロードしてもらう
+<template layout="title" invert type="text/x-markdown" backface="img/cat-jumping.gif" backface-filter="brightness(.5)">
+
+## 「成否は確実でないが、機会を上手く利用して利益を得ようとする行為を形容する。」
+
+現在のページロードを邪魔しないように、ブラウザがアイドルの時に必要になるリソースをロードしてもらう
 
 </template>
 
@@ -119,17 +123,9 @@
 <link rel="prerender" href="//example.com/next-page.html">
 ```
 
-- 指定した URL のリソース取得及び評価を行う
+- 指定した URL の HTML ドキュメントの取得及び評価を行う
 - 描画まで実行するので、高速にナビゲーションされる
 - コストも大きいので、次に発生する可能性の高いナビゲーションに対して実施すると良い
-
-</template>
-
-<template layout="title" type="text/x-markdown">
-
-## Chrome の Prerender History
-
-[`chrome://net-internals/#prerender`](chrome://net-internals/#prerender)
 
 </template>
 
@@ -148,16 +144,45 @@
 
 </template>
 
-<template>
+<template layout="title" type="text/x-markdown">
+
+### 👆 ハイコストハイリターン
+
+- `prerender`
+- `prefetch`
+- `preconnect`
+- `dns-prefetch`
+
+### 👇 ローコストローリターン
+
+</template>
+
+<template layout="title" type="text/x-markdown">
+
+## Chrome の Prerender History
+
+[`chrome://net-internals/#prerender`](chrome://net-internals/#prerender)
+
+</template>
+
+<template layout="code" invert type="text/x-markdown">
+
+## Try in your browser?
 
 ```javascript
-for (const a of document.getElementsByTagName('a')) {
-  const link = document.createElement('link');
-  link.rel = 'prerender';
-  link.href = a.href;
-  document.head.appendChild(link);
-}
+const link = document.createElement('link');
+link.rel = 'prerender';
+link.href = document.querySelector('a').href;
+document.head.appendChild(link);
 ```
+
+</template>
+
+<template layout="cover" type="text/x-markdown">
+
+## おしまい
+
+[@1000ch](http://twitter.com/1000ch)
 
 </template>
 
