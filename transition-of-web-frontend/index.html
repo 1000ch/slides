@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Webフロントエンドの変遷 2017年初春</title>
+    <link rel="stylesheet" href="../asset/talkie.min.css">
+    <link rel="stylesheet" href="../asset/talkie-default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/monokai.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+<template layout="title" invert type="text/x-markdown" backface="img/cover.jpg" backface-filter="brightness(.5)">
+
+# Webフロントエンドの変遷 2017年初春
+
+2017.02.16 [Developer Summit 2017](http://event.shoeisha.jp/devsumi/20170216/session/1270/)
+
+Shogo Sensui a.k.a [@1000ch](http://twitter.com/1000ch)
+
+</template>
+<template layout="bullets" type="text/x-markdown">
+
+## @1000ch
+
+- 株式会社サイバーエージェント
+  - Web Initiative Center
+- Software Engineer
+  - Web クライアントサイド全般
+  - Performance + A11y + Design
+- Frontend Weekly Curator
+
+</template>
+<template layout="bullets" type="text/x-markdown">
+
+## ドキュメントから<br>アプリケーションへ
+
+- よりインタラクティブな Web へ
+  - 非同期通信を使ったダイナミックな画面の更新
+- [侍魂](http://www6.plala.or.jp/private-hp/samuraidamasii/) のようなドキュメントサイト
+- [Google Maps](https://www.google.co.jp/maps/) のようなインタラクティブなサイト
+
+</template>
+<template layout="bullets" type="text/x-markdown">
+
+## アーキテクチャ
+
+- フレームワーク・ライブラリ
+  - jQuery -> DOM抽象
+  - Backbone、Angular v1.x -> MVC抽象
+  - React、Vue -> コンポーネント抽象
+- Single Page Application
+- Server Side Rendering
+
+</template>
+<template layout="bullets" type="text/x-markdown">
+
+## 開発環境
+
+- タスクランナーによる自動化
+  - コマンドライン抽象
+  - Grunt や Gulp 、Broccoli など
+- コマンドライン利用の浸透
+  - npm scripts や Makefile への原点回帰
+- Node.js の普及
+
+</template>
+<template layout="bullets" type="text/x-markdown">
+
+## Web 標準技術
+
+- Extensible Web
+  - Web Components
+  - Service Worker
+- Vendor Prefix から Origin Trials へ
+- ECMAScript
+  - ES5.1 までと ES2015 から
+
+</template>
+<template layout="title" type="text/x-markdown">
+
+## <del>選択肢の変遷</del> ≠ 選択肢の増加
+
+</template>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../asset/talkie.min.js"></script>
+    <script>
+      Talkie({
+        wide         : false,
+        control      : true,
+        pointer      : true,
+        progress     : true,
+        backface     : true,
+        notransition : true
+      });
+    </script>
+  </body>
+</html>
