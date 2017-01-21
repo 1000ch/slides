@@ -21,58 +21,85 @@ Shogo Sensui a.k.a [@1000ch](http://twitter.com/1000ch)
 
 ## @1000ch
 
-- 株式会社サイバーエージェント
+- [株式会社サイバーエージェント](https://www.cyberagent.co.jp/)
   - Web Initiative Center
 - Software Engineer
-  - Web クライアントサイド全般
-  - Performance + A11y + Design
-- Frontend Weekly Curator
+- [Frontend Weekly](https://frontendweekly.tokyo/) Curator
+
+</template>
+<template layout="title" type="text/x-markdown">
+
+# ドキュメントから<br>アプリケーションへ
 
 </template>
 <template layout="bullets" type="text/x-markdown">
 
-## ドキュメントから<br>アプリケーションへ
-
-- よりインタラクティブな Web へ
-  - 非同期通信を使ったダイナミックな画面の更新
-- [侍魂](http://www6.plala.or.jp/private-hp/samuraidamasii/) のようなドキュメントサイト
-- [Google Maps](https://www.google.co.jp/maps/) のようなインタラクティブなサイト
-
-</template>
-<template layout="bullets" type="text/x-markdown">
-
-## アーキテクチャ
+## アーキテクチャの高度化
 
 - フレームワーク・ライブラリ
   - jQuery -> DOM抽象
   - Backbone、Angular v1.x -> MVC抽象
   - React、Vue -> コンポーネント抽象
-- Single Page Application
-- Server Side Rendering
+- Single Page Application の普及
 
 </template>
 <template layout="bullets" type="text/x-markdown">
 
-## 開発環境
+## 開発環境の複雑化と<br>Node.js の普及
 
-- タスクランナーによる自動化
-  - コマンドライン抽象
-  - Grunt や Gulp 、Broccoli など
-- コマンドライン利用の浸透
-  - npm scripts や Makefile への原点回帰
-- Node.js の普及
+- コマンドラインによる作業の抽象化
+- Grunt や Gulp などのタスクランナーによる自動化
+- npm scripts や Makefile への回帰
+
+</template>
+<template layout="title" type="text/x-markdown">
+
+## Web フロントエンドの<br>専門化と分業化
+
+</template>
+<template layout="title" invert type="text/x-markdown" backface="img/smartphone.jpg" backface-filter="brightness(.5)">
+
+## ネイティブアプリの隆盛
 
 </template>
 <template layout="bullets" type="text/x-markdown">
 
-## Web 標準技術
+## Web に足りなかったもの
 
-- Extensible Web
-  - Web Components
-  - Service Worker
-- Vendor Prefix から Origin Trials へ
-- ECMAScript
-  - ES5.1 までと ES2015 から
+- 初期化と実行時のパフォーマンス
+- プッシュ通知によるエンゲージメント
+- デバイス固有の機能へのアクセス
+
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="en" dir="ltr">A year ago, I asked what features made you turn to native. #1 response: push notifications. Today, they&#39;re available: <a href="http://t.co/wDOKa5qVbf">http://t.co/wDOKa5qVbf</a></p>&mdash; Paul Irish (@paul_irish) <a href="https://twitter.com/paul_irish/status/576089864514326528">2015年3月12日</a></blockquote>
+
+</template>
+<template layout="title" type="text/x-markdown">
+
+## ブラウザのパフォーマンスと<br>HTML 描画の壁
+
+</template>
+<template layout="bullets" type="text/x-markdown">
+
+## Virtual DOM
+
+- [なぜ仮想DOMという概念が俺達の魂を震えさせるのか](http://qiita.com/mizchi/items/4d25bc26def1719d52e6)
+- DOM の diff と patch アルゴリズムによる HTML の差分描画
+- Serve-Side Rendering への回帰
+
+</template>
+<template layout="bullets" type="text/x-markdown">
+
+## Web Standards
+
+- W3C と WHATWG
+- [Vendor Prefix](https://developer.mozilla.org/ja/docs/Glossary/Vendor_Prefix) から [Origin Trials](https://blog.jxck.io/entries/2016-09-29/vender-prefix-to-origin-trials.html) へ
+
+</template>
+<template layout="bullets" type="text/x-markdown">
+
+## ECMAScript
+
+- ES5.1 までと ES2015 から
 
 </template>
 <template layout="title" type="text/x-markdown">
@@ -93,5 +120,6 @@ Shogo Sensui a.k.a [@1000ch](http://twitter.com/1000ch)
         notransition : true
       });
     </script>
+    <script async src="https://platform.twitter.com/widgets.js"></script>
   </body>
 </html>
