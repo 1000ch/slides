@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Webフロントエンドにおけるコンポーネント化のアプローチ</title>
+    <link rel="stylesheet" href="../asset/talkie.min.css">
+    <link rel="stylesheet" href="../asset/talkie-default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/monokai.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+<template layout="title" invert type="text/x-markdown" backface="./img/insidefrontend.png" backface-filter="blur(1px) brightness(.25)">
+
+# Webフロントエンドにおけるコンポーネント化のアプローチ
+
+2017.02.25 [Inside Frontend #1](https://inside-frontend.connpass.com/event/47920/) [@1000ch](http://twitter.com/1000ch)
+
+</template>
+<template layout="bullets" type="text/x-markdown">
+
+## @1000ch
+
+- [株式会社サイバーエージェント](https://www.cyberagent.co.jp/)
+  - Software Engineer として働いています
+  - Web Initiative Center で Web のことを考えています
+- [Frontend Weekly](https://frontendweekly.tokyo/)
+  - Curator として色々やってます
+
+</template>
+<template layout="title" type="text/x-markdown">
+
+## ソフトウェアにおける<br>コンポーネント
+
+> コンピュータソフトウェアにおいて部品とは特定の機能を果たす単位で、特に再利用を考えて汎用に開発されたもの。
+
+</template>
+<template layout="title" invert type="text/x-markdown">
+
+# そもそもなぜコンポーネントの概念を持ち込みたいのか？
+
+</template>
+<template layout="bullets" type="text/x-markdown">
+
+## アプリケーションという<br>コンテキストにおいて
+
+- デザインや機能としての再利用性、一貫性、独立性
+- 意味として UI や振る舞いを含み、情報システムを成すもの
+- コンポーネントはデザインという領域に依存しない
+
+</template>
+<template layout="title" invert type="text/x-markdown">
+
+## 再利用可能なデザイン<br>≠ コンポーネント
+
+デザインにおけるコンポーネント化は、デザインに一貫性を持たせた結果に過ぎない
+
+</template>
+<template layout="title" invert type="text/x-markdown" backface="./img/atomic-design.png" backface-filter="blur(1px) brightness(.25)">
+
+## Atomic Design<br>by Brad Frost
+
+情報システムをデザインするためのデザイン原則
+
+</template>
+<template layout="title" invert type="text/x-markdown">
+
+# クライアントサイドにおけるコンポーネントの構築プロセス
+
+</template>
+<template layout="title" type="text/x-markdown">
+
+## デザインプロセス上は<br>UIと機能を分離しない
+
+ユーザーインターフェースから機能を知覚させる
+
+</template>
+<template layout="title" type="text/x-markdown">
+
+## プログラム実装上は<br>UIと機能を分離する
+
+UI レイヤと機能レイヤを明確に分け<br>プログラム部品としてのコンポーネント化する
+
+</template>
+<template layout="bullets" type="text/x-markdown">
+
+## 実装上の UI と機能分割
+
+- Android: View XML で UI、Fragment で機能
+- iOS: Storyboard/Xib で UI、ViewController で機能
+- Web: HTML+CSS で UI、JavaScript で機能
+
+</template>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../asset/talkie.min.js"></script>
+    <script>
+      Talkie({
+        wide         : false,
+        control      : true,
+        pointer      : true,
+        progress     : true,
+        backface     : true,
+        notransition : true
+      });
+    </script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </body>
+</html>
