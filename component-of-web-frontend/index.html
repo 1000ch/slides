@@ -89,6 +89,52 @@ UI レイヤと機能レイヤを明確に分け<br>プログラム部品とし�
 - Web: HTML+CSS で UI、JavaScript で機能
 
 </template>
+<template layout="title" invert type="text/x-markdown">
+
+# 職能への要求と<br>理想の剥離
+
+</template>
+<template layout="bullets" type="text/x-markdown">
+
+## デザイナーには全体図を表現することが課せられる
+
+- お客様への提案のため「モックアップを作らねば」
+- **情報をデザインする意識** の欠如
+- **デザインシステムとして評価される仕組み** が組織にないこと
+
+</template>
+<template layout="bullets" type="text/x-markdown">
+
+## 開発プロセスにおいて<br>実装よりデザインが先にある
+
+- デザイナーには全体図を表現することが課せられる
+  - 「お客様への提案のためモックアップを作らねば」
+  - **情報をデザインする意識** の欠如
+- 実装時に発覚する様々な考慮漏れ
+  - 「各種ディスプレイサイズでのどう振る舞うか」とか
+  - デザイナーだけでなく **クライアント実装に関わる人全員の責務**
+
+</template>
+<template layout="bullets" type="text/x-markdown">
+
+## アプリケーションの要件として
+
+- デザインシステムとして評価される仕組みの有無
+  - リテラシーが低いユーザーがターゲットであればコスパが悪い？
+  - 組織がデザインシステムの価値をどう捉えているか
+
+</template>
+<template layout="bullets" type="text/x-markdown">
+
+## コンポーネントが成果物の価値を左右する
+
+- 情報システムとして優れているか
+  - アプリケーションの目的を提供出来ているか
+- アプリケーションの品質を成す要素を担保出来ているか
+  - パフォーマンス・アクセシビリティ・セキュリティ…
+  - コンポーネントの破綻はソフトウェア上の犠牲に成り得る
+
+</template>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
