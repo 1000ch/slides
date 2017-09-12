@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+  <head>
+    <title>正規表現コト始め</title>
+    <link rel="stylesheet" href="../asset/talkie.min.css">
+    <link rel="stylesheet" href="../asset/talkie-default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/monokai.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+<template layout="title" invert type="text/x-markdown" backface-filter="brightness(.5)">
+
+# 正規表現コト始め
+
+</template>
+
+<template layout="bullets" type="text/x-markdown">
+
+## @1000ch
+
+- 株式会社サイバーエージェント
+- 専門は Web 技術全般
+- 趣味で Node.js や iOS など
+
+</template>
+
+<template layout="title" type="text/x-markdown">
+
+## 正規表現とは
+
+> 正規表現（せいきひょうげん、英: regular expression）とは、文字列の集合を一つの文字列で表現する方法の一つである
+
+[正規表現 - Wikipedia](https://ja.wikipedia.org/wiki/%E6%AD%A3%E8%A6%8F%E8%A1%A8%E7%8F%BE)
+
+</template>
+
+<template layout="code" invert type="text/x-markdown">
+
+## 例1 `colou?r`
+
+`?`: 直前の表現が 0 個か 1 個あることを示す
+
+- ❌ colr
+- ✅ color
+- ✅ colour
+- ❌ colouur
+
+</template>
+
+<template layout="code" invert type="text/x-markdown">
+
+## 例2 `go*gle`
+
+`*`: 直前の表現が 0 個以上あることを示す
+
+- ✅ ggle
+- ✅ gogle
+- ✅ google
+- ✅ gooogle
+
+</template>
+
+<template layout="code" invert type="text/x-markdown">
+
+## 例3 `go+gle`
+
+`+`: 直前の表現が 1 個以上あることを示す
+
+- ❌ ggle
+- ✅ gogle
+- ✅ google
+- ✅ gooogle
+
+</template>
+
+<template layout="code" invert type="text/x-markdown">
+
+## よく使うやつ
+
+- `^`: 入力の先頭にマッチする
+- `$`: 入力の末尾にマッチする
+- `.`: 改行文字以外のどの 1 文字にもマッチする
+- `x|y`: x または y にマッチする
+- `{n}`: 直前の文字がちょうど n 回出現するものにマッチする
+- `{n,m}`: 直前の文字が少なくとも n 回、多くても m 回出現するものにマッチする
+- `[xyz]`: 文字集合を表し、角括弧で囲まれた文字のいずれか一個にマッチする
+
+</template>
+
+<template layout="code" invert type="text/x-markdown">
+
+## よく使うエイリアス
+
+- `\d`: `[0-9]` と等価であり、数字にマッチする
+- `\s`: スペース、タブ、改ページ、改行を含む 1 個のホワイトスペース文字にマッチする
+- `\t`: タブにマッチする
+- `\w`: `[A-Za-z0-9_]` と等価であり、アンダースコアを含むどの英数字にもマッチする
+
+</template>
+
+<template layout="bullets" type="text/x-markdown">
+
+## 参考リンク
+
+- [正規表現 - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [正規表現 - Wikipedia](https://ja.wikipedia.org/wiki/%E6%AD%A3%E8%A6%8F%E8%A1%A8%E7%8F%BE)
+- [https://1000ch.github.io/regex-test/](https://1000ch.github.io/regex-test/)
+
+</template>
+
+<template layout="cover" type="text/x-markdown">
+
+## Questions?
+
+- [https://twitter.com/1000ch](https://twitter.com/1000ch)
+- [https://github.com/1000ch](https://github.com/1000ch)
+
+</template>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../asset/talkie.min.js"></script>
+    <script>
+      Talkie({
+        wide         : false,
+        control      : true,
+        pointer      : true,
+        progress     : true,
+        backface     : true,
+        notransition : true
+      });
+    </script>
+  </body>
+</html>
