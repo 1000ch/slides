@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Web Components Updates</title>
+    <link rel="stylesheet" href="../asset/talkie.min.css">
+    <link rel="stylesheet" href="../asset/talkie-default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/monokai.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+<template layout="title" invert type="text/x-markdown">
+
+# Web Components Updates
+
+2017.11.15 [html_modules_study](https://web-study.connpass.com/event/70731/) [@1000ch](http://twitter.com/1000ch)
+
+</template>
+
+<template layout="bullets" type="text/x-markdown">
+
+## [@1000ch](https://twitter.com/1000ch)
+
+- 株式会社サイバーエージェント
+- Web 開発者です
+- 技術評論社より [`#超速本`](https://twitter.com/search?q=超速本) が発売されます🙏
+
+<img src="./img/webperf-cover.png" style="max-height: 25vh;">
+
+</template>
+
+<template layout="bullets" type="text/x-markdown">
+
+## Web Components Updates
+
+- HTML Modules
+- `<link rel="modulepreload">`
+- Template Parts
+
+</template>
+
+<template layout="title" type="text/x-markdown">
+
+## HTML Modules
+
+ES Modules を拡張して HTML ファイルをロードする。[HTML Modules #645](https://github.com/w3c/webcomponents/issues/645) にて絶賛議論中
+
+</template>
+
+<template layout="code" type="text/x-markdown">
+
+### HTML Modules のイメージ
+
+```html
+<!-- bar.html -->
+<template export="template">
+  <div>Display!</div>
+</template>
+
+<script type="module" id="default">
+  import barDoc from './bar.html';
+  const template = barDoc.querySelector('template');
+</script>
+```
+
+詳しくは [@tkochi](https://twitter.com/tkochi) さんの話を聞きましょう👀
+
+</template>
+
+<template layout="title" type="text/x-markdown">
+
+## `<link>` 要素の `rel="modulepreload"`
+
+ES Modules な JavaScript ファイルを先読みする
+
+</template>
+
+<template layout="bullets" type="text/x-markdown">
+
+### 依存関係が深いとロードが遅くなる問題
+
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">モジュール数100以上 or 深さが5以上ならbundleした方がいいとのこと  &quot;Loading Performance with (Many) Modules: Summary as of Oct 7, 2017 - Go…&quot; <a href="https://t.co/8gZZBbejMn">https://t.co/8gZZBbejMn</a></p>&mdash; azu (@azu_re) <a href="https://twitter.com/azu_re/status/918675534632042496?ref_src=twsrc%5Etfw">2017年10月13日</a></blockquote>
+
+</template>
+
+<template layout="code" type="text/x-markdown">
+
+### `rel="modulepreload"` の使い方
+
+```html
+<link rel="modulepreload" href="app.js">
+<link rel="modulepreload" href="helpers.js">
+<link rel="modulepreload" href="irc.js">
+<link rel="modulepreload" href="fog-machine.js">
+
+<script type="module" src="app.js"></script>
+```
+
+</template>
+
+<template layout="bullets" type="text/x-markdown">
+
+### `rel="preload"` と `as="module"` は？
+
+- あーだこーだ
+- あーだこーだ
+
+[preload, destinations, and module scripts #486](https://github.com/whatwg/fetch/issues/486#issuecomment-282044172)
+
+</template>
+
+<template layout="title" type="text/x-markdown">
+
+## Template Parts
+
+`template` 要素に mustache の文法を取り込んで、テンプレートとしての機能を拡充する
+
+</template>
+
+<template layout="code" type="text/x-markdown">
+
+### Template Parts の使い方
+
+```html
+<template id="tmpl">
+  <section>
+    <h1>{{name}}</h1>
+    <a href="mailto:{{email}}">{{email}}</a>
+  </section>
+</template>
+<script>
+  document.querySelector('#tmpl').createInstance({
+    name: 'Shogo Sensui',
+    email: 'shogosensui@gmail.com'
+  });
+</script>
+```
+
+詳しくは [@koba04](https://twitter.com/koba04) さんの話を聞きましょう👀
+
+</template>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../asset/talkie.min.js"></script>
+    <script>
+      Talkie({
+        wide         : false,
+        control      : true,
+        pointer      : true,
+        progress     : true,
+        backface     : true,
+        notransition : true
+      });
+    </script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </body>
+</html>

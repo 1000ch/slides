@@ -5,3 +5,4 @@
 - [Web Components 2016 & Polymer v2](https://1000ch.github.io/slide/webcomponents-2016)
 - [Introduction to Resource Hints](https://1000ch.github.io/slide/resource-hints)
 - [正規表現コト始め](https://1000ch.github.io/slide/regex)
+- [Web Components Updates](https://1000ch.github.io/slide/webcomponents-2017)
