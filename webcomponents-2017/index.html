@@ -22,7 +22,7 @@
 
 - 株式会社サイバーエージェント
 - Web 開発者です
-- 技術評論社より [`#超速本`](https://twitter.com/search?q=超速本) が発売されます🙏
+- 技術評論社より [`#超速本`](https://twitter.com/search?q=超速本) が発売されます📕
 
 <img src="./img/webperf-cover.png" style="max-height: 25vh;">
 
@@ -42,7 +42,8 @@
 
 ## HTML Modules
 
-ES Modules を拡張して HTML ファイルをロードする。[HTML Modules #645](https://github.com/w3c/webcomponents/issues/645) にて絶賛議論中
+- ES Modules を拡張して HTML ファイルをロードする
+- [HTML Modules #645](https://github.com/w3c/webcomponents/issues/645) にて議論中
 
 </template>
 
@@ -70,7 +71,8 @@ ES Modules を拡張して HTML ファイルをロードする。[HTML Modules #
 
 ## `<link>` 要素の `rel="modulepreload"`
 
-ES Modules な JavaScript ファイルを先読みする
+- ES Modules な JavaScript ファイルを先読みする
+- https://github.com/whatwg/html/pull/2383
 
 </template>
 
@@ -99,12 +101,14 @@ ES Modules な JavaScript ファイルを先読みする
 
 <template layout="bullets" type="text/x-markdown">
 
-### `rel="preload"` と `as="module"` は？
+### `rel="preload"` と `as="module"` はダメ？
 
-- あーだこーだ
-- あーだこーだ
+- `<script>` 要素の credential と一致している必要がある
+- 事前に module なのかどうかわかっていないとパースに困る (v8?)
+- `<link rel="preload">` は単一リソースをロードする仕様
+- 保存先が preload cache ではなく module map である必要がある (chrome?)
 
-[preload, destinations, and module scripts #486](https://github.com/whatwg/fetch/issues/486#issuecomment-282044172)
+[preload, destinations, and module scripts #486](https://github.com/whatwg/fetch/issues/486#issuecomment-282044172) や [Preload and Modules](https://docs.google.com/document/d/1WebH4IOCswACUbaczx5cGQPVl5mnqcieOd4MRJM2syk/edit?usp=sharing) あたりを参照
 
 </template>
 
