@@ -3,7 +3,10 @@
   "private": true,
   "repository": "1000ch/slide",
   "author": "1000ch",
-  "dependencies": {
-    "talkiejs": "^0.11.1"
+  "scripts": {
+    "build": "for d in $(ls -F | grep / | grep -v -E '^node_modules'); do marp --html --input-dir $d --output $d; done"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "^2.4.0"
   }
 }
