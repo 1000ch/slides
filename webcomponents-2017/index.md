@@ -7,7 +7,7 @@ footer: Web Components Updates 2017 by [Shogo SENSUI](https://bento.me/1000ch)
 
 <!-- _class: invert -->
 
-# Web Components Updates
+# Web Components Updates 2017
 
 2017.11.15 [html_modules_study](https://web-study.connpass.com/event/70731/) [@1000ch](http://twitter.com/1000ch)
 
