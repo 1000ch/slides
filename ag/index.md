@@ -2,10 +2,18 @@
 marp: true
 theme: default
 paginate: true
-footer: The Silver Searcher のススメ by [Shogo SENSUI](https://bento.me/1000ch)
+footer: The Silver Searcher のススメ by [@1000ch](https://bento.me/1000ch)
 ---
 
 # The Silver Searcher のススメ
+
+---
+
+![bg left:30% 60%](https://shogosensui.com/img/1000ch.avif)
+
+# @1000ch
+
+> Web アプリケーション開発を専門とするソフトウェアエンジニア。企業で働く傍ら、技術顧問として複数企業のエンジニアリングに関わり、高品質で維持しやすい Web アプリケーションを作るための活動を続けている。
 
 ---
 

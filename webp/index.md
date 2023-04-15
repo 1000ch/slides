@@ -2,30 +2,28 @@
 marp: true
 theme: default
 paginate: true
-footer: WebP - A new image format for the Web by [Shogo SENSUI](https://bento.me/1000ch)
+footer: WebP - A new image format for the Web by [@1000ch](https://bento.me/1000ch)
 ---
 
 ![bg blur:1px brightness:0.8](./img/inokashira.jpg)
 
 <!-- _class: invert -->
 
-# Introduction to **WebP**
+# <!-- fit --> Introduction to **WebP**
 
 A new image format for the Web
 
-by [@1000ch](http://twitter.com/1000ch)
+---
+
+![bg left:30% 60%](https://shogosensui.com/img/1000ch.avif)
+
+# @1000ch
+
+Web アプリケーション開発を専門とするソフトウェアエンジニア。企業で働く傍ら、技術顧問として複数企業のエンジニアリングに関わり、高品質で維持しやすい Web アプリケーションを作るための活動を続けている。
 
 ---
 
-## Who is 1000ch
-
-- Software Engineer at CyberAgent
-- [1000ch.net](http://1000ch.net)の人
-- [HTML5Experts.jp エキスパート](http://html5experts.jp/1000ch)
-
----
-
-## WebPとは？
+# WebPとは？
 
 - Googleが開発する新しい画像フォーマット
 - 可逆/非可逆圧縮・アルファチャネル・アニメーション
@@ -41,15 +39,19 @@ by [@1000ch](http://twitter.com/1000ch)
 
 ---
 
-### 1000ch.jpg (圧縮レベル80で33KB)
+<!-- _class: invert -->
 
-![](./img/1000ch.jpg)
+## 1000ch.jpg (圧縮レベル80で33KB)
+
+![bg](./img/1000ch.jpg)
 
 ---
 
-### 1000ch.webp (圧縮レベル80で15KB)
+<!-- _class: invert -->
 
-![](./img/1000ch.jpg)
+## 1000ch.webp (圧縮レベル80で15KB)
+
+![bg](./img/1000ch.jpg)
 
 ---
 
@@ -68,7 +70,7 @@ by [@1000ch](http://twitter.com/1000ch)
 
 ---
 
-### iOS Safariだと…
+## iOS Safariだと…
 
 ![](./img/webp-safari.jpg)
 
@@ -124,14 +126,14 @@ $ npm install gulp-cwebp
 
 ---
 
-## GUIでやりたい？
+## GUI でやりたい？
 
 - [webp.herokuapp.com](http://webp.herokuapp.com) - Webツール
-- [WebPonize](http://github.com/1000ch/webponize) - Macのアプリ
+- [WebPonize](http://github.com/webponize/webponize) - Macのアプリ
 
 ---
 
-### WebPonize
+## WebPonize
 
 ![](./img/webponize.jpg)
 

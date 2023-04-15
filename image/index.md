@@ -2,14 +2,20 @@
 marp: true
 theme: default
 paginate: true
-footer: よくわかる画像の話 by [Shogo SENSUI](https://bento.me/1000ch)
+footer: よくわかる画像の話 by [@1000ch](https://bento.me/1000ch)
 ---
 
 <!-- _class: invert -->
 
-# よくわかる画像の話
+# <!-- fit --> よくわかる画像の話
 
-by [@1000ch](http://twitter.com/1000ch)
+---
+
+![bg left:30% 60%](https://shogosensui.com/img/1000ch.avif)
+
+# @1000ch
+
+> Web アプリケーション開発を専門とするソフトウェアエンジニア。企業で働く傍ら、技術顧問として複数企業のエンジニアリングに関わり、高品質で維持しやすい Web アプリケーションを作るための活動を続けている。
 
 ---
 
@@ -17,7 +23,7 @@ by [@1000ch](http://twitter.com/1000ch)
 
 - 写真・ロゴ・アイコンなど、プラットフォームを問わず至る所で使われている
 - 印象的な画像はユーザーの目を引き、時に重要な情報を伝える
-- **画像はサービスにとって重要な存在**
+- **画像はサービスにとって重要な存在** である
 
 ---
 
@@ -27,7 +33,7 @@ by [@1000ch](http://twitter.com/1000ch)
 
 ---
 
-## 少し噛み砕いてみる
+# 少し噛み砕いてみる
 
 - RGBの表現系からなる画素の集合（＝ビットマップ）
 - よく使われる画像フォーマットは、PNG・JPEG・GIF・WebP
@@ -83,7 +89,7 @@ by [@1000ch](http://twitter.com/1000ch)
 
 ---
 
-# 画像ファイルのサイズ
+## 画像ファイルのサイズ
 
 - 通信コスト、ストレージやメモリ消費に影響する
 - ことWebに関しては、帯域の80%を画像データが占めている
@@ -93,7 +99,7 @@ by [@1000ch](http://twitter.com/1000ch)
 
 <!-- _class: invert -->
 
-# 今から4枚のJPEGと1枚のPNGをお見せします
+# <!-- fit --> 今から 4 枚の JPEG と 1 枚の PNG をお見せします
 
 ---
 
@@ -101,7 +107,7 @@ by [@1000ch](http://twitter.com/1000ch)
 
 <!-- _class: invert -->
 
-JPEG（4.7MB）
+## JPEG（4.7MB）
 
 ---
 
@@ -109,7 +115,7 @@ JPEG（4.7MB）
 
 <!-- _class: invert -->
 
-JPEG（1.8MB）
+## JPEG（1.8MB）
 
 ---
 
@@ -117,7 +123,7 @@ JPEG（1.8MB）
 
 <!-- _class: invert -->
 
-JPEG（1.1MB）
+## JPEG（1.1MB）
 
 ---
 
@@ -125,7 +131,7 @@ JPEG（1.1MB）
 
 <!-- _class: invert -->
 
-JPEG（0.8MB）
+## JPEG（0.8MB）
 
 ---
 
@@ -133,7 +139,7 @@ JPEG（0.8MB）
 
 <!-- _class: invert -->
 
-PNG（18.8MB）
+## PNG（18.8MB）
 
 ---
 
@@ -162,7 +168,7 @@ PNG（18.8MB）
 - [ImageOptim](https://imageoptim.com/mac): JPEG・PNG・GIFを最適化する
 - [ImageAlpha](https://pngmini.com/): PNGの8bitにダウンコンバートする
 - [JPEGmini](http://www.jpegmini.com/): JPEGを圧縮・最適化する
-- [WebPonize](https://webponize.github.io): JPEG・PNGをWebPに変換する
+- [WebPonize](https://github.com/webponize/webponize): JPEG・PNGをWebPに変換する
 
 ---
 

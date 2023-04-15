@@ -2,20 +2,12 @@
 marp: true
 theme: default
 paginate: true
-footer: 正規表現コト始め by [Shogo SENSUI](https://bento.me/1000ch)
+footer: 正規表現コト始め by [@1000ch](https://bento.me/1000ch)
 ---
 
 <!-- _class: invert -->
 
-# 正規表現コト始め
-
----
-
-# @1000ch
-
-- 株式会社サイバーエージェント
-- 専門は Web 技術全般
-- 趣味で Node.js や iOS など
+# <!-- fit --> 正規表現コト始め
 
 ---
 

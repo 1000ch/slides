@@ -2,40 +2,38 @@
 marp: true
 theme: default
 paginate: true
-footer: Web Components 2016 & Polymer v2 by [Shogo SENSUI](https://bento.me/1000ch)
+footer: Web Components 2016 & Polymer v2 by [@1000ch](https://bento.me/1000ch)
 ---
 
 ![bg brightness:0.5](./img/cover.jpg)
 
 <!-- _class: invert -->
 
-# Web Components 2016 & Polymer v2
+# <!-- fit --> Web Components 2016 & Polymer v2
 
-2016.10.09 [DevFest Tokyo 2016](http://gdg-tokyo.connpass.com/event/38927/) [@1000ch](http://twitter.com/1000ch)
-
----
-
-## @1000ch
-
-- 株式会社サイバーエージェント
-- Web 技術とか iOS とかいろいろ
-- [https://1000ch.net](https://1000ch.net) の人
+2016.10.09 [DevFest Tokyo 2016](http://gdg-tokyo.connpass.com/event/38927/)
 
 ---
 
-## アジェンダ
+![bg left:30% 60%](https://shogosensui.com/img/1000ch.avif)
+
+# @1000ch
+
+> Web アプリケーション開発を専門とするソフトウェアエンジニア。企業で働く傍ら、技術顧問として複数企業のエンジニアリングに関わり、高品質で維持しやすい Web アプリケーションを作るための活動を続けている。
+
+---
+
+# アジェンダ
 
 - Web Components おさらい
 - 最近の Web Components 事情
-- Polymer v2 is coming !!
+- Polymer v2 is coming!!
 
 ---
 
 <!-- _class: invert -->
 
----
-
-# Web Components<br>おさらい
+# <!-- fit -->　Web Components のおさらい
 
 ---
 
@@ -43,9 +41,9 @@ footer: Web Components 2016 & Polymer v2 by [Shogo SENSUI](https://bento.me/1000
 
 <!-- _class: invert -->
 
-## 「Web のコンポーネント」の難しさ
+# 「Web におけるコンポーネント」の難しさ
 
-〜 Web 開発者が戦ってきたもの 〜
+長らく Web 開発者が向き合ってきた
 
 ---
 
@@ -62,7 +60,7 @@ footer: Web Components 2016 & Polymer v2 by [Shogo SENSUI](https://bento.me/1000
 
 <blockquote class="twitter-tweet" data-lang="ja"><p lang="und" dir="ltr">(╯°□°）╯︵ SSƆ</p>&mdash; 1000ch (@1000ch) <a href="https://twitter.com/1000ch/status/752394739438137344">2016年7月11日</a></blockquote>
 
-CSS はつらい。 本当につらい。
+CSS はつらい。本当につらい。
 
 ---
 
@@ -74,7 +72,7 @@ CSS はつらい。 本当につらい。
 
 ---
 
-## Web Components<br>を支える技術
+## Web Components を支える技術
 
 - [Custom Elements](https://www.w3.org/TR/custom-elements/): 新たな要素の定義
 - [Shadow DOM](https://www.w3.org/TR/shadow-dom/): 隔離された DOM スコープ
@@ -85,13 +83,13 @@ CSS はつらい。 本当につらい。
 
 <!-- _class: invert -->
 
-# 最近の Web Components 事情
+# <!-- fit --> 最近の Web Components 事情
 
 ---
 
-## Shadow DOM v1 と<br>Custom Elements v1
+## Shadow DOM v1 と Custom Elements v1
 
-これまでのものを v0 、新たなものを v1<br>として改めて仕様の策定が進んでいる
+これまでのものを v0、新たなものを v1 として、改めて仕様の策定が進んでいる
 
 ---
 
@@ -121,9 +119,9 @@ console.log(div.shadowRoot);
 
 ---
 
-## Opened な Shadow DOM と Closed な Shadow DOM
+## Opened Shadow DOM と Closed Shadow DOM
 
-外部からアクセスできる Shadow DOM と、アクセスできない Shadow DOM。 Closed な Shadow DOM であれば `shadowRoot` プロパティは `null` を返す
+外部からアクセスできる Shadow DOM と、アクセスできない Shadow DOM。 Closed Shadow DOM であれば `shadowRoot` プロパティは `null` を返す
 
 ---
 
@@ -147,6 +145,8 @@ console.log(div.shadowRoot);
 
 ---
 
+## `<content` による挿入から
+
 ```html
 <template>
   <style>
@@ -165,6 +165,8 @@ console.log(div.shadowRoot);
 ```
 
 ---
+
+## `<slot>` による挿入へ
 
 ```html
 <template>
@@ -187,9 +189,7 @@ console.log(div.shadowRoot);
 
 ## [What's New in Shadow DOM v1 (by examples)](http://hayato.io/2016/shadowdomv1/)
 
-http://hayato.io/2016/shadowdomv1/
-
-更なる詳細はこちらの神資料を参照のこと
+更なる詳細はこちらの資料を参照のこと
 
 ---
 
@@ -251,13 +251,13 @@ customElements.whenDefined('foo-element').then(() => {
 
 ---
 
-![bg blue:1px brightness:0.5](./img/defined-promise.png)
+![bg blue:1px brightness:0.25](./img/defined-promise.png)
 
 <!-- _class: invert -->
 
 ## カスタム要素が定義されるタイミングを待ちたい？
 
-不完全な状態でページが表示されるのを避けるには、 `:defined` だけでは難しいため
+不完全な状態でページが表示されるのを避けるには、 `:defined` 擬似クラスだけでは難しい
 
 [Issue #427 · w3c/webcomponents](https://github.com/w3c/webcomponents/issues/427)
 
@@ -265,16 +265,13 @@ customElements.whenDefined('foo-element').then(() => {
 
 ## `is` 属性の行方…
 
-WebKit は `<button is="foo-button" />` のような [Custom Elements によるネイティブ要素の拡張をしない方針](https://github.com/w3c/webcomponents/issues/509#issuecomment-233419167)を今のところ示している
+今のところ WebKit は `<button is="foo-button" />` のような [Custom Elements によるネイティブ要素の拡張をしない方針](https://github.com/w3c/webcomponents/issues/509#issuecomment-233419167)を示している
 
 ---
 
-## HTML Imports どうなった
+## HTML Imports はどうなった
 
-- [Mozilla は ES6 Modules を意識して見送っている](https://hacks.mozilla.org/2014/12/mozilla-and-web-components/)
-    - [JavaScript Loader](https://github.com/whatwg/loader) あたりの話
-    - `<script type="module"></script>` のアセット解決方法
-- [The state of Web Components](https://hacks.mozilla.org/2015/06/the-state-of-web-components/)
+Mozilla は [ES6 Modules を意識して見送っている](https://hacks.mozilla.org/2014/12/mozilla-and-web-components/)。[The state of Web Components](https://hacks.mozilla.org/2015/06/the-state-of-web-components/) でも触れているように、ES Modules で解決することを支持している
 
 ---
 
@@ -293,9 +290,9 @@ WebKit は `<button is="foo-button" />` のような [Custom Elements による�
 
 ---
 
-## Safari 10 に Shadow DOM v1 が実装された (❗)
+## Safari 10 に Shadow DOM v1 が実装された！
 
-[iOS 10のシェア](https://mixpanel.com/trends/#report/ios_10/from_date:-3,report_unit:hour,to_date:0)次第だが、時間の問題
+[iOS 10 のシェア](https://mixpanel.com/trends/#report/ios_10/from_date:-3,report_unit:hour,to_date:0)次第だが、時間の問題
 
 ---
 
@@ -313,7 +310,7 @@ _メニューの Develop → Experimental Features → Custom Elements_
 
 ---
 
-## Safari の実装が進むのは、開発者にとってかなり大きい
+## Safari の実装が進むことは、開発者にとってかなり大きい
 
 - モバイルでの利用は現実的になってきた😍
 - あとは Firefox と Edge を応援するだけ👆
@@ -408,37 +405,21 @@ customElements.define(MyElement.is, MyElement);
 
 ---
 
-## Polymer v1.x の<br>API も一応使える
+## Polymer v1.x の API も一応使える
 
-`polymer.html` が引き続き提供され、`Polymer.dom()` や `Polymer.CompatElement` といった Polymer v1.x で提供されてきた API も含まれる。
-
----
-
-## ネイティブ API へ<br>移行を強く推奨
-
-Polymer で抽象化してきた API が排除されネイティブの API を使うように。例えば、[Shady DOM v1](https://github.com/webcomponents/shadydom)が提供されることで DOM 操作に関しても `Polymer.dom()` が不要になる。
+`polymer.html` が引き続き提供され、`Polymer.dom()` や `Polymer.CompatElement` といった Polymer v1.x で提供されてきた API も含まれる
 
 ---
 
-## Polymer v1.x の機能は引き続き提供されるが…
+## ネイティブ API へ移行を強く推奨
+
+Polymer で抽象化してきた API が排除されネイティブの API を使うように。例えば、[Shady DOM v1](https://github.com/webcomponents/shadydom) が提供されることで DOM 操作に関しても `Polymer.dom()` が不要になる
 
 ---
 
-## Type Extension の<br>雲行きが怪しいので…
+## Polymer v2 は `is=""` をサポートしない
 
-```html
-<template is="dom-repeat" items="{{items}}">
-  ...
-</template>
-
-<style is="custom-style">
-  ...
-</style>
-```
-
----
-
-## Polymer v2 でも<br>`is=""` はサポートしない
+Polymer v1.x の機能は引き続き提供されるが、Type Extension (`is="..."`) の雲行きが怪しいので…
 
 ```html
 <dom-repeat items="{{items}}">
@@ -456,19 +437,17 @@ Polymer で抽象化してきた API が排除されネイティブの API を�
 
 ## Web Components "v1" の API に依存する
 
-故に、サポートされていない環境でも使うには webcomponentsjs によるポリフィルが必要。そして新たなスペックに対応するポリフィルを提供する [v1](https://github.com/webcomponents/webcomponentsjs/tree/v1) ブランチの開発が進められている
+故に、サポートされていない環境で使うには [webcomponentsjs](https://github.com/webcomponents/webcomponentsjs) によるポリフィルが必要である。そして新たなスペックに対応するポリフィルを提供する [v1 ブランチ](https://github.com/webcomponents/webcomponentsjs/tree/v1)の開発が進められている
 
 ---
 
-![bg blur:1px brightness:0.5](./img/Polymer-Catalog.png)
+![bg blur:1px brightness:0.25](./img/Polymer-Catalog.png)
 
 <!-- _class: invert -->
 
-[https://elements.polymer-project.org/](https://elements.polymer-project.org/)
+## [Polymer Elements](https://elements.polymer-project.org/)
 
-## Polymer Elements
-
-v2 のリリースに伴いアップデートされるが、<br>使う側に影響はない。はず
+v2 のリリースに伴いアップデートされるが、使う側に影響はない（はず）
 
 ---
 
@@ -486,14 +465,18 @@ $ bower install --save Polymer/polymer#2.0-preview
 
 ---
 
+<!-- _header: まとめ -->
+
 ## スペックに関して
 
 - Shadow DOM v1 も Custom Elements v1 も順当にリデザインされてる
 - Shadow DOM は既に [v2](https://github.com/w3c/webcomponents/labels/v2) に関する議論がはじまっている
-- HTML Imports だけは先行きが若干不安だが、ひとまず `webcomponents.js` のポリフィルに頼る
+- HTML Imports だけは先行きが若干不安だが、ひとまず [webcomponentsjs](https://github.com/webcomponents/webcomponentsjs) のポリフィルに頼る
 - WebKit の実装進捗によって **モバイル利用が現実的になりつつある**
 
 ---
+
+<!-- _header: まとめ -->
 
 ## 使い方に関して
 
@@ -507,6 +490,4 @@ $ bower install --save Polymer/polymer#2.0-preview
 
 <!-- _class: invert -->
 
-# おわり
-
-[@1000ch](http://twitter.com/1000ch)
+# <!-- fit --> おわり

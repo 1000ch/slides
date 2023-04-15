@@ -7,23 +7,23 @@ footer: Web Components Updates 2017 by [Shogo SENSUI](https://bento.me/1000ch)
 
 <!-- _class: invert -->
 
-# Web Components Updates 2017
+# <!-- fit --> Web Components Updates 2017
 
-2017.11.15 [html_modules_study](https://web-study.connpass.com/event/70731/) [@1000ch](http://twitter.com/1000ch)
-
----
-
-![bg right:50% 50%](./img/webperf-cover.png)
-
-## [@1000ch](https://twitter.com/1000ch)
-
-- 株式会社サイバーエージェント
-- Web 開発者です
-- [`#超速本`](https://twitter.com/search?q=超速本) が発売されます📕
+2017.11.15 [html_modules_study](https://web-study.connpass.com/event/70731/)
 
 ---
 
-## これから入るかもしれない仕様
+![bg left:30% 60%](https://shogosensui.com/img/1000ch.avif)
+
+# @1000ch
+
+> Web アプリケーション開発を専門とするソフトウェアエンジニア。企業で働く傍ら、技術顧問として複数企業のエンジニアリングに関わり、高品質で維持しやすい Web アプリケーションを作るための活動を続けている。
+
+[超速本](https://www.amazon.co.jp/dp/477419400X) をよろしくおねがいします📕🙏
+
+---
+
+# これから入るかもしれない仕様
 
 - [Void or Self-closing Elements](#4)
 - [HTMLSlotElement#assignedElements()](#9)
@@ -33,11 +33,11 @@ footer: Web Components Updates 2017 by [Shogo SENSUI](https://bento.me/1000ch)
 - [HTML Template Instantiation](#20)
 - [`<link rel="modulepreload">`](#23)
 
-※2017年11月現在、実験的な・議論中の内容です
+※2017年11月現在、議論中の実験的な仕様です
 
 ---
 
-## Void or Self-closing Elements
+# Void or Self-closing Elements
 
 カスタム要素で `/` の省略やセルフクロージングをできるようにする
 
@@ -46,7 +46,7 @@ footer: Web Components Updates 2017 by [Shogo SENSUI](https://bento.me/1000ch)
 
 ---
 
-### カスタム要素で終了タグが必須な件
+## カスタム要素で終了タグが必須な件
 
 ```html
 <!-- まぁわかる -->
@@ -64,19 +64,19 @@ footer: Web Components Updates 2017 by [Shogo SENSUI](https://bento.me/1000ch)
 
 ---
 
-### `/` の省略やセルフクロージングの意義
+## `/` の省略やセルフクロージングの意義
 
 `<input>` や `<img>` のように独立して意味を成すカスタム要素があるかもしれない
 
 ---
 
-### カスタム要素の長さに応じて冗長になる記述
+## カスタム要素の長さに応じて冗長になる記述
 
 `<the-most-important-element><the-most-important-element>` は `<the-most-important-element />` と書けても良さそう
 
 ---
 
-### 各所での議論
+## 各所での議論
 
 - **HTML Parser の挙動を変えるのは危険が伴う**
 - カスタム要素名の制約にハイフン付きがあるなら大丈夫かも？
@@ -84,7 +84,7 @@ footer: Web Components Updates 2017 by [Shogo SENSUI](https://bento.me/1000ch)
 
 ---
 
-## `assignedElements()`
+# `assignedElements()`
 
 `<slot>` 要素に挿入された要素を参照する
 
@@ -92,7 +92,7 @@ footer: Web Components Updates 2017 by [Shogo SENSUI](https://bento.me/1000ch)
 
 ---
 
-### 挿入された要素を Shadow DOM 内部で参照したい
+## 挿入された要素を Shadow DOM 内部で参照したい
 
 ```html
 <fancy-button>
@@ -105,7 +105,7 @@ footer: Web Components Updates 2017 by [Shogo SENSUI](https://bento.me/1000ch)
 
 ---
 
-### `HTMLSlotElement#assignedNodes()` は？
+## `HTMLSlotElement#assignedNodes()` は？
 
 ```javascript
 const button = document.querySelector('fancy-button');
@@ -117,7 +117,7 @@ console.log(slot.assignedNodes());
 
 ---
 
-### `HTMLElement` だけ取得したい === `assignedElements()`
+## `HTMLElement` だけ取得したい === `assignedElements()`
 
 ```javascript
 HTMLSlotElement.prototype.assignedElements = function() {
@@ -132,7 +132,7 @@ HTMLSlotElement.prototype.assignedElements = function() {
 
 ---
 
-## Custom Psuedo-elements
+# Custom Psuedo-elements
 
 Shadow DOM 内の要素に任意の疑似セレクタを定義できるようにする
 
@@ -141,7 +141,7 @@ Shadow DOM 内の要素に任意の疑似セレクタを定義できるように
 
 ---
 
-### Custom Psuedo-elements のイメージ
+## Custom Psuedo-elements のイメージ
 
 ```html
 <date-range-selector>
@@ -162,7 +162,7 @@ _パーサーの振る舞いと相性が若干悪そうで、旗色が悪い？_
 
 ---
 
-## CSS Shadow Parts
+# CSS Shadow Parts
 
 Shadow Host を `::part()` や `::theme()` で参照する CSS セレクタ。`/deep/` やら `::shadow` の登場によって削除された仕様だが、Custom Psuedo-elements によって復活？
 
@@ -171,7 +171,7 @@ Shadow Host を `::part()` や `::theme()` で参照する CSS セレクタ。`/
 
 ---
 
-### CSS Shadow Parts のイメージ
+## CSS Shadow Parts のイメージ
 
 ```html
 <date-range-selector>
@@ -190,7 +190,7 @@ Shadow Host を `::part()` や `::theme()` で参照する CSS セレクタ。`/
 
 ---
 
-## HTML Modules
+# HTML Modules
 
 ES Modules を拡張して HTML ファイルをロードできるようにする
 
@@ -200,7 +200,7 @@ ES Modules を拡張して HTML ファイルをロードできるようにする
 
 ---
 
-### HTML Modules のイメージ
+## HTML Modules のイメージ
 
 ```html
 <!-- bar.html -->
@@ -228,7 +228,7 @@ ES Modules を拡張して HTML ファイルをロードできるようにする
 
 ---
 
-## HTML Template Instantiation
+# HTML Template Instantiation
 
 `template` 要素に mustache の文法を取り込んで、テンプレートとしての機能を拡充する
 
@@ -237,7 +237,7 @@ ES Modules を拡張して HTML ファイルをロードできるようにする
 
 ---
 
-### HTML Template Instantiation
+## HTML Template Instantiation
 
 ```html
 <template id="tmpl">
@@ -257,7 +257,7 @@ ES Modules を拡張して HTML ファイルをロードできるようにする
 
 ---
 
-### type (processor) の定義
+## type (processor) の定義
 
 ```html
 <template type="tmpl-type">
@@ -276,7 +276,7 @@ ES Modules を拡張して HTML ファイルをロードできるようにする
 
 ---
 
-## `<link rel="modulepreload">`
+# `<link rel="modulepreload">`
 
 ES Modules な JavaScript ファイルを先読みする
 
@@ -285,13 +285,13 @@ ES Modules な JavaScript ファイルを先読みする
 
 ---
 
-### 依存関係が深いとロードが遅くなる問題
+## 依存関係が深いとロードが遅くなる問題
 
 <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">モジュール数100以上 or 深さが5以上ならbundleした方がいいとのこと  &quot;Loading Performance with (Many) Modules: Summary as of Oct 7, 2017 - Go…&quot; <a href="https://t.co/8gZZBbejMn">https://t.co/8gZZBbejMn</a></p>&mdash; azu (@azu_re) <a href="https://twitter.com/azu_re/status/918675534632042496?ref_src=twsrc%5Etfw">2017年10月13日</a></blockquote>
 
 ---
 
-### `rel="modulepreload"` の使い方
+## `rel="modulepreload"` の使い方
 
 ```html
 <link rel="modulepreload" href="app.js">
@@ -304,7 +304,7 @@ ES Modules な JavaScript ファイルを先読みする
 
 ---
 
-### `rel="preload"` と `as="module"` はダメ？
+## `rel="preload"` と `as="module"` はダメ？
 
 - `script` 要素の credential と一致している必要がある
 - 事前に module なのかどうかわかっていないとパースに困る (v8?)
@@ -313,6 +313,6 @@ ES Modules な JavaScript ファイルを先読みする
 
 ---
 
-<!--- _class:invert -->
+<!--- _class: invert -->
 
 # おしまい

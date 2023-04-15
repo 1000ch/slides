@@ -2,41 +2,43 @@
 marp: true
 theme: default
 paginate: true
-footer: Webフロントエンドの変遷 2017年初春 by [Shogo SENSUI](https://bento.me/1000ch)
+footer: Webフロントエンドの変遷 2017年初春 by [@1000ch](https://bento.me/1000ch)
 ---
 
 <!-- _class: invert -->
 
-# Webフロントエンドの変遷 2017年初春
+# <!-- fit --> Webフロントエンドの変遷 2017年初春
 
 2017.02.16 [Developer Summit 2017](http://event.shoeisha.jp/devsumi/20170216/session/1270/)
 
-Shogo Sensui a.k.a [@1000ch](http://twitter.com/1000ch)
-
 ---
 
-## @1000ch
+![bg left:30% 60%](https://shogosensui.com/img/1000ch.avif)
 
-- [株式会社サイバーエージェント](https://www.cyberagent.co.jp/)
-  - Web Initiative Center
-- Software Engineer
-- [Frontend Weekly](https://frontendweekly.tokyo/) Curator
+# @1000ch
+
+> Web アプリケーション開発を専門とするソフトウェアエンジニア。企業で働く傍ら、技術顧問として複数企業のエンジニアリングに関わり、高品質で維持しやすい Web アプリケーションを作るための活動を続けている。
 
 ---
 
 # ドキュメントからアプリケーションへ
 
+Web の役割の変化に応じてアーキテクチャが高度化してきた
+
 ---
 
-## アーキテクチャの高度化
+## フレームワーク・ライブラリ
 
-- フレームワーク・ライブラリ
-  - jQuery -> DOM抽象
-  - Backbone、Angular v1.x -> MVC抽象
-  - React、Vue -> コンポーネント抽象
-- よりダイナミックな Web へ
-  - XMLHttpRequest の台頭
-  - Single Page Application の普及
+- prototype.js、jQuery -> DOM抽象
+- Backbone、Angular v1.x -> MVC抽象
+- React、Vue.js -> コンポーネント抽象
+
+---
+
+## よりダイナミックな Web へ
+
+- XMLHttpRequest の台頭
+- Single Page Application の普及
 
 ---
 

@@ -2,24 +2,24 @@
 marp: true
 theme: default
 paginate: true
-footer: Introduction to Resource Hints by [Shogo SENSUI](https://bento.me/1000ch)
+footer: Introduction to Resource Hints by [@1000ch](https://bento.me/1000ch)
 ---
 
 ![bg brightness:0.5](./img/cover.jpg)
 
 <!-- _class: invert -->
 
-# Introduction to Resource Hints
+# <!-- fit --> Introduction to Resource Hints
 
-2016.12.05 [Frontrend Vol.8](https://frontrend.connpass.com/event/45238/) [@1000ch](http://twitter.com/1000ch)
+2016.12.05 [Frontrend Vol.8](https://frontrend.connpass.com/event/45238/)
 
 ---
 
-## @1000ch
+![bg left:30% 60%](https://shogosensui.com/img/1000ch.avif)
 
-- 株式会社サイバーエージェント
-- 専門は Web 技術全般
-- 趣味で Node.js や iOS など
+# @1000ch
+
+> Web アプリケーション開発を専門とするソフトウェアエンジニア。企業で働く傍ら、技術顧問として複数企業のエンジニアリングに関わり、高品質で維持しやすい Web アプリケーションを作るための活動を続けている。
 
 ---
 
@@ -27,7 +27,7 @@ footer: Introduction to Resource Hints by [Shogo SENSUI](https://bento.me/1000ch
 
 <!-- _class: invert -->
 
-## Resource Hints とは
+# Resource Hints とは
 
 これから必要になるリソースを `<link>` 要素で定義し、それをブラウザが **投機的に** 取得する機能
 
@@ -47,16 +47,16 @@ footer: Introduction to Resource Hints by [Shogo SENSUI](https://bento.me/1000ch
 
 ---
 
-## [Resource Hints](https://w3c.github.io/resource-hints/)
+<!-- _class: invert -->
 
-- [DNS Prefetch](https://w3c.github.io/resource-hints/#dns-prefetch): 投機的な DNS 解決
-- [Preconnect](https://w3c.github.io/resource-hints/#preconnect): 投機的な TCP 接続
-- [Prefetch](https://w3c.github.io/resource-hints/#prefetch): 投機的なリソース取得
-- [Prerender](https://w3c.github.io/resource-hints/#prerender): 投機的なページ描画
+# Resource Hints
+
+- [DNS Prefetch](https://html.spec.whatwg.org/multipage/links.html#link-type-dns-prefetch): 投機的な DNS 解決
+- [Preconnect](https://html.spec.whatwg.org/multipage/links.html#link-type-preconnect): 投機的な TCP 接続
+- [Prefetch](https://html.spec.whatwg.org/multipage/links.html#link-type-prefetch): 投機的なリソース取得
+- [Prerender](https://html.spec.whatwg.org/multipage/links.html#link-type-prerender): 投機的なページ描画
 
 ---
-
-<!-- _class: invert -->
 
 ## DNS Prefetch
 
@@ -69,8 +69,6 @@ footer: Introduction to Resource Hints by [Shogo SENSUI](https://bento.me/1000ch
 
 ---
 
-<!-- _class: invert -->
-
 ## Preconnect
 
 ```html
@@ -82,8 +80,6 @@ footer: Introduction to Resource Hints by [Shogo SENSUI](https://bento.me/1000ch
 - ドメイン及びスキーマがわかっている場合に使う
 
 ---
-
-<!-- _class: invert -->
 
 ## Prefetch
 
@@ -106,11 +102,9 @@ footer: Introduction to Resource Hints by [Shogo SENSUI](https://bento.me/1000ch
 - **font**: CSS の `@font-face`
 - **image**: `img`, `picture`, `srcset`, CSS の `-image`
 
-他には `worker`, `embed`, `object`, `documenet` など
+他には `worker`, `embed`, `object`, `documenet` などがある
 
 ---
-
-<!-- _class: invert -->
 
 ## Prerender
 
@@ -120,22 +114,19 @@ footer: Introduction to Resource Hints by [Shogo SENSUI](https://bento.me/1000ch
 
 - 指定した URL の HTML ドキュメントの取得及び評価を行う
 - 描画まで実行するので、高速にナビゲーションされる
-- コストも大きいので、次に発生する可能性の高いナビゲーションに対して実施すると良い
+- コストも大きいので、発生する可能性の高いナビゲーションを指定すると良い
 
 ---
 
-<!-- _class: invert -->
-
-## Hint probability
+## [`fetchpriority`](https://html.spec.whatwg.org/multipage/urls-and-fetching.html#fetch-priority-attribute) 属性
 
 ```html
-<link rel="dns-prefetch" href="//widget.com" pr="0.75">
-<link rel="preconnect" href="//cdn.example.com" pr="0.42">
-<link rel="prefetch" href="//example.com/next-page.html" pr="0.75">
-<link rel="prerender" href="//example.com/thankyou.html" pr="0.25">
+<link rel="dns-prefetch" href="//widget.com" fetchpriority="high">
+<link rel="preconnect" href="//cdn.example.com" fetchpriority="low">
+<link rel="prefetch" href="//example.com/next-page.html" fetchpriority="auto">
 ```
 
-- リソースの優先度を `pr` 属性に `0.0~1.0` で指定する
+- リソースの優先度を `high`, `low`, `auto` で指定する
 
 ---
 
@@ -150,7 +141,7 @@ footer: Introduction to Resource Hints by [Shogo SENSUI](https://bento.me/1000ch
 
 ---
 
-## Chrome の Prerender History
+# Chrome の Prerender History
 
 [`chrome://net-internals/#prerender`](chrome://net-internals/#prerender)
 
