@@ -1,5 +1,6 @@
 ---
 marp: true
+title: Introduction to Resource Hints
 theme: default
 paginate: true
 footer: Introduction to Resource Hints by [@1000ch](https://bento.me/1000ch)

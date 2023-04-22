@@ -1,5 +1,6 @@
 ---
 marp: true
+title: Web Components Updates 2017
 theme: default
 paginate: true
 footer: Web Components Updates 2017 by [Shogo SENSUI](https://bento.me/1000ch)

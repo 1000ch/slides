@@ -1,5 +1,6 @@
 ---
 marp: true
+title: 麻雀はじめの一歩
 theme: default
 paginate: true
 footer: 麻雀はじめの一歩 by [@1000ch](https://bento.me/1000ch)

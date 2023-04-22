@@ -1,5 +1,6 @@
 ---
 marp: true
+title: Webフロントエンドの変遷 2017年初春
 theme: default
 paginate: true
 footer: Webフロントエンドの変遷 2017年初春 by [@1000ch](https://bento.me/1000ch)

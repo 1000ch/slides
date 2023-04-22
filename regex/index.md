@@ -1,5 +1,6 @@
 ---
 marp: true
+title: 正規表現コト始め
 theme: default
 paginate: true
 footer: 正規表現コト始め by [@1000ch](https://bento.me/1000ch)

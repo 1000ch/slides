@@ -1,5 +1,6 @@
 ---
 marp: true
+title: WebP - A new image format for the Web
 theme: default
 paginate: true
 footer: WebP - A new image format for the Web by [@1000ch](https://bento.me/1000ch)
@@ -19,23 +20,23 @@ A new image format for the Web
 
 # @1000ch
 
-Web アプリケーション開発を専門とするソフトウェアエンジニア。企業で働く傍ら、技術顧問として複数企業のエンジニアリングに関わり、高品質で維持しやすい Web アプリケーションを作るための活動を続けている。
+> Web アプリケーション開発を専門とするソフトウェアエンジニア。企業で働く傍ら、技術顧問として複数企業のエンジニアリングに関わり、高品質で維持しやすい Web アプリケーションを作るための活動を続けている。
 
 ---
 
-# WebPとは？
+# WebP とは？
 
-- Googleが開発する新しい画像フォーマット
-- 可逆/非可逆圧縮・アルファチャネル・アニメーション
+- Google が開発する新しい画像フォーマット
+- 可逆/非可逆圧縮・アルファチャネル・アニメーションなど豊富な機能
 - 高圧縮率でファイルサイズがとても軽い
 
 ---
 
 ## どのくらい軽いの？
 
-- 可逆圧縮 → PNG比で約26%小さい
-- 非可逆圧縮 → JPEG比で約25%~34%小さい
-- アルファチャネル付きの非可逆圧縮 → PNG比で3倍以上小さい
+- 可逆圧縮 → PNG 比で約 26 %小さい
+- 非可逆圧縮 → JPEG 比で約 25 %~ 34 %小さい
+- アルファチャネル付きの非可逆圧縮 → PNG 比で3倍以上小さい
 
 ---
 
@@ -63,40 +64,40 @@ Web アプリケーション開発を専門とするソフトウェアエンジ�
 
 ## サポート環境
 
-- Google Chrome (+ Opera)
-- Chrome for Android <i class="fa fa-android"></i>
+- Google Chrome
+- Chrome for Android
 - Chrome for iOS
-- CodecがあればWindowsのエクスプローラ <i class="fa fa-windows"></i>
+- Codec があれば Windows のエクスプローラ
 
 ---
 
-## iOS Safariだと…
+## iOS Safari だと…
 
-![](./img/webp-safari.jpg)
-
----
-
-### iOS Chromeだと…
-
-![](./img/webp-chrome.jpg)
+![bg contain](./img/webp-safari.jpg)
 
 ---
 
-## iOS WebViewもOK
+### iOS Chrome だと…
 
-- vwebpで表示する
-- dwebpでデコードする
-- Chrome Frameを使う（サポート終了）
+![bg contain](./img/webp-chrome.jpg)
 
-ネットワークコストの軽減＋アプリサイズのダイエット
+---
+
+## iOS WebView も OK
+
+- vwebp で表示する
+- dwebp でデコードする
+- Chrome Frame を使う（サポート終了）
+
+ネットワークコストの軽減だけでなく、アプリのダイエットにもつながる
 
 ---
 
 ## 非対応ブラウザのために
 
-- WebPJSで`.webp`をdataURIに変換
-- リクエストヘッダに`image/webp`がない場合はpngを返却
-- `<picture>`と`<source type="image/webp">`で条件分岐
+- WebPJS で `.webp` を dataURI に変換
+- リクエストヘッダに `image/webp` がない場合は png を返却
+- `<picture>` と `<source type="image/webp">` で条件分岐
 
 やりようはいくらでもある
 
@@ -110,10 +111,10 @@ Web アプリケーション開発を専門とするソフトウェアエンジ�
 
 ## コマンドラインツール
 
-- [cwebp](https://developers.google.com/speed/webp/docs/precompiled) Homebrewからもインストール可
-- [cwebp-bin](https://github.com/imagemin/cwebp-bin) cwebpのNode.jsラッパー
-- [grunt-cwebp](https://github.com/1000ch/grunt-cwebp) Gruntプラグイン
-- [gulp-cwebp](https://github.com/1000ch/gulp-cwebp) Gulpプラグイン
+- [cwebp](https://developers.google.com/speed/webp/docs/precompiled) Homebrew からもインストール可
+- [cwebp-bin](https://github.com/imagemin/cwebp-bin) cwebpの Node.js ラッパー
+- [grunt-cwebp](https://github.com/1000ch/grunt-cwebp) Grunt プラグイン
+- [gulp-cwebp](https://github.com/1000ch/gulp-cwebp) Gulp プラグイン
 
 ---
 
@@ -143,12 +144,8 @@ Drag & Drop!
 
 ## WebPonize の機能
 
-- ImageOptimにそっくりなUI
-- ドラッグ&ドロップで変換できる
-- 複数ファイルのドロップもOK
+- ImageOptim にそっくりなインターフェース
+- ドラッグアンドドロップで変換できる
+- 複数ファイルのドロップも OK
 - PNG・JPEG・GIF（アニメーションGIF）に対応している
 - 圧縮率やアルファチャネルのオプション設定できる
-
----
-
-# Thank you!

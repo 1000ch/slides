@@ -1,5 +1,6 @@
 ---
 marp: true
+title: The Silver Searcher のススメ
 theme: default
 paginate: true
 footer: The Silver Searcher のススメ by [@1000ch](https://bento.me/1000ch)

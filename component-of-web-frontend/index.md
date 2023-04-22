@@ -1,5 +1,6 @@
 ---
 marp: true
+title: Webフロントエンドにおけるコンポーネント化のアプローチ
 theme: default
 paginate: true
 footer: Webフロントエンドにおけるコンポーネント化のアプローチ by [@1000ch](https://bento.me/1000ch)

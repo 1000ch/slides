@@ -1,5 +1,6 @@
 ---
 marp: true
+title: Web Components 2016 & Polymer v2
 theme: default
 paginate: true
 footer: Web Components 2016 & Polymer v2 by [@1000ch](https://bento.me/1000ch)

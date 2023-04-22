@@ -1,5 +1,6 @@
 ---
 marp: true
+title: よくわかる画像の話
 theme: default
 paginate: true
 footer: よくわかる画像の話 by [@1000ch](https://bento.me/1000ch)

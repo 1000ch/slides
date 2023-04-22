@@ -1,5 +1,6 @@
 ---
 marp: true
+title: なぜ私達は働くのか
 theme: default
 paginate: true
 footer: なぜ私達は働くのか by [@1000ch](https://bento.me/1000ch)
