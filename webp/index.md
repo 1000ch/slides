@@ -32,7 +32,7 @@ A new image format for the Web
 
 ---
 
-## どのくらい軽いの？
+## どのくらい軽量なのか
 
 - 可逆圧縮 → PNG 比で約 26 %小さい
 - 非可逆圧縮 → JPEG 比で約 25 %~ 34 %小さい
@@ -58,46 +58,36 @@ A new image format for the Web
 
 <!-- _class: invert -->
 
-# 利用に向けて
+# <!-- fit --> 利用に向けて
 
 ---
 
 ## サポート環境
 
-- Google Chrome
-- Chrome for Android
-- Chrome for iOS
-- Codec があれば Windows のエクスプローラ
+- Chrome/Firefox/Safari を含む最新モダンブラウザ
+- macOS 11 Big Sur or later
+- Windows 10 or later
 
 ---
 
-## iOS Safari だと…
+## iOS 14.0 未満の Safari だと…
 
 ![bg contain](./img/webp-safari.jpg)
 
 ---
 
-### iOS Chrome だと…
+### iOS 14.0 未満の Chrome だと…
 
 ![bg contain](./img/webp-chrome.jpg)
 
 ---
 
-## iOS WebView も OK
-
-- vwebp で表示する
-- dwebp でデコードする
-- Chrome Frame を使う（サポート終了）
-
-ネットワークコストの軽減だけでなく、アプリのダイエットにもつながる
-
----
-
 ## 非対応ブラウザのために
 
-- WebPJS で `.webp` を dataURI に変換
-- リクエストヘッダに `image/webp` がない場合は png を返却
-- `<picture>` と `<source type="image/webp">` で条件分岐
+- [vwebp](https://developers.google.com/speed/webp/docs/vwebp) で表示し、[dwebp](https://developers.google.com/speed/webp/docs/dwebp) でデコードしたり、[Chrome Frame を使ってきた](https://cloud.googleblog.com/2013/06/retiring-chrome-frame.html)
+- [WebPJS](https://github.com/obartra/webpjs) で `.webp` を dataURI に変換する
+- `Accept: image/webp` がない場合に、異なる画像フォーマットを返却する
+- `<picture>` 要素と `<source type="image/webp">` 要素で条件分岐する
 
 やりようはいくらでもある
 
@@ -105,32 +95,21 @@ A new image format for the Web
 
 <!-- _class: invert -->
 
-# ツール
+# <!-- fit --> 各種変換ツール
 
 ---
 
-## コマンドラインツール
+## CLI ツール
 
-- [cwebp](https://developers.google.com/speed/webp/docs/precompiled) Homebrew からもインストール可
-- [cwebp-bin](https://github.com/imagemin/cwebp-bin) cwebpの Node.js ラッパー
-- [grunt-cwebp](https://github.com/1000ch/grunt-cwebp) Grunt プラグイン
-- [gulp-cwebp](https://github.com/1000ch/gulp-cwebp) Gulp プラグイン
+- [cwebp](https://developers.google.com/speed/webp/docs/precompiled): Homebrew からもインストール可
+- [cwebp-bin](https://github.com/imagemin/cwebp-bin): cwebp の Node.js ラッパー
 
 ---
 
-```bash
-$ brew install cwebp
-$ npm install [-g] cwebp-bin
-$ npm install grunt-cwebp
-$ npm install gulp-cwebp
-```
+## GUI ツール
 
----
-
-## GUI でやりたい？
-
-- [webp.herokuapp.com](http://webp.herokuapp.com) - Webツール
-- [WebPonize](http://github.com/webponize/webponize) - Macのアプリ
+- [Squoosh](https://squoosh.app/): 画像の最適化やフォーマットの変換などを行う Web アプリ
+- [WebPonize](http://github.com/webponize/webponize) - PNG/JPEG/GIF を WebP に変換する macOS アプリ
 
 ---
 
@@ -145,7 +124,6 @@ Drag & Drop!
 ## WebPonize の機能
 
 - ImageOptim にそっくりなインターフェース
-- ドラッグアンドドロップで変換できる
-- 複数ファイルのドロップも OK
+- ドラッグアンドドロップで変換できる、複数ファイルのドロップも OK
 - PNG・JPEG・GIF（アニメーションGIF）に対応している
-- 圧縮率やアルファチャネルのオプション設定できる
+- オプションで圧縮率やアルファチャネルを設定できる
