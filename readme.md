@@ -9,3 +9,4 @@
 - [Webフロントエンドにおけるコンポーネント化のアプローチ](https://1000ch.github.io/slides/component-of-web-frontend) (originally for [Inside Frontend #1](https://inside-frontend.connpass.com/event/47920/) at 2017-02-25)
 - [Web Components Updates 2017](https://1000ch.github.io/slides/webcomponents-2017) (originally for [html modules Study](https://web-study.connpass.com/event/70731/) at 2017-11-15)
 - [なぜ私達は働くのか](https://1000ch.github.io/slides/why-we-work)
+- [ソフトウェアエンジニアのキャリア](https://1000ch.github.io/slides/software-engineer-career) (originally for [外資就活 Terminal](https://gaishishukatsu.com/lp/terminal) at 2023-05-22)
