@@ -8,6 +8,6 @@
     "postbuild": "for d in $(ls -F | grep / | grep -v -E '^node_modules|public'); do mkdir -p public/$d/img && if [ -d $d/img/ ]; then cp -R $d/img/ public/$d; fi; done"
   },
   "devDependencies": {
-    "@marp-team/marp-cli": "^2.4.0"
+    "@marp-team/marp-cli": "^2.5.0"
   }
 }
