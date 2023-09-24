@@ -157,7 +157,7 @@ C(評価) --> |評価と称賛により承認される| A
 
 # 広がり続ける Frontend の責務
 
-サーバーサイドエンジニアが Backend を実装してマークアップエンジニアが HTML/CSS を実装する時代から、Node.js の成熟およびそのエコシステムの普及によって Software Engineer (Frontend) が全域をカバーしつつある。
+サーバーサイドエンジニアが Backend を実装してマークアップエンジニアが HTML/CSS を実装する時代から、Node.js が成すエコシステムの普及と成熟によって Software Engineer (Frontend) が Web アプリケーション全域をカバーしつつある。
 
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">.<a href="https://twitter.com/1000ch?ref_src=twsrc%5Etfw">@1000ch</a> さんの「フロントエンドの責務が広がってバックエンドを飲み込んでいる」という話があって、これは結構象徴的だなと思いました。たとえばフロントエンドエンジニア向けのミートアップでCDNが話の中心になるというのは隔世の感があります。 <a href="https://twitter.com/hashtag/%E9%AB%98%E9%80%9F%E5%8C%96_findy?src=hash&amp;ref_src=twsrc%5Etfw">#高速化_findy</a></p>&mdash; FUJI Goro (@__gfx__) <a href="https://twitter.com/__gfx__/status/1638497684708552705?ref_src=twsrc%5Etfw">March 22, 2023</a></blockquote>
 
