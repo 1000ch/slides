@@ -10,3 +10,5 @@
 - [Web Components Updates 2017](https://1000ch.github.io/slides/webcomponents-2017) (originally for [html modules Study](https://web-study.connpass.com/event/70731/) at 2017-11-15)
 - [なぜ私達は働くのか](https://1000ch.github.io/slides/why-we-work)
 - [ソフトウェアエンジニアのキャリア](https://1000ch.github.io/slides/software-engineer-career) (originally for [外資就活 Terminal](https://gaishishukatsu.com/lp/terminal) at 2023-05-22)
+- [開発生産性と組織](https://1000ch.github.io/slides/productivity-and-organization) (originally for [フロントエンドの開発生産性〜Online Conference〜](https://findy.connpass.com/event/294482/) at 2023-09-21)
+- [2023 年の Web 開発のベースライン](https://1000ch.github.io/slides/web-development-baseline-2023) (originally for [TechFeed Experts Night#26 〜 Web標準技術最前線 ー HTML/CSS/JSの「いま」](https://techfeed.io/events/techfeed-experts-night-26) at 2023-09-27)
