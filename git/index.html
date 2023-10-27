@@ -124,8 +124,8 @@ flowchart LR;
   RemoteCommits -- git pull --&gt; LocalCommitsY
 </div>
 <ul>
-<li>ローカルもリモートも Git のリポジトリであり、Git における差分のまとまりであるコミットを格納している</li>
-<li>コミットの履歴を、リモートから <a href="https://git-scm.com/docs/git-pull"><code>git pull</code></a> でローカルに受信したり、ローカルから <a href="https://git-scm.com/docs/git-push"><code>git push</code></a> でリモートに送信する</li>
+<li>ローカルもリモートも Git のリポジトリであり、Git における差分のまとまりであるリビジョンを格納している</li>
+<li>リビジョンの履歴を、リモートから <a href="https://git-scm.com/docs/git-pull"><code>git pull</code></a> でローカルに受信したり、ローカルから <a href="https://git-scm.com/docs/git-push"><code>git push</code></a> でリモートに送信する</li>
 </ul>
 <footer>はじめての Git by <a href="https://bento.me/1000ch">@1000ch</a></footer>
 </section>
@@ -154,7 +154,7 @@ flowchart LR;
 </div>
 <ul>
 <li>ファイルを変更すると差分が発生する。差分を <a href="https://git-scm.com/docs/git-diff"><code>git diff</code></a> で確認し、<a href="https://git-scm.com/docs/git-add"><code>git add</code></a> でコミットの対象に含め、<a href="https://git-scm.com/docs/git-reset"><code>git reset</code></a> でコミットの対象から外す</li>
-<li>コミットの対象に含めた差分全体を <a href="https://git-scm.com/docs/git-commit"><code>git commit</code></a> で差分のまとまりであるコミットを作成する</li>
+<li>対象に含めた差分全体を <a href="https://git-scm.com/docs/git-commit"><code>git commit</code></a> で差分のまとまりであるリビジョンを作成する、これをコミットと呼ぶ</li>
 </ul>
 <footer>はじめての Git by <a href="https://bento.me/1000ch">@1000ch</a></footer>
 </section>
