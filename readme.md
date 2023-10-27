@@ -12,3 +12,5 @@
 - [ソフトウェアエンジニアのキャリア](https://1000ch.github.io/slides/software-engineer-career) (originally for [外資就活 Terminal](https://gaishishukatsu.com/lp/terminal) at 2023-05-22)
 - [開発生産性と組織](https://1000ch.github.io/slides/productivity-and-organization) (originally for [フロントエンドの開発生産性〜Online Conference〜](https://findy.connpass.com/event/294482/) at 2023-09-21)
 - [2023 年の Web 開発のベースライン](https://1000ch.github.io/slides/web-development-baseline-2023) (originally for [TechFeed Experts Night#26 〜 Web標準技術最前線 ー HTML/CSS/JSの「いま」](https://techfeed.io/events/techfeed-experts-night-26) at 2023-09-27)
+- [はじめての Git](https://1000ch.github.io/slides/git)
+- [macOS の黒い画面](https://1000ch.github.io/slides/macos-cli)
