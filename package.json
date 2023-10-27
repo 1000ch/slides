@@ -4,6 +4,7 @@
   "repository": "1000ch/slides",
   "author": "1000ch",
   "scripts": {
+    "start": "marp --server --html --input-dir .",
     "build": "for d in $(ls -F | grep / | grep -v -E '^node_modules|public'); do mkdir -p public/$d && marp --html --input-dir $d --output public/$d; done",
     "postbuild": "for d in $(ls -F | grep / | grep -v -E '^node_modules|public'); do mkdir -p public/$d/img && if [ -d $d/img/ ]; then cp -R $d/img/ public/$d; fi; done"
   },
