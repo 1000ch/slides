@@ -10,8 +10,6 @@ footer: なぜ私達は働くのか by [@1000ch](https://bento.me/1000ch)
 
 # <!-- fit --> なぜ私達は働くのか
 
-by Shogo SENSUI
-
 ---
 
 ![bg left:30% 60%](https://shogosensui.com/img/1000ch.avif)

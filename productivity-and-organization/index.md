@@ -11,8 +11,7 @@ footer: 開発生産性と組織 by [@1000ch](https://bento.me/1000ch)
 
 # <!-- fit --> 開発生産性と組織
 
-at [フロントエンドの開発生産性〜Online Conference〜](https://findy.connpass.com/event/294482/)
-by [@1000ch](https://bento.me/1000ch)
+[フロントエンドの開発生産性〜Online Conference〜](https://findy.connpass.com/event/294482/)
 
 ---
 
@@ -239,7 +238,7 @@ section Evaluation
 # <!-- fit --> Frontend としての問の在処を探そう
 
 <script type="module">
-import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+import mermaid from 'https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs';
 mermaid.initialize({startOnLoad: true});
 </script>
-<script defer src="https://platform.twitter.com/widgets.js"></script>
+<script defer src="https://platform.x.com/widgets.js"></script>

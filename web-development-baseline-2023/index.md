@@ -10,8 +10,7 @@ footer: 2023 年の Web 開発のベースライン by [@1000ch](https://bento.m
 
 # <!-- fit --> 2023 年の Web 開発のベースライン
 
-at [TechFeed Experts Night #26](https://techfeed.io/events/techfeed-experts-night-26)
-by [@1000ch](http://twitter.com/1000ch)
+[TechFeed Experts Night #26](https://techfeed.io/events/techfeed-experts-night-26)
 
 ---
 
@@ -165,7 +164,7 @@ Node.js とそのエコシステムは Web 開発にとって今や欠かせな�
 [Frontend Developer Roadmap](https://roadmap.sh/frontend) を参考に、<u>**Software Engineer (Frontend) としての分化する専門性を磨いていく**</u>。
 
 <script type="module">
-import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+import mermaid from 'https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs';
 mermaid.initialize({startOnLoad: true});
 </script>
-<script defer src="https://platform.twitter.com/widgets.js"></script>
+<script defer src="https://platform.x.com/widgets.js"></script>

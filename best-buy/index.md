@@ -10,8 +10,6 @@ footer: 買ってよかったもの総集編 by [@1000ch](https://bento.me/1000c
 
 # <!-- fit --> 買ってよかったもの総集編
 
-by Shogo SENSUI
-
 ---
 
 ![bg left:30% 70%](https://m.media-amazon.com/images/I/6129C2JCHwL._AC_SX679_.jpg)
