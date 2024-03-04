@@ -12,8 +12,6 @@ footer: 麻雀はじめの一歩 by [@1000ch](https://bento.me/1000ch)
 
 # <!-- fit --> 麻雀はじめの一歩
 
-by [@1000ch](http://twitter.com/1000ch)
-
 ---
 
 # 麻雀とは？
@@ -69,9 +67,8 @@ by [@1000ch](http://twitter.com/1000ch)
 
 ## 基本原則その1「アガリ形」
 
-- アガリ形は14枚である
+- アガリ形は14枚であり、**面子(3枚1組)が4つ** + **雀頭(2枚1組)が1つ** という内訳
 - 手元に13枚、自摸って14枚という流れを繰り返し行う
-- **雀頭(2枚1組)が1つ** ＋ **面子(3枚1組)が4つ** という内訳
 
 ![](./img/honor/3.png)![](./img/honor/3.png)![](./img/honor/3.png)![](./img/dot/1.png)![](./img/dot/2.png)![](./img/dot/3.png)![](./img/dot/8.png)![](./img/dot/8.png)![](./img/bamboo/3.png)![](./img/bamboo/4.png)![](./img/bamboo/5.png)![](./img/character/6.png)![](./img/character/7.png)![](./img/character/8.png)
 
@@ -99,7 +96,7 @@ by [@1000ch](http://twitter.com/1000ch)
 
 ![](./img/kaiji.jpg)
 
-何とか遊べる。でも、あがれない。
+何とか遊べる。でも、和了れない。
 
 ---
 
@@ -123,7 +120,7 @@ by [@1000ch](http://twitter.com/1000ch)
 
 ![bg right](./img/go.jpg)
 
-あと1手でアガリという聴牌（テンパイ）の状態で、宣言する
+あと1手で和了という聴牌（テンパイ）の状態で、宣言する
 
 ---
 
@@ -162,7 +159,7 @@ by [@1000ch](http://twitter.com/1000ch)
 ## ひとまずこの5つを覚えよう
 
 - ポン？チー？カン？そんなもんやらんでいい！
-    - やりたい人は **翻牌（ファンパイ）** という役を覚えてからやること
+  - やりたい人は **翻牌（ファンパイ）** という役を覚えてからやること
 - ドラ？そんなもん（最初は）気にしなくていい！
 - 点数の数え方？そんなもん（最初は）気にしなくていい！
 
@@ -194,7 +191,7 @@ by [@1000ch](http://twitter.com/1000ch)
 
 ![](./img/character/8.png)![](./img/character/9.png)　ペンチャン（辺張）
 
-![](./img/honor/2.png)![](./img/honor/2.png)　シャンポン（双碰）
+![](./img/honor/2.png)![](./img/honor/2.png)　トイツ（対子）
 
 ---
 
