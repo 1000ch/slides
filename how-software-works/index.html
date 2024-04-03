@@ -56,6 +56,117 @@
 <footer>ソフトウェアプロダクトの仕組み by <a href="https://bento.me/1000ch">@1000ch</a></footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-paginate="true" data-footer="ソフトウェアプロダクトの仕組み by [@1000ch](https://bento.me/1000ch)" data-theme="default" data-marpit-pagination="7" style="--paginate:true;--footer:ソフトウェアプロダクトの仕組み by [@1000ch](https://bento.me/1000ch);--theme:default;" data-marpit-pagination-total="15">
+<h1 id="%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%82%92%E6%A7%8B%E6%88%90%E3%81%99%E3%82%8B%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%81%A8%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2">コンピュータを構成するソフトウェアとハードウェア</h1>
+<h2 id="%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2%E4%B8%8A%E3%81%A7%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%81%8C%E5%8B%95%E4%BD%9C%E3%81%99%E3%82%8B">ハードウェア上でソフトウェアが動作する</h2>
+<ul>
+<li>端末はソフトウェアが搭載されていなければ、ただの機械</li>
+<li>ハードウェアを動作させる基本ソフトウェアとして OS</li>
+</ul>
+<h2 id="%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%81%AB%E3%82%82%E5%B1%A4%E3%81%8C%E3%81%82%E3%82%8A%E3%81%9D%E3%82%8C%E5%90%8C%E5%A3%AB%E3%81%8C%E3%82%84%E3%82%8A%E3%81%A8%E3%82%8A%E3%81%99%E3%82%8B">ソフトウェアにも層があり、それ同士がやりとりする</h2>
+<ul>
+<li>OS 上で動作する様々なソフトウェアが、いわゆるネイティブアプリケーション</li>
+<li>その1つにブラウザがあり、ブラウザ上で動作するのが Web アプリケーション</li>
+</ul>
+<footer>ソフトウェアプロダクトの仕組み by <a href="https://bento.me/1000ch">@1000ch</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-paginate="true" data-footer="ソフトウェアプロダクトの仕組み by [@1000ch](https://bento.me/1000ch)" data-header="コンピュータはソフトウェアとハードウェアで構成される" data-theme="default" data-marpit-pagination="8" style="--paginate:true;--footer:ソフトウェアプロダクトの仕組み by [@1000ch](https://bento.me/1000ch);--header:コンピュータはソフトウェアとハードウェアで構成される;--theme:default;" data-marpit-pagination-total="15">
+<header>コンピュータはソフトウェアとハードウェアで構成される</header>
+<div class="mermaid">
+flowchart TB;
+  subgraph hardware[ハードウェア]
+    subgraph desktop[デスクトップ]
+      cpu[CPU]
+      harddisk[ハードディスク]
+      display[ディスプレイ]
+    end
+    subgraph mobile[モバイル]
+    end
+  end
+  subgraph software[ソフトウェア]
+    subgraph os[オペレーティングシステム]
+      windows[Windows]
+      macos[macOS]
+      linux[Linux]
+      ios[iOS]
+      android[Android]
+    end
+  end
+  hardware <--> software
+</div>
+<footer>ソフトウェアプロダクトの仕組み by <a href="https://bento.me/1000ch">@1000ch</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-paginate="true" data-footer="ソフトウェアプロダクトの仕組み by [@1000ch](https://bento.me/1000ch)" data-header="ソフトウェアにも様々なレイヤが存在する" data-theme="default" data-marpit-pagination="9" style="--paginate:true;--footer:ソフトウェアプロダクトの仕組み by [@1000ch](https://bento.me/1000ch);--header:ソフトウェアにも様々なレイヤが存在する;--theme:default;" data-marpit-pagination-total="15">
+<header>ソフトウェアにも様々なレイヤが存在する</header>
+<div class="mermaid">
+flowchart TB;
+  subgraph software[ソフトウェア]
+    subgraph os[オペレーティングシステム]
+      subgraph ios[iOS]
+        iosapp[iOS アプリ]
+      end
+      subgraph android[Android]
+        androidapp[Android アプリ]
+      end
+      subgraph web[Web]
+        subgraph browser[ブラウザ]
+          webapp[Web アプリ]
+        end
+      end
+    end
+  end
+</div>
+<footer>ソフトウェアプロダクトの仕組み by <a href="https://bento.me/1000ch">@1000ch</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-paginate="true" data-footer="ソフトウェアプロダクトの仕組み by [@1000ch](https://bento.me/1000ch)" data-theme="default" data-marpit-pagination="10" style="--paginate:true;--footer:ソフトウェアプロダクトの仕組み by [@1000ch](https://bento.me/1000ch);--theme:default;" data-marpit-pagination-total="15">
+<h1 id="%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E5%9F%BA%E6%9C%AC%E7%9A%84%E3%81%AA%E5%8B%95%E4%BD%9C%E5%8E%9F%E7%90%86">アプリケーションの基本的な動作原理</h1>
+<h2 id="%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9%E4%B8%8A%E3%81%A7%E5%8B%95%E4%BD%9C%E3%81%99%E3%82%8B%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3">デバイス上で動作するアプリケーション</h2>
+<ul>
+<li>デバイス上にホストされるソフトウェアが、ユーザーアクションに応答する</li>
+<li>URL にアクセスしたりストアからソフトウェアをダウンロードする</li>
+</ul>
+<h2 id="%E3%81%9D%E3%82%8C%E3%81%A8%E7%96%8E%E9%80%9A%E3%81%99%E3%82%8B%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%E4%B8%8A%E3%81%AE%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">それと疎通するクラウド上のシステム</h2>
+<ul>
+<li>クラウド上にホストされるソフトウェアが、ネットワーク越しの要求に応答する</li>
+</ul>
+<footer>ソフトウェアプロダクトの仕組み by <a href="https://bento.me/1000ch">@1000ch</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-paginate="true" data-footer="ソフトウェアプロダクトの仕組み by [@1000ch](https://bento.me/1000ch)" data-header="実際のソフトウェア動作を表現すると" data-theme="default" data-marpit-pagination="11" style="--paginate:true;--footer:ソフトウェアプロダクトの仕組み by [@1000ch](https://bento.me/1000ch);--header:実際のソフトウェア動作を表現すると;--theme:default;" data-marpit-pagination-total="15">
+<header>実際のソフトウェア動作を表現すると</header>
+<div class="mermaid">
+flowchart LR;
+  subgraph client-side[クライアントサイド]
+    subgraph ios[iOS]
+      iosapp[iOS アプリ]
+    end
+    subgraph android[Android]
+      androidapp[Android アプリ]
+    end
+    subgraph web[Web]
+      subgraph browser[ブラウザ]
+        webapp[Web アプリ]
+      end
+    end
+  end
+  subgraph server-side[サーバーサイド]
+    subgraph linux
+      subgraph server[サーバー]
+        system[システム]
+        database[データベース]
+      end
+    end
+  end
+  iosapp <--> server
+  androidapp <--> server
+  webapp <--> server
+  system <--> database
+</div>
+<footer>ソフトウェアプロダクトの仕組み by <a href="https://bento.me/1000ch">@1000ch</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-paginate="true" data-footer="ソフトウェアプロダクトの仕組み by [@1000ch](https://bento.me/1000ch)" data-class="invert" data-theme="default" class="invert" data-marpit-pagination="12" style="--paginate:true;--footer:ソフトウェアプロダクトの仕組み by [@1000ch](https://bento.me/1000ch);--class:invert;--theme:default;" data-marpit-pagination-total="15">
+<h1 is="marp-h1" data-auto-scaling id="%E3%83%97%E3%83%AD%E3%83%80%E3%82%AF%E3%83%88%E3%82%92%E6%A7%8B%E6%88%90%E3%81%99%E3%82%8B%E3%82%82%E3%81%AE"> プロダクトを構成するもの</h1>
+<footer>ソフトウェアプロダクトの仕組み by <a href="https://bento.me/1000ch">@1000ch</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-paginate="true" data-footer="ソフトウェアプロダクトの仕組み by [@1000ch](https://bento.me/1000ch)" data-theme="default" data-marpit-pagination="13" style="--paginate:true;--footer:ソフトウェアプロダクトの仕組み by [@1000ch](https://bento.me/1000ch);--theme:default;" data-marpit-pagination-total="15">
 <h1 id="%E3%83%97%E3%83%AD%E3%83%80%E3%82%AF%E3%83%88%E3%82%92%E6%88%90%E3%81%99%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%81%A8%E7%B5%84%E7%B9%94">プロダクトを成すソフトウェアと組織</h1>
 <h2 id="%E6%A7%98%E3%81%AA%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E6%8D%89%E3%81%88%E6%96%B9">様々な&quot;システム&quot;の捉え方</h2>
 <ul>
@@ -69,7 +180,7 @@
 </ul>
 <footer>ソフトウェアプロダクトの仕組み by <a href="https://bento.me/1000ch">@1000ch</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-paginate="true" data-footer="ソフトウェアプロダクトの仕組み by [@1000ch](https://bento.me/1000ch)" data-header="プロダクトの価値がデリバリーされるまでの例" data-theme="default" data-marpit-pagination="8" style="--paginate:true;--footer:ソフトウェアプロダクトの仕組み by [@1000ch](https://bento.me/1000ch);--header:プロダクトの価値がデリバリーされるまでの例;--theme:default;" data-marpit-pagination-total="15">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-paginate="true" data-footer="ソフトウェアプロダクトの仕組み by [@1000ch](https://bento.me/1000ch)" data-header="プロダクトの価値がデリバリーされるまでの例" data-theme="default" data-marpit-pagination="14" style="--paginate:true;--footer:ソフトウェアプロダクトの仕組み by [@1000ch](https://bento.me/1000ch);--header:プロダクトの価値がデリバリーされるまでの例;--theme:default;" data-marpit-pagination-total="15">
 <header>プロダクトの価値がデリバリーされるまでの例</header>
 <div class="mermaid">
 graph LR;
@@ -105,7 +216,7 @@ graph LR;
 </div>
 <footer>ソフトウェアプロダクトの仕組み by <a href="https://bento.me/1000ch">@1000ch</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-paginate="true" data-footer="ソフトウェアプロダクトの仕組み by [@1000ch](https://bento.me/1000ch)" data-theme="default" data-marpit-pagination="9" style="--paginate:true;--footer:ソフトウェアプロダクトの仕組み by [@1000ch](https://bento.me/1000ch);--theme:default;" data-marpit-pagination-total="15">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-paginate="true" data-footer="ソフトウェアプロダクトの仕組み by [@1000ch](https://bento.me/1000ch)" data-theme="default" data-marpit-pagination="15" style="--paginate:true;--footer:ソフトウェアプロダクトの仕組み by [@1000ch](https://bento.me/1000ch);--theme:default;" data-marpit-pagination-total="15">
 <h1 id="%E3%83%9F%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E5%90%91%E3%81%8B%E3%81%A3%E3%81%A6%E7%B5%84%E7%B9%94%E3%81%8C%E4%B8%80%E4%BD%93%E3%81%A8%E3%81%AA%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AB">ミッションに向かって組織が一体となるために</h1>
 <h2 id="%E7%B5%84%E7%B9%94%E3%81%AF%E7%9B%AE%E7%9A%84%E9%81%94%E6%88%90%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AB%E9%9B%86%E3%81%BE%E3%81%A3%E3%81%9F%E9%9B%86%E5%90%88%E4%BD%93">組織は目的達成のために集まった集合体</h2>
 <ul>
@@ -117,117 +228,6 @@ graph LR;
 <li>理解や実践の範囲が広い程、目的に貢献する幅だけでなく質が高まる</li>
 <li>優れた知識や専門性を持っていても、協調できなければ反乱因子</li>
 </ul>
-<footer>ソフトウェアプロダクトの仕組み by <a href="https://bento.me/1000ch">@1000ch</a></footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-paginate="true" data-footer="ソフトウェアプロダクトの仕組み by [@1000ch](https://bento.me/1000ch)" data-class="invert" data-theme="default" class="invert" data-marpit-pagination="10" style="--paginate:true;--footer:ソフトウェアプロダクトの仕組み by [@1000ch](https://bento.me/1000ch);--class:invert;--theme:default;" data-marpit-pagination-total="15">
-<h1 is="marp-h1" data-auto-scaling id="%E3%83%97%E3%83%AD%E3%83%80%E3%82%AF%E3%83%88%E3%81%AE%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E6%A6%82%E8%AB%96"> プロダクトのソフトウェア概論</h1>
-<footer>ソフトウェアプロダクトの仕組み by <a href="https://bento.me/1000ch">@1000ch</a></footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-paginate="true" data-footer="ソフトウェアプロダクトの仕組み by [@1000ch](https://bento.me/1000ch)" data-theme="default" data-marpit-pagination="11" style="--paginate:true;--footer:ソフトウェアプロダクトの仕組み by [@1000ch](https://bento.me/1000ch);--theme:default;" data-marpit-pagination-total="15">
-<h1 id="%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%82%92%E6%A7%8B%E6%88%90%E3%81%99%E3%82%8B%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%81%A8%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2">コンピュータを構成するソフトウェアとハードウェア</h1>
-<h2 id="%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2%E4%B8%8A%E3%81%A7%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%81%8C%E5%8B%95%E4%BD%9C%E3%81%99%E3%82%8B">ハードウェア上でソフトウェアが動作する</h2>
-<ul>
-<li>端末はソフトウェアが搭載されていなければ、ただの機械</li>
-<li>ハードウェアを動作させる基本ソフトウェアとして OS</li>
-</ul>
-<h2 id="%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%81%AB%E3%82%82%E5%B1%A4%E3%81%8C%E3%81%82%E3%82%8A%E3%81%9D%E3%82%8C%E5%90%8C%E5%A3%AB%E3%81%8C%E3%82%84%E3%82%8A%E3%81%A8%E3%82%8A%E3%81%99%E3%82%8B">ソフトウェアにも層があり、それ同士がやりとりする</h2>
-<ul>
-<li>OS 上で動作する様々なソフトウェアが、いわゆるネイティブアプリケーション</li>
-<li>その1つにブラウザがあり、ブラウザ上で動作するのが Web アプリケーション</li>
-</ul>
-<footer>ソフトウェアプロダクトの仕組み by <a href="https://bento.me/1000ch">@1000ch</a></footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-paginate="true" data-footer="ソフトウェアプロダクトの仕組み by [@1000ch](https://bento.me/1000ch)" data-header="コンピュータはソフトウェアとハードウェアで構成される" data-theme="default" data-marpit-pagination="12" style="--paginate:true;--footer:ソフトウェアプロダクトの仕組み by [@1000ch](https://bento.me/1000ch);--header:コンピュータはソフトウェアとハードウェアで構成される;--theme:default;" data-marpit-pagination-total="15">
-<header>コンピュータはソフトウェアとハードウェアで構成される</header>
-<div class="mermaid">
-flowchart TB;
-  subgraph hardware[ハードウェア]
-    subgraph desktop[デスクトップ]
-      cpu[CPU]
-      harddisk[ハードディスク]
-      display[ディスプレイ]
-    end
-    subgraph mobile[モバイル]
-    end
-  end
-  subgraph software[ソフトウェア]
-    subgraph os[オペレーティングシステム]
-      windows[Windows]
-      macos[macOS]
-      linux[Linux]
-      ios[iOS]
-      android[Android]
-    end
-  end
-  hardware <--> software
-</div>
-<footer>ソフトウェアプロダクトの仕組み by <a href="https://bento.me/1000ch">@1000ch</a></footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-paginate="true" data-footer="ソフトウェアプロダクトの仕組み by [@1000ch](https://bento.me/1000ch)" data-header="ソフトウェアにも様々なレイヤが存在する" data-theme="default" data-marpit-pagination="13" style="--paginate:true;--footer:ソフトウェアプロダクトの仕組み by [@1000ch](https://bento.me/1000ch);--header:ソフトウェアにも様々なレイヤが存在する;--theme:default;" data-marpit-pagination-total="15">
-<header>ソフトウェアにも様々なレイヤが存在する</header>
-<div class="mermaid">
-flowchart TB;
-  subgraph software[ソフトウェア]
-    subgraph os[オペレーティングシステム]
-      subgraph ios[iOS]
-        iosapp[iOS アプリ]
-      end
-      subgraph android[Android]
-        androidapp[Android アプリ]
-      end
-      subgraph web[Web]
-        subgraph browser[ブラウザ]
-          webapp[Web アプリ]
-        end
-      end
-    end
-  end
-</div>
-<footer>ソフトウェアプロダクトの仕組み by <a href="https://bento.me/1000ch">@1000ch</a></footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-paginate="true" data-footer="ソフトウェアプロダクトの仕組み by [@1000ch](https://bento.me/1000ch)" data-theme="default" data-marpit-pagination="14" style="--paginate:true;--footer:ソフトウェアプロダクトの仕組み by [@1000ch](https://bento.me/1000ch);--theme:default;" data-marpit-pagination-total="15">
-<h1 id="%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E5%9F%BA%E6%9C%AC%E7%9A%84%E3%81%AA%E5%8B%95%E4%BD%9C%E5%8E%9F%E7%90%86">アプリケーションの基本的な動作原理</h1>
-<h2 id="%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9%E4%B8%8A%E3%81%A7%E5%8B%95%E4%BD%9C%E3%81%99%E3%82%8B%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3">デバイス上で動作するアプリケーション</h2>
-<ul>
-<li>デバイス上にホストされるソフトウェアが、ユーザーアクションに応答する</li>
-<li>URL にアクセスしたりストアからソフトウェアをダウンロードする</li>
-</ul>
-<h2 id="%E3%81%9D%E3%82%8C%E3%81%A8%E7%96%8E%E9%80%9A%E3%81%99%E3%82%8B%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%E4%B8%8A%E3%81%AE%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">それと疎通するクラウド上のシステム</h2>
-<ul>
-<li>クラウド上にホストされるソフトウェアが、ネットワーク越しの要求に応答する</li>
-</ul>
-<footer>ソフトウェアプロダクトの仕組み by <a href="https://bento.me/1000ch">@1000ch</a></footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-paginate="true" data-footer="ソフトウェアプロダクトの仕組み by [@1000ch](https://bento.me/1000ch)" data-header="実際のソフトウェア動作を表現すると" data-theme="default" data-marpit-pagination="15" style="--paginate:true;--footer:ソフトウェアプロダクトの仕組み by [@1000ch](https://bento.me/1000ch);--header:実際のソフトウェア動作を表現すると;--theme:default;" data-marpit-pagination-total="15">
-<header>実際のソフトウェア動作を表現すると</header>
-<div class="mermaid">
-flowchart LR;
-  subgraph client-side[クライアントサイド]
-    subgraph ios[iOS]
-      iosapp[iOS アプリ]
-    end
-    subgraph android[Android]
-      androidapp[Android アプリ]
-    end
-    subgraph web[Web]
-      subgraph browser[ブラウザ]
-        webapp[Web アプリ]
-      end
-    end
-  end
-  subgraph server-side[サーバーサイド]
-    subgraph linux
-      subgraph server[サーバー]
-        system[システム]
-        database[データベース]
-      end
-    end
-  end
-  iosapp <--> server
-  androidapp <--> server
-  webapp <--> server
-  system <--> database
-</div>
 <script type="module">
 import mermaid from 'https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs';
 mermaid.initialize({startOnLoad: true});
