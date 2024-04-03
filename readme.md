@@ -14,3 +14,4 @@
 - [2023 年の Web 開発のベースライン](https://1000ch.github.io/slides/web-development-baseline-2023) (originally for [TechFeed Experts Night#26 〜 Web標準技術最前線 ー HTML/CSS/JSの「いま」](https://techfeed.io/events/techfeed-experts-night-26) at 2023-09-27)
 - [はじめての Git](https://1000ch.github.io/slides/git)
 - [macOS の黒い画面](https://1000ch.github.io/slides/macos-cli)
+- [ソフトウェアプロダクトの仕組み](https://1000ch.github.io/slides/how-software-works)
