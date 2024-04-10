@@ -55,7 +55,7 @@
 </section>
 </foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-paginate="true" data-footer="Web Share API by [@1000ch](https://bento.me/1000ch)" data-theme="default" data-marpit-pagination="5" style="" data-marpit-pagination-total="9" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-paginate="true" data-footer="Web Share API by [@1000ch](https://bento.me/1000ch)" data-header="Web Share API" data-theme="default" data-marpit-pagination="6" style="--paginate:true;--footer:Web Share API by [@1000ch](https://bento.me/1000ch);--header:Web Share API;--theme:default;" data-marpit-pagination-total="9">
 <header>Web Share API</header>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-javascript">button.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&quot;click&quot;</span>, <span class="hljs-keyword">async</span> () =&gt; {
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-javascript">button.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
   <span class="hljs-keyword">try</span> {
     <span class="hljs-keyword">const</span> data = {
       <span class="hljs-attr">title</span>: <span class="hljs-string">&#x27;MDN&#x27;</span>,
@@ -83,12 +83,12 @@ flowchart TB;
       webapp[Web アプリケーション]
     end
     subgraph app1[アプリケーション]
-      receiver1[text と URL を受け取る機能]
+      receiver1[text と url を受け取る機能]
     end
     subgraph app2[アプリケーション]
       receiver2[text と files を受け取る機能]
     end
-    webapp --text, URL--&gt; receiver1
+    webapp --text, url--&gt; receiver1
     webapp --text, files--&gt; receiver2
   end
 </div>
