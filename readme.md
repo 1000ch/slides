@@ -15,5 +15,5 @@
 - [はじめての Git](https://1000ch.github.io/slides/git)
 - [macOS の黒い画面](https://1000ch.github.io/slides/macos-cli)
 - [ソフトウェアプロダクトの仕組み](https://1000ch.github.io/slides/how-software-works)
-- [Web Share API](https://1000ch.github.io/slides/web-share-api) (originally for [LT会“最近私が気になっている技術”｜外資就活ドットコム主催](https://howtv.connpass.com/event/315141/) at 2024-04-10)
-
+- [Web Share API](https://1000ch.github.io/slides/web-share-api) (originally for [Engineer Guild Lightning Talk vol.1](https://howtv.connpass.com/event/315141/) at 2024-04-10)
+- [EU のデジタル市場法と Apple](https://1000ch.github.io/slides/dma-affects-apple) (originally for [Engineer Guild Lightning Talk vol.2](https://howtv.connpass.com/event/316547/) at 2024-04-23)
