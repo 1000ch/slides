@@ -12,9 +12,9 @@ footer: About me by [@1000ch](https://bento.me/1000ch)
 
 ---
 
-![bg left:30% 60%](./img/avatar.jpg)
+![bg left:50% 80%](./img/avatar.jpg)
 
-# Shogo SENSUI
+# <!-- fit --> Shogo SENSUI
 
 ---
 
@@ -28,27 +28,21 @@ footer: About me by [@1000ch](https://bento.me/1000ch)
 
 ---
 
-![bg center:100% 100%](./img/merpay.jpg)
-
----
-
 # As Advisor
 
-- 社員数は一桁から四桁まで、フェーズはシードから上場まで、フォーカスは開発技術から経営課題まで、様々な組織を支援
-- 少し前だと[ドクターズプライムのフロントエンド開発の現状](https://blog.drsprime.com/entry/26)
-  - [静的解析を整備してコードベースをボトムアップ](https://blog.drsprime.com/entry/2022/08/16/090000)、[社内勉強会を公開して対外的認知を向上](https://blog.drsprime.com/entry/2022/03/29/110000)、[ソフトウェア性能と KPI の相関を可視化](https://blog.drsprime.com/entry/2022/02/10/170000) など
+- 社員数は一桁から四桁まで、フェーズはシードから上場まで、フォーカスは開発技術から経営課題まで、様々な組織をアドバイザーとして支援
 - 最近では [三年間の関わりから見る PR TIMES エンジニアリングの変化](https://developers.prtimes.jp/2024/09/25/transition-of-prtimes-engineering/) など
+- TechTrain でメンターとして、次世代ソフトウェアエンジニアの育成や教育カリキュラムの改善といった教育にも従事
 
 ---
 
 # As Advocate
 
+![bg right:30%](./img/presentation.jpg)
+
 - [TechFeed の公認エキスパート](https://techfeed.io/people/@1000ch) (JavaScript/Web 標準) や [HTML5Experts.jp のエキスパート](https://html5experts.jp/1000ch)として Web 技術の啓蒙に従事
 - [イベントでの登壇やメディアでのインタビューや寄稿](https://shogosensui.com/activity/)、[技術誌の連載や書籍の出版](https://shogosensui.com/book/)を通じて、技術の知見やプロダクト開発における事例を共有
-
----
-
-![bg center:100% 100%](./img/presentation.jpg)
+- 最近では [エンジニアチームの生産性の高め方](https://1000ch.net/posts/2024/how-to-improve-engineering-productivity/) をレビューしたり、[日本 CTO 協会の Webフロントエンド版DX Criteria](https://dxcriteria.cto-a.org/frontend) を監修
 
 ---
 
