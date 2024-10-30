@@ -76,20 +76,20 @@
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-paginate="true" data-footer="Web Share API by [@1000ch](https://bento.me/1000ch)" data-theme="default" lang="C" data-marpit-pagination="7" style="--paginate:true;--footer:Web Share API by [@1000ch](https://bento.me/1000ch);--theme:default;" data-marpit-pagination-total="9">
 <div class="mermaid">
-flowchart TB;
-  subgraph os[OS]
-    subgraph browser[ブラウザ]
-      webapp[Web アプリケーション]
-    end
-    subgraph app1[アプリケーション]
-      receiver1[text と url を受け取る機能]
-    end
-    subgraph app2[アプリケーション]
-      receiver2[text と files を受け取る機能]
-    end
-    webapp --text, url--&gt; receiver1
-    webapp --text, files--&gt; receiver2
+flowchart TB
+subgraph os[OS]
+  subgraph browser[ブラウザ]
+    webapp[Web アプリケーション]
   end
+  subgraph app1[アプリケーション]
+    receiver1[text と url を受け取る機能]
+  end
+  subgraph app2[アプリケーション]
+    receiver2[text と files を受け取る機能]
+  end
+  webapp --text, url--&gt; receiver1
+  webapp --text, files--&gt; receiver2
+end
 </div>
 <footer>Web Share API by <a href="https://bento.me/1000ch">@1000ch</a></footer>
 </section>
