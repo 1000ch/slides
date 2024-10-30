@@ -222,7 +222,7 @@ $ git push origin add-x-and-update-y
 ```
 
 <script type="module">
-import mermaid from 'https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs';
+import mermaid from 'https://unpkg.com/mermaid@11/dist/mermaid.esm.min.mjs';
 mermaid.initialize({startOnLoad: true});
 </script>
 <script defer src="https://platform.x.com/widgets.js"></script>

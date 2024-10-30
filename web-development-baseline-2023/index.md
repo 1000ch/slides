@@ -164,7 +164,7 @@ Node.js とそのエコシステムは Web 開発にとって今や欠かせな�
 [Frontend Developer Roadmap](https://roadmap.sh/frontend) を参考に、<u>**Software Engineer (Frontend) としての分化する専門性を磨いていく**</u>。
 
 <script type="module">
-import mermaid from 'https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs';
+import mermaid from 'https://unpkg.com/mermaid@11/dist/mermaid.esm.min.mjs';
 mermaid.initialize({startOnLoad: true});
 </script>
 <script defer src="https://platform.x.com/widgets.js"></script>
