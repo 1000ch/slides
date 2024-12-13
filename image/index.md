@@ -14,9 +14,7 @@ footer: よくわかる画像の話 by [@1000ch](https://bento.me/1000ch)
 
 ![bg left:30% 60%](https://shogosensui.com/img/1000ch.avif)
 
-# @1000ch
-
-> Web アプリケーション開発を専門とするソフトウェアエンジニア。企業で働く傍ら、技術顧問として複数企業のエンジニアリングに関わり、高品質で維持しやすい Web アプリケーションを作るための活動を続けている。
+# Shogo SENSUI ([shogosensui.com](https://shogosensui.com))
 
 ---
 
@@ -30,52 +28,69 @@ footer: よくわかる画像の話 by [@1000ch](https://bento.me/1000ch)
 
 <!-- _class: invert -->
 
-# そもそも画像ってなんだろう？
+# <!-- fit -->そもそも画像ってなんだろう？
 
 ---
 
 # 少し噛み砕いてみる
 
-- RGBの表現系からなる画素の集合（＝ビットマップ）
-- よく使われる画像フォーマットは、PNG・JPEG・GIF・WebP
-- それぞれ特徴があるが、基本的には画素の集合を圧縮したもの
+- RGB の表現系からなる画素の集合 (=ビットマップ) であるラスタ形式やベクタ形式
+- よく使われる画像フォーマットは、PNG・JPEG・GIF・WebP・AVIF・SVG
+- それぞれ特徴があるが、基本的にはラスターやベクターのデータを圧縮したもの
 
 ---
 
-# PNG
+![bg right contain](./img/lossless.png)
 
-- フルカラー＋アルファチャネル
-- 8bitモード（インデックスカラー）
+# [PNG](https://ja.wikipedia.org/wiki/Portable_Network_Graphics) (`image/png`)
+
+- [フルカラー](https://ja.wikipedia.org/wiki/フルカラー)に加えてアルファチャネルを表現できる
+- 通常の 24bit に加えて [8bit モードが存在](https://www.youtube.com/watch?v=bPdkWJe9XH0)
 - 可逆圧縮
 
-※フルカラーは約1677万色（赤256×緑256×青256）
-
-![](./img/lossless.png)
-
 ---
 
-# JPEG
+![bg right contain](./img/lossy.png)
 
-- フルカラー
+# [JPEG](https://ja.wikipedia.org/wiki/JPEG) (`image/jpeg`)
+
+- フルカラーを表現できる
 - プログレッシブ or ベースライン
 - 非可逆圧縮
 
-![](./img/lossy.png)
+---
+
+![bg right:30% contain](https://upload.wikimedia.org/wikipedia/commons/2/2c/Rotating_earth_%28large%29.gif)
+
+# [GIF](https://ja.wikipedia.org/wiki/Graphics_Interchange_Format) (`image/gif`)
+
+- 256色を表現かつ特定色を透過できる
+- アニメーション可能
 
 ---
 
-# GIF
+# [WebP](https://ja.wikipedia.org/wiki/WebP) (`image/webp`)
 
-- 256色＋特定色の透過
-- アニメーション
+- [WebM](https://ja.wikipedia.org/wiki/WebM) という動画圧縮コーデックの基礎
+- [フルカラー](https://ja.wikipedia.org/wiki/フルカラー)に加えてアルファチャネルを表現できる
+- 可逆圧縮と非可逆圧縮をサポート
+- アニメーション可能
 
 ---
 
-# WebP
+# [AVIF](https://ja.wikipedia.org/wiki/AVIF) (`image/avif`)
 
-- フルカラー＋アルファチャネル
-- 可逆圧縮・非可逆圧縮
-- アニメーション
+- [AV1](https://ja.wikipedia.org/wiki/AV1) という動画圧縮コーデックの基礎
+- [フルカラー](https://ja.wikipedia.org/wiki/フルカラー)に加えてアルファチャネルを表現できる
+- 可逆圧縮と非可逆圧縮をサポート
+- アニメーション可能
+
+---
+
+# [SVG](https://ja.wikipedia.org/wiki/Scalable_Vector_Graphics) (`image/svg+xml`)
+
+- パスを表現できるベクター形式の画像
+- XML でありテキストデータ
 
 ---
 
@@ -83,17 +98,19 @@ footer: よくわかる画像の話 by [@1000ch](https://bento.me/1000ch)
 
 # 特徴を踏まえた画像フォーマットの選択
 
-- **PNG**: UIパーツ・アイコンのように色数が少なく透過がある
+- _PNG_: UI パーツやアイコンであれば SVG、他の場面では WebP / AVIF で代替
 - **JPEG**: 写真やグラデーションを含むような複雑で非透過な画像
-- **GIF**: アニメーションをさせたい場合
-- **WebP**: WebPをサポートしている環境の場合
+- _GIF_: アニメーションなら動画や WebP / AVIF で代替
+- **WebP**: [WebP をサポートしている環境](https://caniuse.com/webp)の場合
+- **AVIF**: [AVIF をサポートしている環境](https://caniuse.com/avif)の場合
+- **SVG**: UI パーツ・アイコンのように色数が少なく透過がある場合
 
 ---
 
-## 画像ファイルのサイズ
+# 画像のファイルサイズの影響
 
-- 通信コスト、ストレージやメモリ消費に影響する
-- ことWebに関しては、帯域の80%を画像データが占めている
+- インターネットの帯域に加えて、端末のストレージやメモリ消費に影響する
+- こと [Web においては、帯域の 80% を画像データが占めている](https://httparchive.org/reports/state-of-images)
 - 同等の表現ができれば、軽いほど良い
 
 ---
@@ -108,7 +125,7 @@ footer: よくわかる画像の話 by [@1000ch](https://bento.me/1000ch)
 
 <!-- _class: invert -->
 
-## JPEG（4.7MB）
+## JPEG (オリジナル, 4.7MB)
 
 ---
 
@@ -116,7 +133,7 @@ footer: よくわかる画像の話 by [@1000ch](https://bento.me/1000ch)
 
 <!-- _class: invert -->
 
-## JPEG（1.8MB）
+## JPEG (圧縮率 80, 1.8MB)
 
 ---
 
@@ -124,7 +141,7 @@ footer: よくわかる画像の話 by [@1000ch](https://bento.me/1000ch)
 
 <!-- _class: invert -->
 
-## JPEG（1.1MB）
+## JPEG (圧縮率 60, 1.1MB)
 
 ---
 
@@ -132,7 +149,7 @@ footer: よくわかる画像の話 by [@1000ch](https://bento.me/1000ch)
 
 <!-- _class: invert -->
 
-## JPEG（0.8MB）
+## JPEG (圧縮率 40, 0.8MB)
 
 ---
 
@@ -140,41 +157,38 @@ footer: よくわかる画像の話 by [@1000ch](https://bento.me/1000ch)
 
 <!-- _class: invert -->
 
-## PNG（18.8MB）
+## PNG (18.8MB)
 
 ---
 
-# 圧縮率とファイルサイズの関係
+# 画像の圧縮率とファイルサイズの関係
 
-- オリジナル: **4.7MB**（100%）
-- 圧縮率80: **1.8MB**（38%）
-- 圧縮率60: **1.1MB**（23.6%）
-- 圧縮率40: **0.8MB**（16.9%）
-- PNGに変換したもの: **18.8MB**（400%）
+|   | ファイルサイズ | サイズ比率 |
+|---|---|---|
+| JPEG (オリジナル) | 4.7MB | 100% |
+| JPEG (圧縮率80) | 1.8MB | 38% |
+| JPEG (圧縮率60) | 1.1MB | 23.6% |
+| JPEG (圧縮率40) | 0.8MB | 16.9% |
+| PNG | 18.8MB | 400% |
 
-ファイルサイズは **縦横が小さいかより圧縮がされているか** に左右される（もちろん最適化された上であれば、縦横サイズが小さい＝ピクセル数が少ないほうがファイルサイズは小さくなる）
+- ファイルサイズは **縦横サイズより適切な圧縮 (=最適化)** に左右される
+- 最適化された上であれば、縦横サイズが小さい方がファイルサイズは小さい
 
 ---
 
-# 画像を適切に扱うためにサービス提供側ができる努力
+# 画像を適切に扱う心構え
 
-- 開発側が適切な画像フォーマットを選択し圧縮・最適化するのは、前提であり最低条件
-- ユーザーに強いるのは非現実的（**PNGの写真をサーバーに送信されても文句は言えない**）
-- **アプリケーション側で吸収する必要がある**（アップロード時・配信時などにPNGをJPEGに変換する等）
+- 開発者が適切な画像形式を選択し最適化するのは前提であり最低条件
+- プロダクトがユーザーに強いるのは非現実的である
+  - **PNG の写真をサーバーに送信されても文句は言えない**
+- 故に **アプリケーション側で吸収する必要がある**
+  - アップロードやダウンロード時に PNG を JPEG に変換する等
 
 ---
 
 # 画像最適化ツール
 
-- [ImageOptim](https://imageoptim.com/mac): JPEG・PNG・GIFを最適化する
-- [ImageAlpha](https://pngmini.com/): PNGの8bitにダウンコンバートする
-- [JPEGmini](http://www.jpegmini.com/): JPEGを圧縮・最適化する
-- [WebPonize](https://github.com/webponize/webponize): JPEG・PNGをWebPに変換する
-
----
-
-# 参考資料
-
-- [Give PNG a chance](http://article.enja.io/articles/give-png-a-chance.html)
-- [We should optimize images](https://medium.com/@1000ch/we-should-optimize-images-8435760e0ec9)
-- [Introduction to WebP](https://medium.com/@1000ch/introduction-to-webp-b593dfe1d1d1)
+- [**Squoosh**](https://squoosh.app/): [PNG](#6) / [JPEG](#7) / [WebP](#9) / [AVIF](#10) を相互変換し、最適化する
+- [**ImageOptim**](https://imageoptim.com/mac): JPEG / PNG / [GIF](#8) を最適化する
+- [**ImageAlpha**](https://pngmini.com/): PNG を 8bit へダウンコンバートする
+- (archived) [**WebPonize**](https://github.com/webponize/webponize): JPEG / PNG を WebP に変換する
