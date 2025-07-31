@@ -16,7 +16,7 @@ footer: 買ってよかったもの総集編 by [@1000ch](https://bento.me/1000c
 
 ## [詰め替えそのままミニ](https://www.amazon.co.jp/dp/B0B86ZDRYJ?tag=1000ch-22)
 
-シャンプーやリンスの詰め替えパックに装着することでそのまま使える。詰め替えボトルを洗って乾燥させる手間がなく、フックでぶら下げて使うためヌメることもない。
+シャンプーやリンスの詰め替えパックに装着することでそのまま使える。詰め替えボトルを洗って乾燥させる手間がなく、フックでぶら下げて使うためヌメることもない。無印良品専用機にはなるが、[詰替えパウチ用吊り下げノズル](https://www.muji.com/jp/ja/store/cmdty/detail/4550344487976)もある。
 
 ---
 
@@ -36,11 +36,11 @@ footer: 買ってよかったもの総集編 by [@1000ch](https://bento.me/1000c
 
 ---
 
-![bg left:30% 70%](https://webshop.montbell.jp/common/images/product/prod_k/k_1128552_ssog.jpg)
+![bg left:30% 70%](https://www.muji.com/public/media/img/item/4550584747137_org.jpg)
 
-## [mont-bell トラベルアンブレラ](https://webshop.montbell.jp/goods/disp.php?product_id=1128552)
+## [晴雨兼用 軽量 折りたたみ傘](https://www.muji.com/jp/ja/store/cmdty/detail/4550584747168)
 
-超軽量で超コンパクトな mont-bell の折り畳み傘。スマートフォンより軽い 86g という、鞄に忍ばせても全く気にならない重さ。
+スマートフォンより軽い 136g という、鞄に忍ばせていると雨の日も晴れの日も安心な折りたたみ傘。
 
 ---
 
@@ -52,16 +52,16 @@ footer: 買ってよかったもの総集編 by [@1000ch](https://bento.me/1000c
 
 ---
 
-![bg left:30% 70%](https://m.media-amazon.com/images/I/51ySEkXza-L._AC_SX679_.jpg)
+![bg left:30% 70%](https://m.media-amazon.com/images/I/717cnjDtjjL._AC_SL1500_.jpg)
 
-## [日立 ドラム式洗濯乾燥機 ビッグドラム](https://www.amazon.co.jp/dp/B098X93WG8?tag=1000ch-22)
+## [CIO NovaWave SPOT PLUG +C](https://www.amazon.co.jp/dp/B0D2DBG5ML?tag=1000ch-22)
 
-洗濯をする度に発生する「干す手間」をほぼゼロにしてくれる。天気や干すスペースを気にする必要もなく、ボタン1つで衣類が洗濯されて乾燥された状態になる。
+コンセントに直接挿して Qi2 で充電できる他、30W の出力に対応した USB type-C ポートを備えた充電器。コンセント部分を折り畳んで、コンパクトに収納可能。
 
 ---
 
-![bg left:30% 70%](https://m.media-amazon.com/images/I/61+YU0a-KUL._AC_SX679_.jpg)
+![bg left:30% 70%](https://m.media-amazon.com/images/I/71QYx06kDeL._AC_SL1500_.jpg)
 
-## [SwitchBot スマートロック+指紋認証パッド](https://www.amazon.co.jp/dp/B0B1ZJP9YK?tag=1000ch-22)
+## [SwitchBot スマートロック Ultra +指紋認証パッド](https://www.amazon.co.jp/dp/B0DSQ25D55?tag=1000ch-22)
 
 玄関ドアを指紋認証で解錠できる。鍵を持ち運ぶ必要がないので、締め出されたり、鍵を紛失するリスクがない。オートロックがあれば物理鍵より安心すらあり得る。
