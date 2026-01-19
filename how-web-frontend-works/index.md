@@ -3,7 +3,7 @@ marp: true
 title: 昨今の Web アプリ事情
 theme: default
 paginate: true
-footer: 昨今の Web アプリ事情 by [@1000ch](https://bento.me/1000ch)
+footer: 昨今の Web アプリ事情 by [@1000ch](https://shogosensui.com)
 style: |
   section:has(> .mermaid) {
     padding-top: 0;

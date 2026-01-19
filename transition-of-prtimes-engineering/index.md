@@ -3,7 +3,7 @@ marp: true
 title: 三年間の関わりから見る PR TIMES エンジニアリングの変化
 theme: default
 paginate: true
-footer: 三年間の関わりから見る PR TIMES エンジニアリングの変化 by [@1000ch](https://bento.me/1000ch)
+footer: 三年間の関わりから見る PR TIMES エンジニアリングの変化 by [@1000ch](https://shogosensui.com)
 style: |
   section:has(> .twitter-tweet) {
     display: flex;

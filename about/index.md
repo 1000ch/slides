@@ -3,7 +3,7 @@ marp: true
 title: About me
 theme: default
 paginate: true
-footer: About me by [@1000ch](https://bento.me/1000ch)
+footer: About me by [@1000ch](https://shogosensui.com/)
 ---
 
 <!-- _class: invert -->

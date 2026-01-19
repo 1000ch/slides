@@ -3,7 +3,7 @@ marp: true
 title: 買ってよかったもの総集編
 theme: default
 paginate: true
-footer: 買ってよかったもの総集編 by [@1000ch](https://bento.me/1000ch)
+footer: 買ってよかったもの総集編 by [@1000ch](https://shogosensui.com)
 ---
 
 <!-- _class: invert -->

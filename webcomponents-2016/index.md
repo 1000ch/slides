@@ -3,7 +3,7 @@ marp: true
 title: Web Components 2016 & Polymer v2
 theme: default
 paginate: true
-footer: Web Components 2016 & Polymer v2 by [@1000ch](https://bento.me/1000ch)
+footer: Web Components 2016 & Polymer v2 by [@1000ch](https://shogosensui.com)
 ---
 
 ![bg brightness:0.5](./img/cover.jpg)
@@ -20,7 +20,7 @@ footer: Web Components 2016 & Polymer v2 by [@1000ch](https://bento.me/1000ch)
 
 # @1000ch
 
-> Web アプリケーション開発を専門とするソフトウェアエンジニア。企業で働く傍ら、技術顧問として複数企業のエンジニアリングに関わり、高品質で維持しやすい Web アプリケーションを作るための活動を続けている。
+> Web アプリケーション開発を専門とするソフトウェアエンジニア。企業で働く傍ら、様々な企業のエンジニアリングに顧問として関わり、高品質で維持しやすい Web アプリケーションを作るための活動を続けている。
 
 ---
 

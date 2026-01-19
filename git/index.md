@@ -3,7 +3,7 @@ marp: true
 title: はじめての Git
 theme: default
 paginate: true
-footer: はじめての Git by [@1000ch](https://bento.me/1000ch)
+footer: はじめての Git by [@1000ch](https://shogosensui.com)
 style: |
   section:has(> .mermaid) {
     padding-top: 0;
@@ -19,7 +19,7 @@ style: |
 
 # <!-- fit --> はじめての Git
 
-by [@1000ch](https://bento.me/1000ch)
+by [@1000ch](https://shogosensui.com)
 
 ---
 
@@ -27,7 +27,7 @@ by [@1000ch](https://bento.me/1000ch)
 
 # @1000ch
 
-> Web アプリケーション開発を専門とするソフトウェアエンジニア。企業で働く傍ら、技術顧問として複数企業のエンジニアリングに関わり、高品質で維持しやすい Web アプリケーションを作るための活動を続けている。
+> Web アプリケーション開発を専門とするソフトウェアエンジニア。企業で働く傍ら、様々な企業のエンジニアリングに顧問として関わり、高品質で維持しやすい Web アプリケーションを作るための活動を続けている。
 
 ---
 

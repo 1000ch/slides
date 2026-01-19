@@ -3,7 +3,7 @@ marp: true
 title: Web Components Updates 2017
 theme: default
 paginate: true
-footer: Web Components Updates 2017 by [Shogo SENSUI](https://bento.me/1000ch)
+footer: Web Components Updates 2017 by [Shogo SENSUI](https://shogosensui.com)
 ---
 
 <!-- _class: invert -->
@@ -18,7 +18,7 @@ footer: Web Components Updates 2017 by [Shogo SENSUI](https://bento.me/1000ch)
 
 # @1000ch
 
-> Web アプリケーション開発を専門とするソフトウェアエンジニア。企業で働く傍ら、技術顧問として複数企業のエンジニアリングに関わり、高品質で維持しやすい Web アプリケーションを作るための活動を続けている。
+> Web アプリケーション開発を専門とするソフトウェアエンジニア。企業で働く傍ら、様々な企業のエンジニアリングに顧問として関わり、高品質で維持しやすい Web アプリケーションを作るための活動を続けている。
 
 [超速本](https://www.amazon.co.jp/dp/477419400X) をよろしくおねがいします📕🙏
 

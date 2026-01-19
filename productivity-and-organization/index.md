@@ -4,7 +4,7 @@ math: mathjax
 title: 開発生産性と組織
 theme: default
 paginate: true
-footer: 開発生産性と組織 by [@1000ch](https://bento.me/1000ch)
+footer: 開発生産性と組織 by [@1000ch](https://shogosensui.com)
 ---
 
 <!-- _class: invert -->
@@ -19,7 +19,7 @@ footer: 開発生産性と組織 by [@1000ch](https://bento.me/1000ch)
 
 ## Shogo SENSUI ([shogosensui.com](https://shogosensui.com))
 
-SIer での受託開発を経て、2012 年に株式会社サイバーエージェントに入社。プロダクト開発の傍ら、エンジニア組織のマネジメントに従事。2018 年に株式会社メルカリに入社後は、[株式会社メルペイの Frontend チームの立ち上げ](https://engineering.mercari.com/blog/entry/20201222-merpay-frontend/)や [Web 版の「メルカリ」の刷新](https://engineering.mercari.com/blog/entry/20210810-the-new-mercari-web/)、[メルカリアプリのコードベース刷新](https://engineering.mercari.com/blog/entry/20221213-ground-up-app/)を牽引した後に、執行役員 VP of Engineering としてメルペイのエンジニアリング部門を管掌。2023 年 4 月にデジタル庁入庁。2023 年 7 月に株式会社ハウテレビジョン入社、執行役員プロダクト本部長に就任。[mond 認定回答者](https://mond.how/1000ch)、[TechFeed 公認エキスパート](https://techfeed.io/people/@1000ch) (Web 標準技術 • JavaScript)。
+> Web アプリケーション開発を専門とするソフトウェアエンジニア。企業で働く傍ら、様々な企業のエンジニアリングに顧問として関わり、高品質で維持しやすい Web アプリケーションを作るための活動を続けている。
 
 ---
 
